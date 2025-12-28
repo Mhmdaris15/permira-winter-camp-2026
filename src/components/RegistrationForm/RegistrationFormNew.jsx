@@ -1,5 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Google Sheets Web App URL - Replace with your deployed Apps Script URL
 const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyy4bET7HlYwbZRii2_SsviXC_y9ZCs6ejf3jOi767MZalWkvCXS4PEYNJc1BpFVHE/exec';
@@ -41,6 +45,9 @@ function RegistrationForm() {
   const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const formRef = useRef(null);
+  const headerRef = useRef(null);
+  const sectionsRef = useRef([]);
   const [formData, setFormData] = useState({
     citizenship: '',
     citizenshipOther: '',
@@ -63,6 +70,96 @@ function RegistrationForm() {
     reasonForJoining: ''
   });
   const [errors, setErrors] = useState({});
+
+  // GSAP Animations
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Form header animation
+      gsap.fromTo(headerRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: formRef.current,
+            start: 'top 80%',
+            once: true
+          }
+        }
+      );
+
+      // Form sections stagger animation
+      sectionsRef.current.forEach((section, index) => {
+        if (section) {
+          gsap.fromTo(section,
+            { 
+              opacity: 0, 
+              x: index % 2 === 0 ? -30 : 30,
+              y: 20
+            },
+            {
+              opacity: 1,
+              x: 0,
+              y: 0,
+              duration: 0.7,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: section,
+                start: 'top 85%',
+                once: true
+              }
+            }
+          );
+        }
+      });
+
+      // Input focus animations
+      const inputs = formRef.current?.querySelectorAll('input, select, textarea');
+      inputs?.forEach(input => {
+        input.addEventListener('focus', () => {
+          gsap.to(input, {
+            scale: 1.02,
+            boxShadow: '0 0 20px rgba(79, 172, 254, 0.3)',
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+        });
+        input.addEventListener('blur', () => {
+          gsap.to(input, {
+            scale: 1,
+            boxShadow: 'none',
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+        });
+      });
+
+    }, formRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  // Success animation
+  useEffect(() => {
+    if (isSubmitted) {
+      gsap.fromTo('.success-animation',
+        { scale: 0, rotation: -180, opacity: 0 },
+        { 
+          scale: 1, 
+          rotation: 0, 
+          opacity: 1, 
+          duration: 0.8, 
+          ease: 'back.out(1.7)' 
+        }
+      );
+      gsap.fromTo('.success-text',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.3, stagger: 0.1 }
+      );
+    }
+  }, [isSubmitted]);
 
   const countries = [
     'indonesia', 'russia', 'usa', 'uk', 'germany', 'france',
@@ -230,20 +327,20 @@ function RegistrationForm() {
   if (isSubmitted) {
     return (
       <section className="glass rounded-3xl p-8 md:p-12 text-center">
-        <div style={{ animation: 'float 3s ease-in-out infinite' }}>
-          <div className="text-7xl mb-6">🎉</div>
+        <div>
+          <div className="success-animation text-7xl mb-6">🎉</div>
           <h2 
-            className="font-adventure text-4xl md:text-5xl tracking-wider mb-4"
+            className="success-text font-adventure text-4xl md:text-5xl tracking-wider mb-4"
             style={{ color: colors.auroraCyan }}
           >
             {t('successTitle')}
           </h2>
-          <p style={{ color: colors.frostDark }} className="text-lg max-w-md mx-auto mb-8">
+          <p className="success-text" style={{ color: colors.frostDark, fontSize: '1.125rem', maxWidth: '28rem', margin: '0 auto 2rem' }}>
             {t('successMessage')}
           </p>
           <button
             onClick={handleReset}
-            className="btn-adventure px-8 py-3 rounded-xl font-semibold text-white"
+            className="success-text btn-adventure px-8 py-3 rounded-xl font-semibold text-white"
           >
             {t('reset')}
           </button>
@@ -253,9 +350,9 @@ function RegistrationForm() {
   }
 
   return (
-    <section className="glass rounded-3xl p-6 md:p-8">
+    <section ref={formRef} className="glass rounded-3xl p-6 md:p-8">
       {/* Section Header */}
-      <div className="text-center mb-8">
+      <div ref={headerRef} className="text-center mb-8">
         <h2 
           className="font-adventure text-4xl md:text-5xl tracking-wider mb-2"
           style={{ color: colors.frost }}
@@ -277,7 +374,7 @@ function RegistrationForm() {
 
       <form onSubmit={handleSubmit} className="space-y-8">
         {/* Personal Information Section */}
-        <div className="space-y-6">
+        <div ref={el => sectionsRef.current[0] = el} className="space-y-6">
           <h3 
             className="flex items-center gap-2 font-adventure text-2xl tracking-wide"
             style={{ color: colors.auroraCyan }}
@@ -406,7 +503,7 @@ function RegistrationForm() {
         </div>
 
         {/* Contact Information Section */}
-        <div className="space-y-6">
+        <div ref={el => sectionsRef.current[1] = el} className="space-y-6">
           <h3 
             className="flex items-center gap-2 font-adventure text-2xl tracking-wide"
             style={{ color: colors.auroraCyan }}
@@ -548,7 +645,7 @@ function RegistrationForm() {
         </div>
 
         {/* Additional Information Section */}
-        <div className="space-y-6">
+        <div ref={el => sectionsRef.current[2] = el} className="space-y-6">
           <h3 
             className="flex items-center gap-2 font-adventure text-2xl tracking-wide"
             style={{ color: colors.auroraCyan }}
@@ -687,12 +784,13 @@ function RegistrationForm() {
         </div>
 
         {/* Submit Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 pt-4">
+        <div ref={el => sectionsRef.current[3] = el} className="flex flex-col sm:flex-row gap-4 pt-4">
           <button
             type="submit"
             disabled={isSubmitting}
             className="flex-1 btn-adventure px-8 py-4 rounded-xl font-adventure text-xl tracking-wider text-white 
-                       disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                       disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2
+                       hover:scale-105 active:scale-95 transition-transform"
           >
             {isSubmitting ? (
               <>

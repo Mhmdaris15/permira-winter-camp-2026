@@ -1,4 +1,9 @@
 import { useTranslation } from 'react-i18next';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Style constants
 const colors = {
@@ -46,11 +51,133 @@ const activities = [
 
 function EventDetails() {
   const { t } = useTranslation();
+  const sectionRef = useRef(null);
+  const headerRef = useRef(null);
+  const cardsRef = useRef(null);
+  const overviewRef = useRef(null);
+  const activitiesRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header animation
+      gsap.fromTo(headerRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: headerRef.current,
+            start: 'top 85%',
+            once: true
+          }
+        }
+      );
+
+      // Cards stagger animation
+      const cards = cardsRef.current?.children;
+      if (cards) {
+        gsap.fromTo(cards,
+          { 
+            opacity: 0, 
+            y: 50,
+            rotateX: -15,
+            scale: 0.9
+          },
+          {
+            opacity: 1,
+            y: 0,
+            rotateX: 0,
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: 'back.out(1.2)',
+            scrollTrigger: {
+              trigger: cardsRef.current,
+              start: 'top 80%',
+              once: true
+            }
+          }
+        );
+      }
+
+      // Overview section animation
+      gsap.fromTo(overviewRef.current,
+        { 
+          opacity: 0, 
+          y: 40,
+          scale: 0.98
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: overviewRef.current,
+            start: 'top 80%',
+            once: true
+          }
+        }
+      );
+
+      // Activity items stagger animation
+      const activityItems = activitiesRef.current?.children;
+      if (activityItems) {
+        gsap.fromTo(activityItems,
+          { 
+            opacity: 0, 
+            x: -30,
+            scale: 0.8
+          },
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 0.5,
+            stagger: 0.1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: activitiesRef.current,
+              start: 'top 85%',
+              once: true
+            }
+          }
+        );
+      }
+
+      // Hover animations for cards
+      const cardElements = cardsRef.current?.querySelectorAll('.glass');
+      cardElements?.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          gsap.to(card, {
+            scale: 1.03,
+            boxShadow: '0 20px 40px rgba(79, 172, 254, 0.2)',
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+        });
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, {
+            scale: 1,
+            boxShadow: 'none',
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+        });
+      });
+
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className="relative mb-8">
+    <section ref={sectionRef} className="relative mb-8">
       {/* Section Header */}
-      <div className="text-center mb-8">
+      <div ref={headerRef} className="text-center mb-8">
         <h2 
           className="font-adventure text-4xl md:text-5xl tracking-wider mb-2"
           style={{ color: colors.frost }}
@@ -71,7 +198,7 @@ function EventDetails() {
       </div>
 
       {/* Info Cards */}
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
+      <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 mb-8">
         {/* Date & Time Card */}
         <div className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300">
           <div className="flex items-start gap-4">
@@ -146,7 +273,7 @@ function EventDetails() {
       </div>
 
       {/* Event Overview */}
-      <div className="glass rounded-2xl p-6 md:p-8">
+      <div ref={overviewRef} className="glass rounded-2xl p-6 md:p-8">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-3xl">🗻</span>
           <h3 
@@ -162,7 +289,7 @@ function EventDetails() {
         </p>
 
         {/* Activities Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div ref={activitiesRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {activities.map((activity) => (
             <div
               key={activity.key}
