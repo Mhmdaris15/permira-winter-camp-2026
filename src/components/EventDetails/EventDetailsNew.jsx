@@ -26,13 +26,22 @@ const IconLocation = () => (
   </svg>
 );
 
+const IconOrganizer = () => (
+  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+    <circle cx="9" cy="7" r="4" />
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  </svg>
+);
+
 const activities = [
-  { key: 'skiing', icon: '⛷️' },
-  { key: 'hiking', icon: '🥾' },
+  { key: 'skiing', icon: '🌌' },
+  { key: 'hiking', icon: '🏕️' },
   { key: 'bonfire', icon: '🔥' },
-  { key: 'workshops', icon: '🏕️' },
-  { key: 'photography', icon: '📸' },
-  { key: 'games', icon: '🎿' }
+  { key: 'workshops', icon: '📸' },
+  { key: 'photography', icon: '🇮🇩' },
+  { key: 'games', icon: '🗺️' }
 ];
 
 function EventDetails() {
@@ -53,7 +62,7 @@ function EventDetails() {
             className="h-px w-16" 
             style={{ background: `linear-gradient(to right, transparent, ${colors.auroraCyan})` }}
           />
-          <span style={{ color: colors.auroraCyan }} className="text-2xl">🏔️</span>
+          <span style={{ color: colors.auroraCyan }} className="text-2xl">🌌</span>
           <div 
             className="h-px w-16" 
             style={{ background: `linear-gradient(to left, transparent, ${colors.auroraCyan})` }}
@@ -62,7 +71,7 @@ function EventDetails() {
       </div>
 
       {/* Info Cards */}
-      <div className="grid md:grid-cols-2 gap-6 mb-8">
+      <div className="grid md:grid-cols-3 gap-6 mb-8">
         {/* Date & Time Card */}
         <div className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300">
           <div className="flex items-start gap-4">
@@ -107,6 +116,30 @@ function EventDetails() {
                 {t('location')}
               </h3>
               <p style={{ color: colors.frost }} className="text-lg">{t('locationValue')}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Organizer Card */}
+        <div className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300">
+          <div className="flex items-start gap-4">
+            <div 
+              className="p-3 rounded-xl group-hover:scale-110 transition-transform"
+              style={{ 
+                background: `linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(239, 68, 68, 0.2))`,
+                color: '#ef4444'
+              }}
+            >
+              <IconOrganizer />
+            </div>
+            <div>
+              <h3 
+                className="font-adventure text-xl tracking-wide mb-1"
+                style={{ color: '#ef4444' }}
+              >
+                {t('organizer') || 'Organizer'}
+              </h3>
+              <p style={{ color: colors.frost }} className="text-lg">{t('organizerValue') || 'PERMIRA Saint Petersburg'}</p>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Google Sheets Web App URL - Replace with your deployed Apps Script URL
-const GOOGLE_SHEETS_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyy4bET7HlYwbZRii2_SsviXC_y9ZCs6ejf3jOi767MZalWkvCXS4PEYNJc1BpFVHE/exec';
 
 // Style constants
 const colors = {

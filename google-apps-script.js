@@ -126,15 +126,15 @@ function getOrCreateSheet() {
 function sendConfirmationEmail(data) {
   if (!data.email) return;
   
-  const subject = '❄️ Winter Camp 2025 - Registration Confirmed!';
+  const subject = '❄️ Winter Camp 2026 - Registration Confirmed!';
   const body = `
 Dear ${data.fullName},
 
-Thank you for registering for Winter Camp 2025! 🏔️
+Thank you for registering for Winter Camp 2026! 🏔️
 
 We have received your registration with the following details:
 
-📅 Event: January 15-20, 2025
+📅 Event: January 15-20, 2026
 📍 Location: Alpine Mountain Resort, Switzerland
 
 Your Registration Details:
@@ -148,7 +148,7 @@ We will contact you soon with more information about the event.
 Get ready for an amazing winter adventure!
 
 Best regards,
-Winter Camp 2025 Team
+Winter Camp 2026 Team
 
 ⛷️🏂❄️
   `;

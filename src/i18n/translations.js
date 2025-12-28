@@ -2,8 +2,8 @@ export const translations = {
   en: {
     translation: {
       // Header
-      title: "Winter Camp 2025",
-      subtitle: "Embrace the adventure of a lifetime in the frozen wilderness!",
+      title: "Winter Camp 2026",
+      subtitle: "Experience the magical Aurora Borealis in Murmansk with PERMIRA!",
       
       // Language selector
       language: "Language",
@@ -11,18 +11,20 @@ export const translations = {
       // Event Details
       eventDetails: "Event Details",
       dateTime: "Date & Time",
-      dateTimeValue: "January 15-20, 2025 | 9:00 AM - 5:00 PM",
+      dateTimeValue: "February 2-3, 2026",
       location: "Location",
-      locationValue: "Alpine Mountain Resort, Switzerland",
+      locationValue: "Murmansk, Russia",
+      organizer: "Organizer",
+      organizerValue: "PERMIRA Saint Petersburg",
       eventOverview: "Event Overview",
-      eventDescription: "Experience the magic of winter at our annual Winter Camp 2025! This 6-day adventure includes:",
+      eventDescription: "Join us for an unforgettable Aurora Borealis adventure! Winter Camp 2026 by PERMIRA includes:",
       activities: {
-        skiing: "Professional skiing and snowboarding lessons",
-        hiking: "Guided mountain hiking expeditions",
-        bonfire: "Evening bonfire gatherings with hot cocoa",
-        workshops: "Winter survival workshops",
-        photography: "Snow photography sessions",
-        games: "Team building activities and snow games"
+        skiing: "Aurora Borealis (Northern Lights) viewing",
+        hiking: "Arctic camping experience",
+        bonfire: "Bonfire gatherings under the stars",
+        workshops: "Photography sessions of the aurora",
+        photography: "Cultural exchange with Indonesian students",
+        games: "Exploration of Murmansk"
       },
       
       // Registration Form
@@ -79,12 +81,12 @@ export const translations = {
       
       // Terms & Participation
       termsConditions: "Terms & Conditions",
-      termsText: "I agree to the terms and conditions of Winter Camp 2025",
+      termsText: "I agree to the terms and conditions of Winter Camp 2026",
       willingnessToParticipate: "Willingness to Participate",
       yes: "Yes, I'm excited to participate!",
       no: "No, I'm not sure yet",
       reasonForJoining: "Reason for Joining",
-      reasonPlaceholder: "Tell us why you want to join Winter Camp 2025...",
+      reasonPlaceholder: "Tell us why you want to join Winter Camp 2026...",
       
       // Buttons
       submit: "Submit Registration",
@@ -100,7 +102,7 @@ export const translations = {
       
       // Success message
       successTitle: "Registration Successful!",
-      successMessage: "Thank you for registering for Winter Camp 2025. We'll contact you soon with more details.",
+      successMessage: "Thank you for registering for Winter Camp 2026. We'll contact you soon with more details.",
       
       // Chatbot
       chatbot: "Winter Camp Assistant",
@@ -132,8 +134,8 @@ export const translations = {
   id: {
     translation: {
       // Header
-      title: "Kemah Musim Dingin 2025",
-      subtitle: "Rasakan petualangan seumur hidup di alam liar yang membeku!",
+      title: "Winter Camp 2026",
+      subtitle: "Rasakan keajaiban Aurora Borealis di Murmansk bersama PERMIRA!",
       
       // Language selector
       language: "Bahasa",
@@ -141,18 +143,20 @@ export const translations = {
       // Event Details
       eventDetails: "Detail Acara",
       dateTime: "Tanggal & Waktu",
-      dateTimeValue: "15-20 Januari 2025 | 09:00 - 17:00",
+      dateTimeValue: "2-3 Februari 2026",
       location: "Lokasi",
-      locationValue: "Alpine Mountain Resort, Swiss",
+      locationValue: "Murmansk, Rusia",
+      organizer: "Penyelenggara",
+      organizerValue: "PERMIRA Saint Petersburg",
       eventOverview: "Ringkasan Acara",
-      eventDescription: "Rasakan keajaiban musim dingin di Kemah Musim Dingin 2025 tahunan kami! Petualangan 6 hari ini mencakup:",
+      eventDescription: "Bergabunglah dalam petualangan Aurora Borealis yang tak terlupakan! Winter Camp 2026 oleh PERMIRA meliputi:",
       activities: {
-        skiing: "Pelajaran ski dan snowboard profesional",
-        hiking: "Ekspedisi hiking gunung dengan pemandu",
-        bonfire: "Perkumpulan api unggun malam dengan cokelat panas",
-        workshops: "Lokakarya bertahan hidup di musim dingin",
-        photography: "Sesi fotografi salju",
-        games: "Kegiatan membangun tim dan permainan salju"
+        skiing: "Melihat Aurora Borealis (Cahaya Utara)",
+        hiking: "Pengalaman berkemah di Arktik",
+        bonfire: "Api unggun di bawah bintang-bintang",
+        workshops: "Sesi fotografi aurora",
+        photography: "Pertukaran budaya dengan mahasiswa Indonesia",
+        games: "Eksplorasi Murmansk"
       },
       
       // Registration Form
@@ -209,12 +213,12 @@ export const translations = {
       
       // Terms & Participation
       termsConditions: "Syarat & Ketentuan",
-      termsText: "Saya setuju dengan syarat dan ketentuan Kemah Musim Dingin 2025",
+      termsText: "Saya setuju dengan syarat dan ketentuan Kemah Musim Dingin 2026",
       willingnessToParticipate: "Kesediaan untuk Berpartisipasi",
       yes: "Ya, saya sangat ingin berpartisipasi!",
       no: "Tidak, saya belum yakin",
       reasonForJoining: "Alasan Bergabung",
-      reasonPlaceholder: "Ceritakan mengapa Anda ingin bergabung dengan Kemah Musim Dingin 2025...",
+      reasonPlaceholder: "Ceritakan mengapa Anda ingin bergabung dengan Kemah Musim Dingin 2026...",
       
       // Buttons
       submit: "Kirim Pendaftaran",
@@ -230,7 +234,7 @@ export const translations = {
       
       // Success message
       successTitle: "Pendaftaran Berhasil!",
-      successMessage: "Terima kasih telah mendaftar Kemah Musim Dingin 2025. Kami akan segera menghubungi Anda dengan detail lebih lanjut.",
+      successMessage: "Terima kasih telah mendaftar Kemah Musim Dingin 2026. Kami akan segera menghubungi Anda dengan detail lebih lanjut.",
       
       // Chatbot
       chatbot: "Asisten Kemah Musim Dingin",
@@ -262,8 +266,8 @@ export const translations = {
   ru: {
     translation: {
       // Header
-      title: "Зимний Лагерь 2025",
-      subtitle: "Испытайте приключение всей жизни в замёрзшей дикой природе!",
+      title: "Зимний Лагерь 2026",
+      subtitle: "Испытайте волшебство Северного Сияния в Мурманске с PERMIRA!",
       
       // Language selector
       language: "Язык",
@@ -271,18 +275,20 @@ export const translations = {
       // Event Details
       eventDetails: "Детали Мероприятия",
       dateTime: "Дата и Время",
-      dateTimeValue: "15-20 января 2025 | 9:00 - 17:00",
+      dateTimeValue: "2-3 февраля 2026",
       location: "Место проведения",
-      locationValue: "Горный курорт Альпин, Швейцария",
+      locationValue: "Мурманск, Россия",
+      organizer: "Организатор",
+      organizerValue: "PERMIRA Санкт-Петербург",
       eventOverview: "Обзор Мероприятия",
-      eventDescription: "Почувствуйте волшебство зимы на нашем ежегодном Зимнем Лагере 2025! Это 6-дневное приключение включает:",
+      eventDescription: "Присоединяйтесь к незабываемому приключению с Северным Сиянием! Зимний Лагерь 2026 от PERMIRA включает:",
       activities: {
-        skiing: "Профессиональные уроки катания на лыжах и сноуборде",
-        hiking: "Горные походы с гидом",
-        bonfire: "Вечерние посиделки у костра с горячим какао",
-        workshops: "Мастер-классы по выживанию зимой",
-        photography: "Фотосессии на снегу",
-        games: "Тимбилдинг и снежные игры"
+        skiing: "Наблюдение за Северным Сиянием",
+        hiking: "Арктический кемпинг",
+        bonfire: "Костёр под звёздами",
+        workshops: "Фотосессия северного сияния",
+        photography: "Культурный обмен с индонезийскими студентами",
+        games: "Исследование Мурманска"
       },
       
       // Registration Form
@@ -339,12 +345,12 @@ export const translations = {
       
       // Terms & Participation
       termsConditions: "Правила и Условия",
-      termsText: "Я согласен с правилами и условиями Зимнего Лагеря 2025",
+      termsText: "Я согласен с правилами и условиями Зимнего Лагеря 2026",
       willingnessToParticipate: "Готовность Участвовать",
       yes: "Да, я с нетерпением жду участия!",
       no: "Нет, я пока не уверен",
       reasonForJoining: "Причина Участия",
-      reasonPlaceholder: "Расскажите, почему вы хотите присоединиться к Зимнему Лагерю 2025...",
+      reasonPlaceholder: "Расскажите, почему вы хотите присоединиться к Зимнему Лагерю 2026...",
       
       // Buttons
       submit: "Отправить Регистрацию",
@@ -360,7 +366,7 @@ export const translations = {
       
       // Success message
       successTitle: "Регистрация Успешна!",
-      successMessage: "Спасибо за регистрацию на Зимний Лагерь 2025. Мы свяжемся с вами в ближайшее время с дополнительной информацией.",
+      successMessage: "Спасибо за регистрацию на Зимний Лагерь 2026. Мы свяжемся с вами в ближайшее время с дополнительной информацией.",
       
       // Chatbot
       chatbot: "Помощник Зимнего Лагеря",

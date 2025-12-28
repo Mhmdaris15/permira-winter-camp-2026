@@ -1,0 +1,140 @@
+# Winter Camp 2026 Knowledge Base
+# This file serves as the RAG (Retrieval-Augmented Generation) context for the AI chatbot
+
+## EVENT OVERVIEW
+Winter Camp 2026 is an exciting 6-day winter adventure event that brings together participants from around the world for an unforgettable experience in the Swiss Alps.
+
+## EVENT DETAILS
+- Event Name: Winter Camp 2026
+- Dates: January 15-20, 2026
+- Location: Alpine Mountain Resort, Switzerland
+- Duration: 6 days / 5 nights
+- Registration Fee: FREE
+- Target Audience: International students and young professionals
+
+## ACTIVITIES INCLUDED
+
+### Day 1 - Arrival & Welcome
+- Airport pickup and transfer to resort
+- Welcome ceremony and orientation
+- Ice-breaker activities
+- Welcome dinner with traditional Swiss cuisine
+
+### Day 2-3 - Snow Sports
+- Professional skiing lessons for all levels (beginner to advanced)
+- Snowboarding lessons and workshops
+- Cross-country skiing introduction
+- Snow tubing fun activities
+
+### Day 4 - Mountain Adventure
+- Guided mountain hiking expeditions
+- Winter survival workshops
+- Snow shelter building
+- Emergency preparedness training
+
+### Day 5 - Creative & Team Building
+- Snow photography sessions with professional guidance
+- Team building activities and snow games
+- Snowman building competition
+- Winter art workshop
+
+### Day 6 - Celebration & Departure
+- Final group activities
+- Award ceremony
+- Farewell brunch
+- Transfer to airport
+
+## EVENING PROGRAMS
+- Evening bonfire gatherings with hot cocoa and marshmallows
+- Stargazing sessions (weather permitting)
+- Cultural exchange nights
+- Movie nights with winter-themed films
+- Game nights and karaoke
+
+## ACCOMMODATION
+- Comfortable shared rooms at Alpine Mountain Resort
+- Heating and hot water provided
+- Wi-Fi available throughout the resort
+- Laundry facilities accessible
+- 24/7 reception and security
+
+## MEALS
+- All meals included (breakfast, lunch, dinner)
+- Special dietary requirements accommodated:
+  - Vegetarian options
+  - Vegan options
+  - Halal food
+  - Kosher food
+  - Gluten-free options
+  - Other allergies (please specify during registration)
+
+## WHAT TO BRING
+- Warm winter clothing (layers recommended)
+- Waterproof jacket and pants
+- Winter boots
+- Gloves, hat, and scarf
+- Sunglasses and sunscreen
+- Personal medications
+- Valid passport and travel documents
+- Travel insurance (required)
+
+## EQUIPMENT PROVIDED
+- Ski equipment (skis, boots, poles)
+- Snowboard equipment
+- Helmets
+- Snow shoes for hiking
+- Safety gear
+
+## REGISTRATION PROCESS
+1. Fill out the online registration form on this website
+2. Provide accurate personal information
+3. Specify any dietary restrictions or allergies
+4. Accept terms and conditions
+5. Submit your application
+6. Receive confirmation email within 48 hours
+7. Attend pre-departure online orientation
+
+## ELIGIBILITY
+- Age: 18-35 years old
+- Must be physically fit for outdoor activities
+- No prior skiing/snowboarding experience required
+- Must have valid travel documents
+- Must have travel insurance
+
+## IMPORTANT CONTACTS
+- Emergency Contact: +41 XX XXX XXXX
+- Email: wintercamp2026@example.com
+- Website: wintercamp2026.example.com
+
+## FREQUENTLY ASKED QUESTIONS
+
+Q: Do I need skiing experience?
+A: No! We welcome beginners and provide professional lessons for all skill levels.
+
+Q: What if I have food allergies?
+A: Please specify all dietary restrictions and allergies in the registration form. We accommodate all dietary needs.
+
+Q: Is the event really free?
+A: Yes! Winter Camp 2026 is completely free for selected participants. You only need to cover your travel costs to Switzerland.
+
+Q: What language is used?
+A: English is the main language of communication. However, we have multilingual staff who speak Indonesian, Russian, and other languages.
+
+Q: Can I bring my own equipment?
+A: Yes, you can bring your own ski/snowboard equipment if you prefer.
+
+Q: What is the cancellation policy?
+A: Please inform us at least 2 weeks before the event if you need to cancel. Last-minute cancellations may affect future applications.
+
+Q: Is there medical support?
+A: Yes, we have first aid trained staff on-site and the resort has a medical clinic nearby.
+
+Q: What about COVID-19 measures?
+A: We follow all current health guidelines. Please check for any travel requirements before your trip.
+
+## DEVELOPER INFORMATION
+This web application was developed by Muhammad Aris Septanugroho.
+LinkedIn: https://www.linkedin.com/in/muhammad-aris-septanugroho/
+
+## LAST UPDATED
+December 2025

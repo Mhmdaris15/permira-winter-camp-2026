@@ -1,8 +1,8 @@
-# Winter Camp 2025 Registration Form 🏔️❄️
+# Winter Camp 2026 Registration Form 🏔️❄️
 
-A stunning, professional registration form web application for Winter Camp 2025, featuring a breathtaking northern lights winter theme, AI-powered chatbot, and Google Sheets integration.
+A stunning, professional registration form web application for Winter Camp 2026, featuring a breathtaking northern lights winter theme, AI-powered chatbot, and Google Sheets integration.
 
-![Winter Camp 2025](https://img.shields.io/badge/Winter%20Camp-2025-blue?style=for-the-badge)
+![Winter Camp 2026](https://img.shields.io/badge/Winter%20Camp-2026-blue?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
 ![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?style=for-the-badge&logo=vite)
@@ -47,10 +47,10 @@ A stunning, professional registration form web application for Winter Camp 2025,
 - Reason for Joining
 
 ### 🤖 AI-Powered Chatbot
-- Powered by **Google Gemini AI**
-- Context-aware responses about Winter Camp
+- Powered by **Chutes.ai** with **Qwen/Qwen3-32B** model
+- **RAG System** - Context-aware responses using knowledge base
 - Beautiful floating chat interface
-- Secure API key input
+- No API key input required
 
 ### 📊 Google Sheets Integration
 - Form submissions sent directly to Google Sheets
@@ -63,7 +63,7 @@ A stunning, professional registration form web application for Winter Camp 2025,
 - **Vite** - Lightning-fast build tool
 - **Tailwind CSS v4** - Utility-first styling
 - **i18next** - Internationalization
-- **Google Gemini API** - AI Chatbot
+- **Chutes.ai API** - AI Chatbot (RAG System)
 - **Google Apps Script** - Google Sheets integration
 
 ## 🚀 Getting Started
@@ -112,11 +112,13 @@ Open [http://localhost:5173/winter-camp-registration/](http://localhost:5173/win
    - Open `src/components/RegistrationForm/RegistrationFormNew.jsx`
    - Replace `YOUR_GOOGLE_APPS_SCRIPT_URL` with your URL
 
-## 🤖 Setting Up Gemini Chatbot
+## 🤖 Setting Up Chutes.ai Chatbot (RAG System)
 
-1. Get your API key from [Google AI Studio](https://aistudio.google.com/apikey)
-2. Enter the API key in the chatbot interface
-3. The chatbot is pre-configured with Winter Camp context
+The chatbot now uses **Chutes.ai API** with a RAG (Retrieval-Augmented Generation) system:
+- Powered by **Qwen/Qwen3-32B** model
+- Pre-configured with comprehensive Winter Camp knowledge base
+- No API key input required (embedded in code)
+- Context-aware responses about the event
 
 ## 🎨 Design Theme
 
@@ -139,7 +141,7 @@ winter-camp-registration/
 ├── src/
 │   ├── components/
 │   │   ├── Background/        # Northern lights & mountain background
-│   │   ├── Chatbot/          # Gemini AI chatbot
+│   │   ├── Chatbot/          # Chutes.ai chatbot with RAG
 │   │   ├── EventDetails/     # Event information section
 │   │   ├── LanguageSelector/ # Multi-language switcher
 │   │   └── RegistrationForm/ # Complete registration form
@@ -185,10 +187,16 @@ MIT License - Feel free to use for your own events!
 
 ## 🙏 Acknowledgments
 
-- Built with ❤️ for Winter Camp 2025
+- Built with ❤️ for Winter Camp 2026
 - Icons: Emoji-based for universal compatibility
 - Fonts: Google Fonts (Bebas Neue, Orbitron, Inter)
-- AI: Powered by Google Gemini
+- AI: Powered by Chutes.ai (Qwen/Qwen3-32B)
+
+## 👨‍💻 Developer
+
+**Muhammad Aris Septanugroho**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/muhammad-aris-septanugroho/)
 
 ---
 
