@@ -7,6 +7,5 @@ export default defineConfig({
     react()
   ],
   // For GitHub Pages deployment, set the base to your repository name
-  // Change '/winter-camp-registration/' to your actual repository name
-  base: '/winter-camp-registration/',
+  base: '/permira-winter-camp-2026/',
 })
