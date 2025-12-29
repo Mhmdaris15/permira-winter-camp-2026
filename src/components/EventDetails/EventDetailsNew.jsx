@@ -224,7 +224,12 @@ function EventDetails() {
         </div>
 
         {/* Location Card */}
-        <div className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300">
+        <a 
+          href="https://yandex.com/maps/-/CLTAeQ~2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300 cursor-pointer block"
+        >
           <div className="flex items-start gap-4">
             <div 
               className="p-3 rounded-xl group-hover:scale-110 transition-transform"
@@ -243,12 +248,21 @@ function EventDetails() {
                 {t('location')}
               </h3>
               <p style={{ color: colors.frost }} className="text-lg">{t('locationValue')}</p>
+              <p style={{ color: colors.frostDark }} className="text-xs mt-1 flex items-center gap-1">
+                <span>📍</span> 68.970663, 33.074918
+                <span className="ml-2 text-auroraCyan">→ View on Map</span>
+              </p>
             </div>
           </div>
-        </div>
+        </a>
 
         {/* Organizer Card */}
-        <div className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300">
+        <a 
+          href="https://t.me/irazkisra"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300 cursor-pointer block"
+        >
           <div className="flex items-start gap-4">
             <div 
               className="p-3 rounded-xl group-hover:scale-110 transition-transform"
@@ -267,9 +281,58 @@ function EventDetails() {
                 {t('organizer') || 'Organizer'}
               </h3>
               <p style={{ color: colors.frost }} className="text-lg">{t('organizerValue') || 'PERMIRA Saint Petersburg'}</p>
+              <p style={{ color: colors.frostDark }} className="text-xs mt-1 flex items-center gap-1">
+                <span>💬</span> Contact via Telegram
+                <span className="ml-2" style={{ color: '#0088cc' }}>→ @irazkisra</span>
+              </p>
             </div>
           </div>
+        </a>
+      </div>
+
+      {/* Map Section */}
+      <div className="glass rounded-2xl p-6 md:p-8 overflow-hidden">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-3xl">🗺️</span>
+          <h3 
+            className="font-adventure text-2xl tracking-wide"
+            style={{ color: colors.frost }}
+          >
+            {t('eventLocation') || 'Event Location'}
+          </h3>
         </div>
+        
+        <p style={{ color: colors.frostDark }} className="text-base mb-4">
+          Murmansk, Russia — Gateway to the Northern Lights (68.970663°N, 33.074918°E)
+        </p>
+        
+        <div className="rounded-xl overflow-hidden" style={{ border: '2px solid rgba(255, 255, 255, 0.1)' }}>
+          <iframe
+            src="https://yandex.com/map-widget/v1/?ll=33.074918%2C68.970663&z=12&l=map&pt=33.074918%2C68.970663%2Cpm2rdm"
+            width="100%"
+            height="350"
+            frameBorder="0"
+            allowFullScreen
+            style={{ display: 'block' }}
+            title="Event Location - Murmansk, Russia"
+          />
+        </div>
+        
+        <a 
+          href="https://yandex.com/maps/-/CLTAeQ~2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+          style={{ 
+            backgroundColor: 'rgba(255, 204, 0, 0.1)',
+            color: '#ffcc00',
+            border: '1px solid rgba(255, 204, 0, 0.3)'
+          }}
+        >
+          <span>📍</span>
+          <span>Open in Yandex Maps</span>
+          <span>→</span>
+        </a>
       </div>
 
       {/* Event Overview */}
