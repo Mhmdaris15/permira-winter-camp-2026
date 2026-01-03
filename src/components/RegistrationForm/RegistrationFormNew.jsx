@@ -50,21 +50,21 @@ function RegistrationForm() {
   const sectionsRef = useRef([]);
   const [formData, setFormData] = useState({
     citizenship: '',
-    citizenshipOther: '',
     fullName: '',
     university: '',
     gender: '',
-    genderOther: '',
     age: '',
     phoneNumber: '',
     email: '',
-    instagram: '',
-    twitter: '',
-    linkedin: '',
+    vk: '',
+    telegram: '',
     hearAboutUs: [],
     hearAboutUsOther: '',
-    dietaryRestrictions: '',
     allergies: '',
+    kbriProof: null,
+    kbriProofName: '',
+    wantToPerform: '',
+    performanceDetails: '',
     termsAccepted: false,
     willingToParticipate: '',
     reasonForJoining: ''
@@ -161,17 +161,28 @@ function RegistrationForm() {
     }
   }, [isSubmitted]);
 
-  const countries = [
-    'indonesia', 'russia', 'usa', 'uk', 'germany', 'france',
-    'japan', 'china', 'india', 'australia', 'canada', 'brazil', 'switzerland', 'other'
-  ];
+  const countries = ['indonesia', 'russia'];
 
   const hearOptions = ['socialMedia', 'friend', 'university', 'website', 'email', 'poster', 'other'];
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked, files } = e.target;
     
-    if (type === 'checkbox' && name === 'hearAboutUs') {
+    if (type === 'file') {
+      const file = files[0];
+      if (file) {
+        // Check file size (max 2MB)
+        if (file.size > 2 * 1024 * 1024) {
+          setErrors(prev => ({ ...prev, kbriProof: t('fileTooLarge') || 'File size must be less than 2MB' }));
+          return;
+        }
+        setFormData(prev => ({
+          ...prev,
+          kbriProof: file,
+          kbriProofName: file.name
+        }));
+      }
+    } else if (type === 'checkbox' && name === 'hearAboutUs') {
       setFormData(prev => ({
         ...prev,
         hearAboutUs: checked 
@@ -202,15 +213,9 @@ function RegistrationForm() {
     const newErrors = {};
 
     if (!formData.citizenship) newErrors.citizenship = t('required');
-    if (formData.citizenship === 'other' && !formData.citizenshipOther.trim()) {
-      newErrors.citizenshipOther = t('required');
-    }
     if (!formData.fullName.trim()) newErrors.fullName = t('required');
     if (!formData.university.trim()) newErrors.university = t('required');
     if (!formData.gender) newErrors.gender = t('required');
-    if (formData.gender === 'other' && !formData.genderOther.trim()) {
-      newErrors.genderOther = t('required');
-    }
     
     if (!formData.age) {
       newErrors.age = t('required');
@@ -233,6 +238,16 @@ function RegistrationForm() {
       newErrors.email = t('invalidEmail');
     }
 
+    // KBRI proof required for Indonesian citizens
+    if (formData.citizenship === 'indonesia' && !formData.kbriProof) {
+      newErrors.kbriProof = t('required');
+    }
+
+    // Performance details required if wants to perform
+    if (formData.wantToPerform === 'yes' && !formData.performanceDetails.trim()) {
+      newErrors.performanceDetails = t('required');
+    }
+
     if (formData.hearAboutUs.includes('other') && !formData.hearAboutUsOther.trim()) {
       newErrors.hearAboutUsOther = t('required');
     }
@@ -249,19 +264,20 @@ function RegistrationForm() {
     try {
       const formattedData = {
         timestamp: new Date().toISOString(),
-        citizenship: data.citizenship === 'other' ? data.citizenshipOther : t(`countries.${data.citizenship}`),
+        citizenship: t(`countries.${data.citizenship}`),
         fullName: data.fullName,
         university: data.university,
-        gender: data.gender === 'other' ? data.genderOther : t(data.gender),
+        gender: t(data.gender),
         age: data.age,
         phoneNumber: data.phoneNumber,
         email: data.email,
-        instagram: data.instagram || '-',
-        twitter: data.twitter || '-',
-        linkedin: data.linkedin || '-',
+        vk: data.vk || '-',
+        telegram: data.telegram || '-',
         hearAboutUs: data.hearAboutUs.map(h => h === 'other' ? data.hearAboutUsOther : t(`hearOptions.${h}`)).join(', '),
-        dietaryRestrictions: data.dietaryRestrictions || '-',
         allergies: data.allergies || '-',
+        kbriProofProvided: data.citizenship === 'indonesia' ? (data.kbriProof ? 'Yes' : 'No') : 'N/A',
+        wantToPerform: data.wantToPerform === 'yes' ? 'Yes' : 'No',
+        performanceDetails: data.performanceDetails || '-',
         willingToParticipate: data.willingToParticipate === 'yes' ? t('yes') : t('no'),
         reasonForJoining: data.reasonForJoining
       };
@@ -301,21 +317,21 @@ function RegistrationForm() {
   const handleReset = () => {
     setFormData({
       citizenship: '',
-      citizenshipOther: '',
       fullName: '',
       university: '',
       gender: '',
-      genderOther: '',
       age: '',
       phoneNumber: '',
       email: '',
-      instagram: '',
-      twitter: '',
-      linkedin: '',
+      vk: '',
+      telegram: '',
       hearAboutUs: [],
       hearAboutUsOther: '',
-      dietaryRestrictions: '',
       allergies: '',
+      kbriProof: null,
+      kbriProofName: '',
+      wantToPerform: '',
+      performanceDetails: '',
       termsAccepted: false,
       willingToParticipate: '',
       reasonForJoining: ''
@@ -402,19 +418,6 @@ function RegistrationForm() {
                 ))}
               </select>
               {errors.citizenship && <p style={{ color: colors.campRed }} className="text-sm">{errors.citizenship}</p>}
-              
-              {formData.citizenship === 'other' && (
-                <input
-                  type="text"
-                  name="citizenshipOther"
-                  value={formData.citizenshipOther}
-                  onChange={handleChange}
-                  placeholder={t('pleaseSpecify')}
-                  style={errors.citizenshipOther ? inputErrorStyles : inputBaseStyles}
-                  className="mt-2"
-                />
-              )}
-              {errors.citizenshipOther && <p style={{ color: colors.campRed }} className="text-sm">{errors.citizenshipOther}</p>}
             </div>
 
             {/* Full Name */}
@@ -463,23 +466,8 @@ function RegistrationForm() {
                 <option value="" style={{ backgroundColor: colors.midnight }}>{t('selectGender')}</option>
                 <option value="male" style={{ backgroundColor: colors.midnight }}>{t('male')}</option>
                 <option value="female" style={{ backgroundColor: colors.midnight }}>{t('female')}</option>
-                <option value="other" style={{ backgroundColor: colors.midnight }}>{t('other')}</option>
-                <option value="prefer-not-to-say" style={{ backgroundColor: colors.midnight }}>{t('preferNotToSay')}</option>
               </select>
               {errors.gender && <p style={{ color: colors.campRed }} className="text-sm">{errors.gender}</p>}
-              
-              {formData.gender === 'other' && (
-                <input
-                  type="text"
-                  name="genderOther"
-                  value={formData.genderOther}
-                  onChange={handleChange}
-                  placeholder={t('pleaseSpecify')}
-                  style={errors.genderOther ? inputErrorStyles : inputBaseStyles}
-                  className="mt-2"
-                />
-              )}
-              {errors.genderOther && <p style={{ color: colors.campRed }} className="text-sm">{errors.genderOther}</p>}
             </div>
 
             {/* Age */}
@@ -550,50 +538,34 @@ function RegistrationForm() {
             <label style={{ color: colors.frost }} className="block font-medium">
               {t('socialMedia')}
             </label>
-            <div className="grid md:grid-cols-3 gap-4">
-              {/* Instagram */}
+            <div className="grid md:grid-cols-2 gap-4">
+              {/* VK */}
               <div className="space-y-2">
-                <label style={{ color: colors.frostDark }} className="block text-sm">{t('instagram')}</label>
+                <label style={{ color: colors.frostDark }} className="block text-sm">{t('vk')}</label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg">📷</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg">📘</span>
                   <input
                     type="text"
-                    name="instagram"
-                    value={formData.instagram}
+                    name="vk"
+                    value={formData.vk}
                     onChange={handleChange}
-                    placeholder={t('instagramPlaceholder')}
+                    placeholder={t('vkPlaceholder')}
                     style={{ ...inputBaseStyles, paddingLeft: '3rem' }}
                   />
                 </div>
               </div>
 
-              {/* Twitter */}
+              {/* Telegram */}
               <div className="space-y-2">
-                <label style={{ color: colors.frostDark }} className="block text-sm">{t('twitter')}</label>
+                <label style={{ color: colors.frostDark }} className="block text-sm">{t('telegramUsername')}</label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg">𝕏</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg">✈️</span>
                   <input
                     type="text"
-                    name="twitter"
-                    value={formData.twitter}
+                    name="telegram"
+                    value={formData.telegram}
                     onChange={handleChange}
-                    placeholder={t('twitterPlaceholder')}
-                    style={{ ...inputBaseStyles, paddingLeft: '3rem' }}
-                  />
-                </div>
-              </div>
-
-              {/* LinkedIn */}
-              <div className="space-y-2">
-                <label style={{ color: colors.frostDark }} className="block text-sm">{t('linkedin')}</label>
-                <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg">💼</span>
-                  <input
-                    type="text"
-                    name="linkedin"
-                    value={formData.linkedin}
-                    onChange={handleChange}
-                    placeholder={t('linkedinPlaceholder')}
+                    placeholder={t('telegramPlaceholder')}
                     style={{ ...inputBaseStyles, paddingLeft: '3rem' }}
                   />
                 </div>
@@ -650,35 +622,133 @@ function RegistrationForm() {
             className="flex items-center gap-2 font-adventure text-2xl tracking-wide"
             style={{ color: colors.auroraCyan }}
           >
-            <span>🍽️</span> {t('additionalInfo')}
+            <span>📋</span> {t('additionalInfo')}
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Dietary Restrictions */}
+          {/* KBRI Proof Upload - Only for Indonesian Citizens */}
+          {formData.citizenship === 'indonesia' && (
             <div className="space-y-2">
-              <label style={{ color: colors.frost }} className="block font-medium">{t('dietaryRestrictions')}</label>
-              <input
-                type="text"
-                name="dietaryRestrictions"
-                value={formData.dietaryRestrictions}
-                onChange={handleChange}
-                placeholder={t('dietaryPlaceholder')}
-                style={inputBaseStyles}
-              />
+              <label style={{ color: colors.frost }} className="block font-medium">
+                {t('kbriProof')} <span style={{ color: colors.campRed }}>*</span>
+              </label>
+              <p style={{ color: colors.frostDark }} className="text-sm mb-2">
+                {t('kbriProofDescription')}
+              </p>
+              <div 
+                className="relative border-2 border-dashed rounded-xl p-6 text-center cursor-pointer hover:bg-white/5 transition-colors"
+                style={{ 
+                  borderColor: errors.kbriProof ? colors.campRed : 'rgba(255, 255, 255, 0.2)',
+                  backgroundColor: formData.kbriProof ? 'rgba(79, 172, 254, 0.1)' : 'transparent'
+                }}
+              >
+                <input
+                  type="file"
+                  name="kbriProof"
+                  accept="image/*,.pdf"
+                  onChange={handleChange}
+                  className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                />
+                {formData.kbriProofName ? (
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-2xl">✅</span>
+                    <span style={{ color: colors.frost }}>{formData.kbriProofName}</span>
+                  </div>
+                ) : (
+                  <div>
+                    <span className="text-4xl block mb-2">📎</span>
+                    <span style={{ color: colors.frostDark }}>{t('uploadFile')}</span>
+                    <p style={{ color: colors.frostDark }} className="text-xs mt-1">{t('maxFileSize')}</p>
+                  </div>
+                )}
+              </div>
+              {errors.kbriProof && <p style={{ color: colors.campRed }} className="text-sm">{errors.kbriProof}</p>}
             </div>
+          )}
 
-            {/* Allergies */}
-            <div className="space-y-2">
-              <label style={{ color: colors.frost }} className="block font-medium">{t('allergies')}</label>
-              <input
-                type="text"
-                name="allergies"
-                value={formData.allergies}
-                onChange={handleChange}
-                placeholder={t('allergiesPlaceholder')}
-                style={inputBaseStyles}
-              />
+          {/* Allergies */}
+          <div className="space-y-2">
+            <label style={{ color: colors.frost }} className="block font-medium">{t('allergies')}</label>
+            <p style={{ color: colors.frostDark }} className="text-sm mb-2">
+              {t('foodIsHalal')}
+            </p>
+            <input
+              type="text"
+              name="allergies"
+              value={formData.allergies}
+              onChange={handleChange}
+              placeholder={t('allergiesPlaceholder')}
+              style={inputBaseStyles}
+            />
+          </div>
+
+          {/* Want to Perform */}
+          <div className="space-y-4">
+            <label style={{ color: colors.frost }} className="block font-medium">
+              {t('wantToPerform')}
+            </label>
+            <div className="flex flex-wrap gap-4">
+              <label
+                className="flex-1 min-w-[150px] flex items-center gap-3 p-4 rounded-xl cursor-pointer transition-all"
+                style={{
+                  backgroundColor: formData.wantToPerform === 'yes' 
+                    ? 'rgba(79, 172, 254, 0.2)' 
+                    : 'rgba(255, 255, 255, 0.05)',
+                  border: `1px solid ${formData.wantToPerform === 'yes' ? colors.auroraBlue : 'rgba(255, 255, 255, 0.2)'}`
+                }}
+              >
+                <input
+                  type="radio"
+                  name="wantToPerform"
+                  value="yes"
+                  checked={formData.wantToPerform === 'yes'}
+                  onChange={handleChange}
+                  className="w-5 h-5"
+                  style={{ accentColor: colors.auroraBlue }}
+                />
+                <span style={{ color: colors.frost }}>{t('yesPerform')}</span>
+              </label>
+              <label
+                className="flex-1 min-w-[150px] flex items-center gap-3 p-4 rounded-xl cursor-pointer transition-all"
+                style={{
+                  backgroundColor: formData.wantToPerform === 'no' 
+                    ? 'rgba(255, 255, 255, 0.1)' 
+                    : 'rgba(255, 255, 255, 0.05)',
+                  border: `1px solid ${formData.wantToPerform === 'no' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.2)'}`
+                }}
+              >
+                <input
+                  type="radio"
+                  name="wantToPerform"
+                  value="no"
+                  checked={formData.wantToPerform === 'no'}
+                  onChange={handleChange}
+                  className="w-5 h-5"
+                  style={{ accentColor: colors.frostDark }}
+                />
+                <span style={{ color: colors.frost }}>{t('noPerform')}</span>
+              </label>
             </div>
+            
+            {/* Performance Details - shown if yes */}
+            {formData.wantToPerform === 'yes' && (
+              <div className="space-y-2 mt-4">
+                <label style={{ color: colors.frost }} className="block font-medium">
+                  {t('performanceDetails')} <span style={{ color: colors.campRed }}>*</span>
+                </label>
+                <textarea
+                  name="performanceDetails"
+                  value={formData.performanceDetails}
+                  onChange={handleChange}
+                  placeholder={t('performanceDetailsPlaceholder')}
+                  rows="3"
+                  style={{
+                    ...(errors.performanceDetails ? inputErrorStyles : inputBaseStyles),
+                    resize: 'none'
+                  }}
+                />
+                {errors.performanceDetails && <p style={{ color: colors.campRed }} className="text-sm">{errors.performanceDetails}</p>}
+              </div>
+            )}
           </div>
         </div>
 

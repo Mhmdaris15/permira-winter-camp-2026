@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Background from './components/Background/Background';
@@ -13,6 +13,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const { t } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavHidden, setIsNavHidden] = useState(false);
+  const lastScrollY = useRef(0);
   
   // Refs for GSAP animations
   const headerRef = useRef(null);
@@ -21,6 +24,26 @@ function App() {
   const heroIconsRef = useRef(null);
   const mainContentRef = useRef(null);
   const footerRef = useRef(null);
+
+  // Handle scroll to hide/show navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scrolling down - hide navbar
+        setIsNavHidden(true);
+      } else {
+        // Scrolling up - show navbar
+        setIsNavHidden(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     // Create GSAP context for cleanup
@@ -170,11 +193,15 @@ function App() {
       
       {/* Content Layer */}
       <div className="relative z-10">
-        {/* Header */}
-        <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 glass">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center flex-wrap gap-4">
+        {/* Header with Hamburger Menu */}
+        <header 
+          ref={headerRef} 
+          className={`fixed top-0 left-0 right-0 z-50 glass transition-transform duration-300 ${isNavHidden && !isMenuOpen ? '-translate-y-full' : 'translate-y-0'}`}
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            {/* Logo */}
             <div className="flex items-center gap-3">
-              <span className="text-3xl" style={{ display: 'inline-block' }}>🌌</span>
+              <span className="text-3xl" style={{ display: 'inline-block' }}>🏰</span>
               <div>
                 <h1 
                   className="font-adventure text-2xl md:text-3xl tracking-wider"
@@ -190,7 +217,40 @@ function App() {
                 <p className="text-xs text-frost-dark opacity-80">by PERMIRA Saint Petersburg</p>
               </div>
             </div>
-            <LanguageSelector />
+            
+            {/* Desktop Language Selector */}
+            <div className="hidden md:block">
+              <LanguageSelector />
+            </div>
+            
+            {/* Hamburger Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+              aria-label="Toggle menu"
+            >
+              <div className="w-6 h-5 relative flex flex-col justify-between">
+                <span 
+                  className={`w-full h-0.5 bg-frost transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
+                />
+                <span 
+                  className={`w-full h-0.5 bg-frost transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}
+                />
+                <span 
+                  className={`w-full h-0.5 bg-frost transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+                />
+              </div>
+            </button>
+          </div>
+          
+          {/* Mobile Menu Dropdown */}
+          <div 
+            className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-40 py-4' : 'max-h-0'}`}
+            style={{ borderTop: isMenuOpen ? '1px solid rgba(255,255,255,0.1)' : 'none' }}
+          >
+            <div className="px-4">
+              <LanguageSelector />
+            </div>
           </div>
         </header>
 

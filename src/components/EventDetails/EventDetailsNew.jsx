@@ -41,12 +41,12 @@ const IconOrganizer = () => (
 );
 
 const activities = [
-  { key: 'skiing', icon: '🌌' },
-  { key: 'hiking', icon: '🏕️' },
+  { key: 'skiing', icon: '�' },
+  { key: 'hiking', icon: '🏛️' },
   { key: 'bonfire', icon: '🔥' },
   { key: 'workshops', icon: '📸' },
   { key: 'photography', icon: '🇮🇩' },
-  { key: 'games', icon: '🗺️' }
+  { key: 'games', icon: '🎭' }
 ];
 
 function EventDetails() {
@@ -225,7 +225,7 @@ function EventDetails() {
 
         {/* Location Card */}
         <a 
-          href="https://yandex.com/maps/-/CLTAeQ~2"
+          href="https://yandex.com/maps/-/CHEsRLUd"
           target="_blank"
           rel="noopener noreferrer"
           className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300 cursor-pointer block"
@@ -249,7 +249,7 @@ function EventDetails() {
               </h3>
               <p style={{ color: colors.frost }} className="text-lg">{t('locationValue')}</p>
               <p style={{ color: colors.frostDark }} className="text-xs mt-1 flex items-center gap-1">
-                <span>📍</span> 68.970663, 33.074918
+                <span>📍</span> 59.714°N, 30.395°E (Pushkin)
                 <span className="ml-2 text-auroraCyan">→ View on Map</span>
               </p>
             </div>
@@ -291,7 +291,7 @@ function EventDetails() {
       </div>
 
       {/* Map Section */}
-      <div className="glass rounded-2xl p-6 md:p-8 overflow-hidden">
+      <div className="glass rounded-2xl p-6 md:p-8 overflow-hidden mb-8">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-3xl">🗺️</span>
           <h3 
@@ -303,23 +303,42 @@ function EventDetails() {
         </div>
         
         <p style={{ color: colors.frostDark }} className="text-base mb-4">
-          Murmansk, Russia — Gateway to the Northern Lights (68.970663°N, 33.074918°E)
+          Pushkin (Tsarskoye Selo), Saint Petersburg, Russia — Near Catherine Palace (59.714°N, 30.395°E)
         </p>
         
         <div className="rounded-xl overflow-hidden" style={{ border: '2px solid rgba(255, 255, 255, 0.1)' }}>
           <iframe
-            src="https://yandex.com/map-widget/v1/?ll=33.074918%2C68.970663&z=12&l=map&pt=33.074918%2C68.970663%2Cpm2rdm"
+            src="https://yandex.com/map-widget/v1/?ll=30.395%2C59.714&z=13&l=map&pt=30.395%2C59.714%2Cpm2rdm"
             width="100%"
             height="350"
             frameBorder="0"
             allowFullScreen
             style={{ display: 'block' }}
-            title="Event Location - Murmansk, Russia"
+            title="Event Location - Pushkin, Saint Petersburg"
           />
         </div>
         
+        {/* Nearby Attractions */}
+        <div className="mt-6 grid md:grid-cols-3 gap-4">
+          <div className="p-4 rounded-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+            <span className="text-2xl">🏰</span>
+            <h4 style={{ color: colors.frost }} className="font-semibold mt-2">Catherine Palace</h4>
+            <p style={{ color: colors.frostDark }} className="text-sm">г. Пушкин, ул. Садовая, д. 7</p>
+          </div>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+            <span className="text-2xl">🏛️</span>
+            <h4 style={{ color: colors.frost }} className="font-semibold mt-2">Peterhof Palace</h4>
+            <p style={{ color: colors.frostDark }} className="text-sm">г. Петергоф, ул. Разводная, д. 2</p>
+          </div>
+          <div className="p-4 rounded-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+            <span className="text-2xl">🎭</span>
+            <h4 style={{ color: colors.frost }} className="font-semibold mt-2">Hermitage (Old Village)</h4>
+            <p style={{ color: colors.frostDark }} className="text-sm">Заусадебная улица, дом 37 "В"</p>
+          </div>
+        </div>
+        
         <a 
-          href="https://yandex.com/maps/-/CLTAeQ~2"
+          href="https://yandex.com/maps/-/CHEsRLUd"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
@@ -338,7 +357,7 @@ function EventDetails() {
       {/* Event Overview */}
       <div ref={overviewRef} className="glass rounded-2xl p-6 md:p-8">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-3xl">🗻</span>
+          <span className="text-3xl">🏰</span>
           <h3 
             className="font-adventure text-2xl tracking-wide"
             style={{ color: colors.frost }}

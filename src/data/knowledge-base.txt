@@ -2,88 +2,99 @@
 # This file serves as the RAG (Retrieval-Augmented Generation) context for the AI chatbot
 
 ## EVENT OVERVIEW
-Winter Camp 2026 is an exciting 6-day winter adventure event that brings together participants from around the world for an unforgettable experience in the Swiss Alps.
+Winter Camp 2026 is an exciting 2-day winter cultural event organized by PERMIRA Saint Petersburg that brings together Indonesian students and participants from around the world for an unforgettable experience near the historic palaces of Saint Petersburg, Russia.
 
 ## EVENT DETAILS
 - Event Name: Winter Camp 2026
-- Dates: January 15-20, 2026
-- Location: Alpine Mountain Resort, Switzerland
-- Duration: 6 days / 5 nights
+- Dates: February 2-3, 2026
+- Location: Pushkin (Tsarskoye Selo), Saint Petersburg, Russia
+- Accommodation: Traditional Russian Dacha
+- Duration: 2 days / 1 night
 - Registration Fee: FREE
-- Target Audience: International students and young professionals
+- Organizer: PERMIRA Saint Petersburg (Indonesian Student Association)
+- Contact: @irazkisra (Telegram)
+
+## ACCOMMODATION OPTIONS
+The event offers dacha (traditional Russian cottage) accommodation in the Saint Petersburg area:
+
+### Option 1: Strelna
+- Location: Санкт-Петербург, Петродворцовый район, поселок Стрельна
+- Near Konstantinovsky Palace
+- Cost: 25,000-35,000₽/day (low season), 45,000-55,000₽/day (high season)
+- Nearby: Большой Петергофский дворец (Grand Peterhof Palace)
+
+### Option 2: Pushkin (Recommended)
+- Location: Near Пулковское шоссе, Пушкинский район
+- Address: пос. Александровская, ул. Встреч, 15
+- Cost: ~50,000₽/day
+- Nearby Museums:
+  1. Екатерининский дворец (Catherine Palace) - г. Пушкин, ул. Садовая, д. 7
+  2. Музей "Россия в великой войне" - г. Пушкин, Фермская дорога 5А
+
+### Option 3: Chernaya Rechka
+- Location: Санкт-Петербург, Приморский, Дибуновская улица, 32
+- Cost: ~1,500,000₽/month
+- Nearby: Эрмитаж старая деревня (Hermitage Old Village) - Заусадебная улица, дом 37 "В"
 
 ## ACTIVITIES INCLUDED
 
-### Day 1 - Arrival & Welcome
-- Airport pickup and transfer to resort
-- Welcome ceremony and orientation
-- Ice-breaker activities
-- Welcome dinner with traditional Swiss cuisine
+### Day 1 - Arrival & Cultural Exploration
+- Arrival and check-in at the dacha
+- Visit to Catherine Palace (Екатерининский дворец)
+- Group photos at historic sites
+- Welcome dinner with traditional Russian cuisine
+- Evening bonfire gathering at the dacha
 
-### Day 2-3 - Snow Sports
-- Professional skiing lessons for all levels (beginner to advanced)
-- Snowboarding lessons and workshops
-- Cross-country skiing introduction
-- Snow tubing fun activities
+### Day 2 - Palace Tour & Cultural Exchange
+- Visit to Peterhof Grand Palace (Большой Петергофский дворец)
+- Photography sessions at winter palace gardens
+- Cultural exchange activities
+- Indonesian-Russian cultural sharing
+- Farewell lunch and departure
 
-### Day 4 - Mountain Adventure
-- Guided mountain hiking expeditions
-- Winter survival workshops
-- Snow shelter building
-- Emergency preparedness training
+## TRANSPORTATION
+Bus rental available from SPB-Bus company:
+- Mercedes Sprinter 516 VIP (микроавтобус)
+- JAC bus options for larger groups
+- Website: https://www.spb-bus.ru/
 
-### Day 5 - Creative & Team Building
-- Snow photography sessions with professional guidance
-- Team building activities and snow games
-- Snowman building competition
-- Winter art workshop
+## NEARBY ATTRACTIONS
 
-### Day 6 - Celebration & Departure
-- Final group activities
-- Award ceremony
-- Farewell brunch
-- Transfer to airport
+### Palaces
+1. Catherine Palace (Екатерининский дворец)
+   - Address: г. Пушкин, ул. Садовая, д. 7
+   - Famous for the Amber Room
 
-## EVENING PROGRAMS
-- Evening bonfire gatherings with hot cocoa and marshmallows
-- Stargazing sessions (weather permitting)
-- Cultural exchange nights
-- Movie nights with winter-themed films
-- Game nights and karaoke
+2. Grand Peterhof Palace (Большой Петергофский дворец)
+   - Address: г. Петергоф, ул. Разводная, д. 2
+   - Known as the "Russian Versailles"
 
-## ACCOMMODATION
-- Comfortable shared rooms at Alpine Mountain Resort
-- Heating and hot water provided
-- Wi-Fi available throughout the resort
-- Laundry facilities accessible
-- 24/7 reception and security
+### Museums
+1. Hermitage Old Village (Эрмитаж старая деревня)
+   - Address: Заусадебная улица, дом 37 "В"
+   - Storage facility with rotating exhibitions
 
-## MEALS
-- All meals included (breakfast, lunch, dinner)
-- Special dietary requirements accommodated:
-  - Vegetarian options
-  - Vegan options
-  - Halal food
-  - Kosher food
-  - Gluten-free options
-  - Other allergies (please specify during registration)
+2. "Russia in the Great War" Museum
+   - Address: Санкт-Петербург, г. Пушкин, Фермская дорога 5А
 
 ## WHAT TO BRING
-- Warm winter clothing (layers recommended)
+- Warm winter clothing (layers recommended, temperatures can reach -15°C)
 - Waterproof jacket and pants
-- Winter boots
+- Winter boots (essential for snow)
 - Gloves, hat, and scarf
-- Sunglasses and sunscreen
+- Thermal underwear
 - Personal medications
-- Valid passport and travel documents
-- Travel insurance (required)
+- Valid passport and visa (if required)
+- Camera for palace photography
 
-## EQUIPMENT PROVIDED
-- Ski equipment (skis, boots, poles)
-- Snowboard equipment
-- Helmets
-- Snow shoes for hiking
-- Safety gear
+## MEALS
+- All meals included during the event
+- Traditional Russian cuisine
+- Special dietary requirements accommodated:
+  - 100% Halal food available
+  - No pork/lard options
+  - Vegetarian options
+  - Other allergies (please specify during registration)
 
 ## REGISTRATION PROCESS
 1. Fill out the online registration form on this website
@@ -91,50 +102,54 @@ Winter Camp 2026 is an exciting 6-day winter adventure event that brings togethe
 3. Specify any dietary restrictions or allergies
 4. Accept terms and conditions
 5. Submit your application
-6. Receive confirmation email within 48 hours
-7. Attend pre-departure online orientation
+6. Contact @irazkisra on Telegram for confirmation
+7. Receive event details and meeting point information
 
 ## ELIGIBILITY
-- Age: 18-35 years old
-- Must be physically fit for outdoor activities
-- No prior skiing/snowboarding experience required
+- Open to Indonesian students and international participants
+- Must be physically fit for walking tours of palaces
+- Must have valid travel documents for Russia
+- Students and young professionals welcome
 - Must have valid travel documents
 - Must have travel insurance
 
 ## IMPORTANT CONTACTS
-- Emergency Contact: +41 XX XXX XXXX
-- Email: wintercamp2026@example.com
-- Website: wintercamp2026.example.com
+- Telegram: @irazkisra (Organizer)
+- Organization: PERMIRA Saint Petersburg
+- Website: https://mhmdaris15.github.io/permira-winter-camp-2026/
 
 ## FREQUENTLY ASKED QUESTIONS
 
-Q: Do I need skiing experience?
-A: No! We welcome beginners and provide professional lessons for all skill levels.
+Q: Where is the event located?
+A: The event takes place in Pushkin (Tsarskoye Selo) near Saint Petersburg, Russia, with dacha accommodation and visits to famous palaces like Catherine Palace and Peterhof.
+
+Q: What is a dacha?
+A: A dacha is a traditional Russian countryside cottage. We'll be staying at a comfortable dacha near the historic palaces of Saint Petersburg.
 
 Q: What if I have food allergies?
-A: Please specify all dietary restrictions and allergies in the registration form. We accommodate all dietary needs.
+A: Please specify all dietary restrictions and allergies in the registration form. We provide 100% halal options and accommodate all dietary needs including no pork/lard.
 
 Q: Is the event really free?
-A: Yes! Winter Camp 2026 is completely free for selected participants. You only need to cover your travel costs to Switzerland.
+A: Yes! Winter Camp 2026 is organized by PERMIRA for Indonesian students and interested participants. You only need to cover your travel costs to Saint Petersburg.
 
 Q: What language is used?
-A: English is the main language of communication. However, we have multilingual staff who speak Indonesian, Russian, and other languages.
+A: English, Indonesian, and Russian are used. We have multilingual staff and participants.
 
-Q: Can I bring my own equipment?
-A: Yes, you can bring your own ski/snowboard equipment if you prefer.
+Q: What will we visit?
+A: The program includes visits to Catherine Palace (famous for the Amber Room), Peterhof Grand Palace (Russian Versailles), and potentially the Hermitage Old Village branch.
 
-Q: What is the cancellation policy?
-A: Please inform us at least 2 weeks before the event if you need to cancel. Last-minute cancellations may affect future applications.
+Q: How cold will it be?
+A: February in Saint Petersburg can be cold (-5°C to -15°C). Please bring warm winter clothing, thermal underwear, and proper winter boots.
 
-Q: Is there medical support?
-A: Yes, we have first aid trained staff on-site and the resort has a medical clinic nearby.
+Q: How do I contact the organizer?
+A: Contact @irazkisra on Telegram for any questions or registration confirmation.
 
-Q: What about COVID-19 measures?
-A: We follow all current health guidelines. Please check for any travel requirements before your trip.
+Q: Is there transportation provided?
+A: Bus transportation can be arranged through SPB-Bus company for palace visits and transfers.
 
 ## DEVELOPER INFORMATION
 This web application was developed by Muhammad Aris Septanugroho.
 LinkedIn: https://www.linkedin.com/in/muhammad-aris-septanugroho/
 
 ## LAST UPDATED
-December 2025
+January 2026

@@ -3,7 +3,7 @@ export const translations = {
     translation: {
       // Header
       title: "Winter Camp 2026",
-      subtitle: "Experience the magical Aurora Borealis in Murmansk with PERMIRA!",
+      subtitle: "Experience the magic of Saint Petersburg's winter palaces with PERMIRA!",
       
       // Language selector
       language: "Language",
@@ -13,18 +13,18 @@ export const translations = {
       dateTime: "Date & Time",
       dateTimeValue: "February 2-3, 2026",
       location: "Location",
-      locationValue: "Murmansk, Russia",
+      locationValue: "Pushkin, Saint Petersburg, Russia",
       organizer: "Organizer",
       organizerValue: "PERMIRA Saint Petersburg",
       eventOverview: "Event Overview",
-      eventDescription: "Join us for an unforgettable Aurora Borealis adventure! Winter Camp 2026 by PERMIRA includes:",
+      eventDescription: "Join us for an unforgettable Russian winter experience! Winter Camp 2026 by PERMIRA features dacha accommodation near world-famous palaces:",
       activities: {
-        skiing: "Aurora Borealis (Northern Lights) viewing",
-        hiking: "Arctic camping experience",
-        bonfire: "Bonfire gatherings under the stars",
-        workshops: "Photography sessions of the aurora",
+        skiing: "Visit Catherine Palace (Ekaterininsky Dvorets)",
+        hiking: "Explore Peterhof Grand Palace",
+        bonfire: "Cozy bonfire gatherings at the dacha",
+        workshops: "Photography at historical sites",
         photography: "Cultural exchange with Indonesian students",
-        games: "Exploration of Murmansk"
+        games: "Visit Hermitage Museum (Old Village branch)"
       },
       
       // Registration Form
@@ -54,12 +54,10 @@ export const translations = {
       email: "Email Address",
       emailPlaceholder: "your.email@example.com",
       socialMedia: "Social Media (Optional)",
-      instagram: "Instagram",
-      instagramPlaceholder: "@username",
-      twitter: "Twitter/X",
-      twitterPlaceholder: "@username",
-      linkedin: "LinkedIn",
-      linkedinPlaceholder: "Profile URL or username",
+      vk: "VK",
+      vkPlaceholder: "VK profile link or ID",
+      telegramUsername: "Telegram",
+      telegramPlaceholder: "@username",
       
       // How did you hear about us
       hearAboutUs: "How did you hear about this event?",
@@ -74,10 +72,24 @@ export const translations = {
       },
       
       // Dietary & Allergies
-      dietaryRestrictions: "Dietary Restrictions",
-      dietaryPlaceholder: "e.g., 100% halal, no pork, no lard, vegetarian",
+      foodIsHalal: "All food served is 100% Halal",
       allergies: "Allergies",
       allergiesPlaceholder: "e.g., peanuts, lactose, seafood, gluten",
+      
+      // KBRI Proof (Indonesian citizens)
+      kbriProof: "KBRI Registration Proof (Lapor Diri)",
+      kbriProofDescription: "Upload screenshot of your KBRI registration (max 2MB)",
+      uploadFile: "Upload File",
+      maxFileSize: "Max file size: 2MB",
+      fileTooLarge: "File size exceeds 2MB limit",
+      kbriRequired: "KBRI proof is required for Indonesian citizens",
+      
+      // Performance
+      wantToPerform: "Would you like to perform something at the event?",
+      yesPerform: "Yes, I'd like to perform",
+      noPerform: "No, thank you",
+      performanceDetails: "What would you like to perform?",
+      performanceDetailsPlaceholder: "Describe your performance (e.g., singing, dancing, poetry, music, etc.)",
       
       // Terms & Participation
       termsConditions: "Terms & Conditions",
@@ -135,7 +147,7 @@ export const translations = {
     translation: {
       // Header
       title: "Winter Camp 2026",
-      subtitle: "Rasakan keajaiban Aurora Borealis di Murmansk bersama PERMIRA!",
+      subtitle: "Rasakan keajaiban istana musim dingin Saint Petersburg bersama PERMIRA!",
       
       // Language selector
       language: "Bahasa",
@@ -145,18 +157,18 @@ export const translations = {
       dateTime: "Tanggal & Waktu",
       dateTimeValue: "2-3 Februari 2026",
       location: "Lokasi",
-      locationValue: "Murmansk, Rusia",
+      locationValue: "Pushkin, Saint Petersburg, Rusia",
       organizer: "Penyelenggara",
       organizerValue: "PERMIRA Saint Petersburg",
       eventOverview: "Ringkasan Acara",
-      eventDescription: "Bergabunglah dalam petualangan Aurora Borealis yang tak terlupakan! Winter Camp 2026 oleh PERMIRA meliputi:",
+      eventDescription: "Bergabunglah dalam pengalaman musim dingin Rusia yang tak terlupakan! Winter Camp 2026 oleh PERMIRA menawarkan akomodasi dacha di dekat istana-istana terkenal dunia:",
       activities: {
-        skiing: "Melihat Aurora Borealis (Cahaya Utara)",
-        hiking: "Pengalaman berkemah di Arktik",
-        bonfire: "Api unggun di bawah bintang-bintang",
-        workshops: "Sesi fotografi aurora",
+        skiing: "Kunjungi Istana Catherine (Ekaterininsky Dvorets)",
+        hiking: "Jelajahi Istana Besar Peterhof",
+        bonfire: "Api unggun di dacha yang nyaman",
+        workshops: "Fotografi di situs bersejarah",
         photography: "Pertukaran budaya dengan mahasiswa Indonesia",
-        games: "Eksplorasi Murmansk"
+        games: "Kunjungi Museum Hermitage (cabang Old Village)"
       },
       
       // Registration Form
@@ -186,12 +198,10 @@ export const translations = {
       email: "Alamat Email",
       emailPlaceholder: "email.anda@contoh.com",
       socialMedia: "Media Sosial (Opsional)",
-      instagram: "Instagram",
-      instagramPlaceholder: "@namapengguna",
-      twitter: "Twitter/X",
-      twitterPlaceholder: "@namapengguna",
-      linkedin: "LinkedIn",
-      linkedinPlaceholder: "URL Profil atau nama pengguna",
+      vk: "VK",
+      vkPlaceholder: "Link profil VK atau ID",
+      telegramUsername: "Telegram",
+      telegramPlaceholder: "@namapengguna",
       
       // How did you hear about us
       hearAboutUs: "Dari mana Anda mendengar tentang acara ini?",
@@ -206,10 +216,24 @@ export const translations = {
       },
       
       // Dietary & Allergies
-      dietaryRestrictions: "Pembatasan Makanan",
-      dietaryPlaceholder: "contoh: 100% halal, tanpa babi, tanpa lemak babi, vegetarian",
+      foodIsHalal: "Semua makanan yang disajikan 100% Halal",
       allergies: "Alergi",
       allergiesPlaceholder: "contoh: kacang, laktosa, makanan laut, gluten",
+      
+      // KBRI Proof (Indonesian citizens)
+      kbriProof: "Bukti Lapor Diri KBRI",
+      kbriProofDescription: "Unggah screenshot bukti lapor diri KBRI (maks 2MB)",
+      uploadFile: "Unggah File",
+      maxFileSize: "Ukuran file maks: 2MB",
+      fileTooLarge: "Ukuran file melebihi batas 2MB",
+      kbriRequired: "Bukti lapor diri KBRI wajib untuk WNI",
+      
+      // Performance
+      wantToPerform: "Apakah Anda ingin tampil di acara ini?",
+      yesPerform: "Ya, saya ingin tampil",
+      noPerform: "Tidak, terima kasih",
+      performanceDetails: "Apa yang ingin Anda tampilkan?",
+      performanceDetailsPlaceholder: "Jelaskan penampilan Anda (misalnya: menyanyi, menari, puisi, musik, dll.)",
       
       // Terms & Participation
       termsConditions: "Syarat & Ketentuan",
@@ -267,7 +291,7 @@ export const translations = {
     translation: {
       // Header
       title: "Зимний Лагерь 2026",
-      subtitle: "Испытайте волшебство Северного Сияния в Мурманске с PERMIRA!",
+      subtitle: "Окунитесь в волшебство зимних дворцов Санкт-Петербурга с PERMIRA!",
       
       // Language selector
       language: "Язык",
@@ -277,18 +301,18 @@ export const translations = {
       dateTime: "Дата и Время",
       dateTimeValue: "2-3 февраля 2026",
       location: "Место проведения",
-      locationValue: "Мурманск, Россия",
+      locationValue: "Пушкин, Санкт-Петербург, Россия",
       organizer: "Организатор",
       organizerValue: "PERMIRA Санкт-Петербург",
       eventOverview: "Обзор Мероприятия",
-      eventDescription: "Присоединяйтесь к незабываемому приключению с Северным Сиянием! Зимний Лагерь 2026 от PERMIRA включает:",
+      eventDescription: "Присоединяйтесь к незабываемому зимнему приключению в России! Зимний Лагерь 2026 от PERMIRA предлагает проживание на даче рядом с всемирно известными дворцами:",
       activities: {
-        skiing: "Наблюдение за Северным Сиянием",
-        hiking: "Арктический кемпинг",
-        bonfire: "Костёр под звёздами",
-        workshops: "Фотосессия северного сияния",
+        skiing: "Посещение Екатерининского дворца",
+        hiking: "Экскурсия в Большой Петергофский дворец",
+        bonfire: "Уютные посиделки у костра на даче",
+        workshops: "Фотосессия у исторических достопримечательностей",
         photography: "Культурный обмен с индонезийскими студентами",
-        games: "Исследование Мурманска"
+        games: "Посещение Эрмитажа (филиал Старая Деревня)"
       },
       
       // Registration Form
@@ -298,7 +322,7 @@ export const translations = {
       additionalInfo: "Дополнительная Информация",
       citizenship: "Гражданство",
       selectCitizenship: "Выберите гражданство",
-      fullName: "Полное Имя",
+      fullName: "Ф.И.О",
       fullNamePlaceholder: "Введите ваше полное имя",
       university: "Университет/Учреждение",
       universityPlaceholder: "Введите ваш университет или учреждение",
@@ -318,12 +342,10 @@ export const translations = {
       email: "Электронная Почта",
       emailPlaceholder: "ваш.email@example.com",
       socialMedia: "Социальные Сети (По желанию)",
-      instagram: "Instagram",
-      instagramPlaceholder: "@имяпользователя",
-      twitter: "Twitter/X",
-      twitterPlaceholder: "@имяпользователя",
-      linkedin: "LinkedIn",
-      linkedinPlaceholder: "URL профиля или имя пользователя",
+      vk: "ВКонтакте",
+      vkPlaceholder: "Ссылка на профиль или ID",
+      telegramUsername: "Telegram",
+      telegramPlaceholder: "@имяпользователя",
       
       // How did you hear about us
       hearAboutUs: "Как вы узнали о мероприятии?",
@@ -338,10 +360,24 @@ export const translations = {
       },
       
       // Dietary & Allergies
-      dietaryRestrictions: "Диетические Ограничения",
-      dietaryPlaceholder: "например: 100% халяль, без свинины, без сала, вегетарианец",
+      foodIsHalal: "Все блюда 100% Халяль",
       allergies: "Аллергии",
       allergiesPlaceholder: "например: арахис, лактоза, морепродукты, глютен",
+      
+      // KBRI Proof (Indonesian citizens)
+      kbriProof: "Подтверждение регистрации в KBRI",
+      kbriProofDescription: "Загрузите скриншот регистрации в KBRI (макс. 2МБ)",
+      uploadFile: "Загрузить файл",
+      maxFileSize: "Макс. размер файла: 2МБ",
+      fileTooLarge: "Размер файла превышает лимит 2МБ",
+      kbriRequired: "Подтверждение KBRI обязательно для граждан Индонезии",
+      
+      // Performance
+      wantToPerform: "Хотите ли вы выступить на мероприятии?",
+      yesPerform: "Да, я хочу выступить",
+      noPerform: "Нет, спасибо",
+      performanceDetails: "Что вы хотите исполнить?",
+      performanceDetailsPlaceholder: "Опишите ваше выступление (например: пение, танцы, поэзия, музыка и т.д.)",
       
       // Terms & Participation
       termsConditions: "Правила и Условия",
