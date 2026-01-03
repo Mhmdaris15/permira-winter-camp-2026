@@ -97,8 +97,8 @@ export const translations = {
       willingnessToParticipate: "Willingness to Participate",
       yes: "Yes, I'm excited to participate!",
       no: "No, I'm not sure yet",
-      reasonForJoining: "Reason for Joining",
-      reasonPlaceholder: "Tell us why you want to join Winter Camp 2026...",
+      reasonForJoining: "Tell us why you want to join Winter Camp 2026...",
+      reasonPlaceholder: "e.g., I want to experience Russian winter culture and visit the beautiful palaces of Saint Petersburg...",
       
       // Buttons
       submit: "Submit Registration",
@@ -241,8 +241,8 @@ export const translations = {
       willingnessToParticipate: "Kesediaan untuk Berpartisipasi",
       yes: "Ya, saya sangat ingin berpartisipasi!",
       no: "Tidak, saya belum yakin",
-      reasonForJoining: "Alasan Bergabung",
-      reasonPlaceholder: "Ceritakan mengapa Anda ingin bergabung dengan Kemah Musim Dingin 2026...",
+      reasonForJoining: "Ceritakan mengapa Anda ingin bergabung dengan Kemah Musim Dingin 2026...",
+      reasonPlaceholder: "contoh: Saya ingin merasakan budaya musim dingin Rusia dan mengunjungi istana-istana indah Saint Petersburg...",
       
       // Buttons
       submit: "Kirim Pendaftaran",
@@ -385,8 +385,8 @@ export const translations = {
       willingnessToParticipate: "Готовность Участвовать",
       yes: "Да, я с нетерпением жду участия!",
       no: "Нет, я пока не уверен",
-      reasonForJoining: "Причина Участия",
-      reasonPlaceholder: "Расскажите, почему вы хотите присоединиться к Зимнему Лагерю 2026...",
+      reasonForJoining: "Расскажите, почему вы хотите присоединиться к Зимнему Лагерю 2026...",
+      reasonPlaceholder: "например: Я хочу познакомиться с русской зимней культурой и посетить прекрасные дворцы Санкт-Петербурга...",
       
       // Buttons
       submit: "Отправить Регистрацию",
