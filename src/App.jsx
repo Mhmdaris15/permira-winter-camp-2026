@@ -13,7 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const { t } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isNavHidden, setIsNavHidden] = useState(false);
   const lastScrollY = useRef(0);
   
@@ -193,18 +192,18 @@ function App() {
       
       {/* Content Layer */}
       <div className="relative z-10">
-        {/* Header with Hamburger Menu */}
+        {/* Header */}
         <header 
           ref={headerRef} 
-          className={`fixed top-0 left-0 right-0 z-50 glass transition-transform duration-300 ${isNavHidden && !isMenuOpen ? '-translate-y-full' : 'translate-y-0'}`}
+          className={`fixed top-0 left-0 right-0 z-50 glass transition-transform duration-300 ${isNavHidden ? '-translate-y-full' : 'translate-y-0'}`}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+          <div className="max-w-7xl mx-auto px-3 py-2 flex justify-between items-center">
             {/* Logo */}
-            <div className="flex items-center gap-3">
-              <span className="text-3xl" style={{ display: 'inline-block' }}>🏰</span>
+            <div className="flex items-center gap-2">
+              <span className="text-xl" style={{ display: 'inline-block' }}>🏰</span>
               <div>
                 <h1 
-                  className="font-adventure text-2xl md:text-3xl tracking-wider"
+                  className="font-adventure text-lg md:text-xl tracking-wider"
                   style={{ 
                     background: 'linear-gradient(90deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%)',
                     WebkitBackgroundClip: 'text',
@@ -214,48 +213,20 @@ function App() {
                 >
                   {t('title')}
                 </h1>
-                <p className="text-xs text-frost-dark opacity-80">by PERMIRA Saint Petersburg</p>
+                <p className="text-[10px] text-frost-dark opacity-80">by PERMIRA Saint Petersburg</p>
               </div>
             </div>
             
-            {/* Desktop Language Selector */}
-            <div className="hidden md:block">
-              <LanguageSelector />
-            </div>
-            
-            {/* Hamburger Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
-              aria-label="Toggle menu"
-            >
-              <div className="w-6 h-5 relative flex flex-col justify-between">
-                <span 
-                  className={`w-full h-0.5 bg-frost transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
-                />
-                <span 
-                  className={`w-full h-0.5 bg-frost transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}
-                />
-                <span 
-                  className={`w-full h-0.5 bg-frost transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
-                />
-              </div>
-            </button>
-          </div>
-          
-          {/* Mobile Menu Dropdown */}
-          <div 
-            className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-40 py-4' : 'max-h-0'}`}
-            style={{ borderTop: isMenuOpen ? '1px solid rgba(255,255,255,0.1)' : 'none' }}
-          >
-            <div className="px-4">
-              <LanguageSelector />
-            </div>
+            {/* Language Selector */}
+            <LanguageSelector />
           </div>
         </header>
 
+        {/* Spacer for fixed header */}
+        <div className="h-16"></div>
+
         {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4 text-center">
+        <section className="pt-12 pb-12 px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 
               ref={heroTitleRef}
@@ -274,7 +245,7 @@ function App() {
             
             {/* Adventure Icons */}
             <div ref={heroIconsRef} className="flex justify-center gap-6 mt-8">
-              {['🌌', '🏕️', '🔥', '📸', '🇮🇩', '❄️'].map((icon, index) => (
+              {['🌌', '🏕️', '🔥', '📸', '🏰', '❄️'].map((icon, index) => (
                 <span 
                   key={index} 
                   className="text-3xl md:text-4xl cursor-default hover:scale-125 transition-transform"
