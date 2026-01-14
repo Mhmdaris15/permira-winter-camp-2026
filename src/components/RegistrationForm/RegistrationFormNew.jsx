@@ -5,8 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Google Sheets Web App URL - Replace with your deployed Apps Script URL
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyy4bET7HlYwbZRii2_SsviXC_y9ZCs6ejf3jOi767MZalWkvCXS4PEYNJc1BpFVHE/exec';
+// Cloudflare Worker URLs - Update with your deployed worker URL
+const CLOUDFLARE_WORKER_URL = 'https://your-worker.your-subdomain.workers.dev'; // UPDATE THIS
+const REGISTER_URL = `${CLOUDFLARE_WORKER_URL}/api/register`;
+const UPLOAD_URL = `${CLOUDFLARE_WORKER_URL}/api/upload`;
 
 // Style constants
 const colors = {
@@ -260,8 +262,45 @@ function RegistrationForm() {
     return Object.keys(newErrors).length === 0;
   };
 
+  // Upload file to Google Drive via Cloudflare Worker
+  const uploadKbriProof = async (file, registrantName) => {
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('fileName', file.name);
+      formData.append('registrantName', registrantName);
+
+      const response = await fetch(UPLOAD_URL, {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        return result.fileUrl;
+      } else {
+        console.error('Upload failed:', result.error);
+        return null;
+      }
+    } catch (error) {
+      console.error('Error uploading file:', error);
+      return null;
+    }
+  };
+
+  // Submit registration to Google Sheets via Cloudflare Worker
   const submitToGoogleSheets = async (data) => {
     try {
+      // First upload KBRI proof if exists (Indonesian citizens)
+      let kbriProofUrl = '-';
+      if (data.citizenship === 'indonesia' && data.kbriProof) {
+        kbriProofUrl = await uploadKbriProof(data.kbriProof, data.fullName);
+        if (!kbriProofUrl) {
+          kbriProofUrl = 'Upload failed';
+        }
+      }
+
       const formattedData = {
         timestamp: new Date().toISOString(),
         citizenship: t(`countries.${data.citizenship}`),
@@ -276,22 +315,25 @@ function RegistrationForm() {
         hearAboutUs: data.hearAboutUs.map(h => h === 'other' ? data.hearAboutUsOther : t(`hearOptions.${h}`)).join(', '),
         allergies: data.allergies || '-',
         kbriProofProvided: data.citizenship === 'indonesia' ? (data.kbriProof ? 'Yes' : 'No') : 'N/A',
+        kbriProofUrl: kbriProofUrl,
         wantToPerform: data.wantToPerform === 'yes' ? 'Yes' : 'No',
         performanceDetails: data.performanceDetails || '-',
         willingToParticipate: data.willingToParticipate === 'yes' ? t('yes') : t('no'),
         reasonForJoining: data.reasonForJoining
       };
 
-      if (GOOGLE_SHEETS_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL') {
-        await fetch(GOOGLE_SHEETS_URL, {
+      // Check if worker URL is configured
+      if (CLOUDFLARE_WORKER_URL !== 'https://your-worker.your-subdomain.workers.dev') {
+        const response = await fetch(REGISTER_URL, {
           method: 'POST',
-          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(formattedData)
         });
-        return true;
+        
+        const result = await response.json();
+        return result.success !== false;
       }
       
       console.log('Form Data (would be sent to Google Sheets):', formattedData);
