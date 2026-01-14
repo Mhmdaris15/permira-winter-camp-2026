@@ -8,6 +8,10 @@ export const translations = {
       // Language selector
       language: "Language",
       
+      // Gallery
+      galleryTitle: "Our Memories",
+      clickToExpand: "Click to expand",
+      
       // Event Details
       eventDetails: "Event Details",
       dateTime: "Date & Time",
@@ -152,6 +156,10 @@ export const translations = {
       // Language selector
       language: "Bahasa",
       
+      // Gallery
+      galleryTitle: "Kenangan Kami",
+      clickToExpand: "Klik untuk memperbesar",
+      
       // Event Details
       eventDetails: "Detail Acara",
       dateTime: "Tanggal & Waktu",
@@ -295,6 +303,10 @@ export const translations = {
       
       // Language selector
       language: "Язык",
+      
+      // Gallery
+      galleryTitle: "Наши Воспоминания",
+      clickToExpand: "Нажмите для увеличения",
       
       // Event Details
       eventDetails: "Детали Мероприятия",

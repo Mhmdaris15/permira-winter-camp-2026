@@ -6,6 +6,7 @@ import Background from './components/Background/Background';
 import LanguageSelector from './components/LanguageSelector/LanguageSelectorNew';
 import EventDetails from './components/EventDetails/EventDetailsNew';
 import RegistrationForm from './components/RegistrationForm/RegistrationFormNew';
+import Gallery from './components/Gallery/Gallery';
 import Chatbot from './components/Chatbot/Chatbot';
 
 // Register GSAP plugins
@@ -261,6 +262,7 @@ function App() {
         {/* Main Content */}
         <main ref={mainContentRef} className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
           <EventDetails />
+          <Gallery />
           <RegistrationForm />
         </main>
 
