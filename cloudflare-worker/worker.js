@@ -15,7 +15,7 @@ const CHUTES_API_KEY = 'cpk_2d6fffb89cee42898c51bb1fa2008eab.9fc77daccdea5b69b63
 
 // Google Apps Script Configuration (for Google Sheets & Drive)
 // Deploy a Google Apps Script with doPost function and get the URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyy4bET7HlYwbZRii2_SsviXC_y9ZCs6ejf3jOi767MZalWkvCXS4PEYNJc1BpFVHE/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9pS8XWDLzChFibtFfyNflaOIfNojz1DupkwICnVOm-QGBREPo_rMgU79x_80Qnfs/exec';
 
 // Allowed origins (add your domains here)
 const ALLOWED_ORIGINS = [

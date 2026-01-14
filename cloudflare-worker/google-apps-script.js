@@ -20,9 +20,9 @@
  */
 
 // Configuration - UPDATE THESE VALUES
-const SPREADSHEET_ID = 'YOUR_GOOGLE_SHEET_ID'; // Get from the sheet URL
+const SPREADSHEET_ID = '14neWGafc3UH60hTtpp2lCy_IEUGLXGVkyGy1E6U9-M4'; // Get from the sheet URL
 const SHEET_NAME = 'Registrations'; // Name of the sheet tab
-const DRIVE_FOLDER_ID = 'YOUR_GOOGLE_DRIVE_FOLDER_ID'; // Folder for KBRI proofs
+const DRIVE_FOLDER_ID = '1SRL471siA_pnKlBwUyZRznHZwcA66TDo'; // Folder for KBRI proofs
 
 /**
  * Handle POST requests from Cloudflare Worker

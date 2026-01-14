@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // Cloudflare Worker URLs - Update with your deployed worker URL
-const CLOUDFLARE_WORKER_URL = 'https://your-worker.your-subdomain.workers.dev'; // UPDATE THIS
+const CLOUDFLARE_WORKER_URL = 'https://winter-camp-chatbot.muhammadaris1945.workers.dev'; // UPDATE THIS
 const REGISTER_URL = `${CLOUDFLARE_WORKER_URL}/api/register`;
 const UPLOAD_URL = `${CLOUDFLARE_WORKER_URL}/api/upload`;
 
