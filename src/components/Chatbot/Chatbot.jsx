@@ -190,7 +190,14 @@ function Chatbot() {
         })
       });
 
+      // Check if response is ok
+      if (!response.ok) {
+        console.error('API response not ok:', response.status, response.statusText);
+        throw new Error(`API error: ${response.status}`);
+      }
+
       const data = await response.json();
+      console.log('Chatbot API response:', data);
       
       if (data.choices && data.choices[0]?.message?.content) {
         let content = data.choices[0].message.content;
@@ -203,21 +210,23 @@ function Chatbot() {
         };
         setMessages(prev => [...prev, assistantMessage]);
       } else if (data.error) {
+        console.error('API returned error:', data.error);
         setMessages(prev => [...prev, {
           role: 'assistant',
-          content: `Sorry, I encountered an error: ${data.error.message || 'Please try again.'}`
+          content: `Sorry, I encountered an error: ${data.error.message || data.error || 'Please try again.'}`
         }]);
       } else {
+        console.error('Unexpected API response format:', data);
         setMessages(prev => [...prev, {
           role: 'assistant',
-          content: "I'm sorry, I couldn't process that request. Please try again! ❄️"
+          content: "I'm sorry, I couldn't process that request. The API returned an unexpected response. Please try again! ❄️"
         }]);
       }
     } catch (error) {
       console.error('Chatbot error:', error);
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: "Sorry, I'm having trouble connecting right now. Please try again in a moment! 🏔️"
+        content: `Sorry, I'm having trouble connecting right now. Error: ${error.message}. Please try again in a moment! 🏔️`
       }]);
     } finally {
       setIsLoading(false);
