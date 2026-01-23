@@ -136,16 +136,17 @@ function Gallery() {
         {/* Main Carousel */}
         <div className="relative glass rounded-2xl overflow-hidden">
           {/* Main Image - Fixed aspect ratio container */}
-        <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+        <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */, backgroundColor: '#0a1628' }}>
           <div 
             ref={slideRef}
-            className="absolute inset-0 cursor-pointer bg-midnight/50"
+            className="absolute inset-0 cursor-pointer flex items-center justify-center"
             onClick={() => openModal(images[currentIndex])}
+            style={{ backgroundColor: '#0a1628' }}
           >
             <img
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
-              className="w-full h-full object-cover"
+              className="max-w-full max-h-full object-contain"
             />
             {/* Gradient overlay */}
             <div 
