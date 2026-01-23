@@ -2,6 +2,128 @@ import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { knowledgeBase } from './knowledgeBase';
 
+// ============================================
+// LOCAL SMART CHATBOT (No External API Needed)
+// ============================================
+
+// Knowledge patterns for smart matching
+const knowledgePatterns = [
+  {
+    keywords: ['when', 'date', 'kapan', 'tanggal', 'когда', 'дата', 'time'],
+    response: `**Winter Camp 2026** will be held on **February 2-3, 2026** ❄️\n\nThe event spans 2 full days with activities starting from the afternoon on Day 1 and ending around noon on Day 3. Mark your calendars! 📅`
+  },
+  {
+    keywords: ['where', 'location', 'dimana', 'lokasi', 'где', 'место', 'address', 'alamat', 'venue'],
+    response: `**Location:** Pushkin (Tsarskoye Selo), Saint Petersburg, Russia 🏰\n\nPushkin is about 24 km south of Saint Petersburg city center. It's famous for the beautiful Catherine Palace with the legendary Amber Room!\n\nWe'll stay at a cozy Russian dacha (country house) with heating, banya (sauna), and bonfire area. ❄️🔥`
+  },
+  {
+    keywords: ['food', 'eat', 'meal', 'makan', 'makanan', 'halal', 'еда', 'питание', 'menu', 'breakfast', 'lunch', 'dinner', 'sarapan', 'makan siang', 'makan malam'],
+    response: `**🍽️ ALL FOOD IS 100% HALAL! 🍽️**\n\n**Menu highlights:**\n- Day 1 Dinner: Plov (Pilaf), Sate Taichan, Shakshouka\n- Day 2 Breakfast: Vladimir Salad, Mie Goreng\n- Day 2 Lunch: Nasi Goreng\n- Day 2 Dinner: Pecel Ayam, Burger\n- Day 3 Breakfast: Burger with Mashed Potatoes\n\nVegetarian options available! Please mention any allergies in your registration. 🥗`
+  },
+  {
+    keywords: ['register', 'sign up', 'join', 'daftar', 'gabung', 'регистрация', 'how to', 'cara'],
+    response: `**How to Register:** 📝\n\n1. Fill out the registration form on our website\n2. Indonesian citizens must upload KBRI proof (Lapor Diri)\n3. Wait for confirmation from the organizers\n\nBoth Indonesian and Russian students are welcome to join!\n\nQuestions? Contact us via Telegram: **@irazkisra** 📱`
+  },
+  {
+    keywords: ['cost', 'price', 'fee', 'biaya', 'harga', 'bayar', 'цена', 'стоимость', 'money', 'budget'],
+    response: `**Registration covers:**\n- Transportation (bus from city center)\n- Accommodation (dacha rental)\n- All meals (100% Halal)\n- Activities and games\n- Emergency fund\n\nFor specific pricing, please contact the organizers via Telegram: **@irazkisra** 💰`
+  },
+  {
+    keywords: ['transport', 'bus', 'how to get', 'meeting point', 'kumpul', 'транспорт', 'автобус'],
+    response: `**Transportation:** 🚌\n\nBus transportation is provided from Saint Petersburg city center to Pushkin.\n\n- **Meeting Point:** Will be announced closer to the event (nearest metro station)\n- **Vehicles:** Mercedes Sprinter VIP (19 seats) or Bus (45 seats)\n- **Arrival Time:** Please be on time! Latecomers will need to arrange their own transport.\n\nVolunteers with PERMIRA flags will greet you at the meeting point! 🇮🇩🇷🇺`
+  },
+  {
+    keywords: ['schedule', 'rundown', 'jadwal', 'acara', 'agenda', 'расписание', 'program', 'activity', 'activities', 'kegiatan'],
+    response: `**📅 Event Schedule Highlights:**\n\n**Day 1 (Feb 2):**\n- 14:00 - Meeting at metro station\n- 16:15 - Opening ceremony\n- 16:45 - Talk show & discussion\n- 19:00 - Dinner\n- 20:30 - Team building games\n\n**Day 2 (Feb 3):**\n- 08:00 - Breakfast\n- 10:30 - Museum visit & quest game\n- 15:30 - Lunch\n- 20:00 - Cultural performances\n\n**Day 3:**\n- 09:00 - Outdoor team games\n- 11:30 - Awards & departure\n\nFull schedule on the website! 🎭`
+  },
+  {
+    keywords: ['bring', 'pack', 'bawa', 'что брать', 'prepare', 'packing', 'essentials'],
+    response: `**What to Bring:** 🎒\n\n**Essential:**\n- Warm winter clothes (coat, gloves, hat, scarf)\n- Comfortable indoor clothes\n- Personal toiletries\n- Reusable utensils (eco-friendly policy! 🌱)\n- Camera for memories 📸\n- Positive attitude! 😊\n\n**Optional:**\n- Swimsuit (if you want to try banya/sauna)\n- Musical instruments for performances\n- Traditional items for cultural exchange`
+  },
+  {
+    keywords: ['who', 'organizer', 'siapa', 'permira', 'организатор', 'contact', 'telegram', 'hubungi', 'kontak'],
+    response: `**Organized by:** PERMIRA Saint Petersburg 🇮🇩🇷🇺\n\n(Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia)\n\n**Contact:**\n- Telegram: **@irazkisra**\n- Chair: Fikria Shaleha\n\nWe're excited to welcome Indonesian and Russian students for this amazing cultural exchange! ❄️`
+  },
+  {
+    keywords: ['volunteer', 'help', 'relawan', 'panitia', 'волонтёр', 'assist'],
+    response: `**Volunteer Opportunities:** 🙋\n\nWe need help with:\n- Food & menu coordination\n- Event hosting (MC)\n- Social media & posters\n- Documentation & photography\n- Participant coordination\n\nInterested? Indicate it in your registration form! Volunteers get special benefits and recognition. ⭐`
+  },
+  {
+    keywords: ['game', 'play', 'permainan', 'игра', 'fun', 'outdoor', 'indoor', 'snow', 'salju'],
+    response: `**Games & Activities:** 🎮\n\n**Indoor Games:**\n- Find Animal Voice\n- Shadow Boxing\n- The Counting Game\n- Interactive quizzes\n\n**Outdoor (weather permitting):**\n- Snowman competition ⛄\n- Gobak Sodor\n- Tug of war\n- Volleyball\n\n**Special:**\n- Museum quest game with prizes!\n- Cultural performances\n- Bonfire gathering 🔥`
+  },
+  {
+    keywords: ['eco', 'environment', 'plastic', 'lingkungan', 'экология', 'green', 'utensils'],
+    response: `**🌱 Eco-Friendly Policy:**\n\nWe care about the environment!\n\n- **No plastic utensils provided** - bring your own reusable ones!\n- Strict portion control to reduce food waste\n- Waste sorting (please separate your trash)\n- QR codes instead of paper materials\n- Help keep the dacha and nature clean! 🌍`
+  },
+  {
+    keywords: ['palace', 'museum', 'catherine', 'peterhof', 'hermitage', 'istana', 'музей', 'дворец', 'tourist', 'sight'],
+    response: `**Nearby Attractions:** 🏛️\n\n**Must-see places near Pushkin:**\n- **Catherine Palace** - Home of the famous Amber Room! 💛\n- **Alexander Palace**\n- **Peterhof Grand Palace** - "Russian Versailles"\n- **Hermitage Museum** branches\n\nWe'll have an educational quest game at a museum! Perfect for photos and learning Russian history. 📸`
+  },
+  {
+    keywords: ['hello', 'hi', 'hey', 'halo', 'hai', 'привет', 'здравствуйте', 'help', 'start'],
+    response: `**Hello!** 👋 Welcome to Winter Camp 2026!\n\nI'm here to help you with information about:\n- 📅 Event dates & schedule\n- 📍 Location & transportation\n- 🍽️ Food (100% Halal!)\n- 📝 Registration\n- 🎮 Activities & games\n- And more!\n\nWhat would you like to know? ❄️🏔️`
+  },
+  {
+    keywords: ['thank', 'thanks', 'terima kasih', 'makasih', 'спасибо', 'great', 'awesome', 'good'],
+    response: `You're welcome! 😊\n\nIf you have more questions, feel free to ask anytime!\n\nHope to see you at Winter Camp 2026! ❄️🎉\n\nDon't forget to register and follow us for updates!`
+  },
+  {
+    keywords: ['developer', 'made', 'built', 'created', 'pembuat', 'website', 'who made', 'разработчик'],
+    response: `This website was developed by **Muhammad Aris Septanugroho** 👨‍💻\n\nConnect with him on LinkedIn:\nhttps://www.linkedin.com/in/muhammad-aris-septanugroho/\n\nThe chatbot uses a local AI system to answer your questions about Winter Camp 2026! 🤖`
+  },
+  {
+    keywords: ['kbri', 'lapor diri', 'indonesian', 'wni', 'citizen', 'warga negara', 'passport'],
+    response: `**For Indonesian Citizens:** 🇮🇩\n\nYou need to provide **KBRI proof (Lapor Diri)** during registration.\n\nThis is a requirement from the Indonesian Embassy for Indonesian citizens living abroad.\n\nIf you haven't registered with KBRI yet, please do so first before registering for Winter Camp.`
+  },
+  {
+    keywords: ['russian', 'россия', 'russia', 'rusia', 'student', 'mahasiswa', 'студент'],
+    response: `**Who Can Join?** 🇮🇩🇷🇺\n\n- Indonesian students studying in Russia\n- Russian students interested in cultural exchange\n- Both nationalities welcome!\n\nThis is a great opportunity for Indonesian-Russian friendship and cultural exchange! 🤝`
+  },
+  {
+    keywords: ['perform', 'performance', 'sing', 'dance', 'music', 'tampil', 'penampilan', 'выступление', 'nyanyi', 'tari'],
+    response: `**Want to Perform?** 🎭\n\nWe welcome performances at our Cultural Night!\n\n- Singing 🎤\n- Dancing 💃\n- Poetry 📜\n- Music 🎸\n- Traditional performances\n\nIndicate your interest in the registration form. Share your talent and represent your culture! 🌟`
+  },
+  {
+    keywords: ['banya', 'sauna', 'bath', 'mandi', 'баня'],
+    response: `**Russian Banya (Sauna):** 🧖\n\nOur dacha has a traditional Russian banya available!\n\nIt's a unique Russian experience - hot steam room with birch branches for a traditional bathing ritual.\n\nBring a swimsuit if you'd like to try it! Towels recommended. 🔥`
+  }
+];
+
+// Smart response generator
+const generateLocalResponse = (userMessage) => {
+  const message = userMessage.toLowerCase();
+  
+  // Find best matching pattern
+  let bestMatch = null;
+  let bestScore = 0;
+  
+  for (const pattern of knowledgePatterns) {
+    let score = 0;
+    for (const keyword of pattern.keywords) {
+      if (message.includes(keyword.toLowerCase())) {
+        score += 1;
+        // Bonus for exact word match
+        if (new RegExp(`\\b${keyword}\\b`, 'i').test(message)) {
+          score += 0.5;
+        }
+      }
+    }
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = pattern;
+    }
+  }
+  
+  // Return best match or default response
+  if (bestMatch && bestScore > 0) {
+    return bestMatch.response;
+  }
+  
+  // Default response for unmatched queries
+  return `I'm not sure about that specific question, but I'd love to help! 🤔\n\n**Here's what I can tell you about:**\n- 📅 Event dates (February 2-3, 2026)\n- 📍 Location (Pushkin, Saint Petersburg)\n- 🍽️ Food (100% Halal!)\n- 📝 How to register\n- 🎮 Activities and games\n- 🚌 Transportation\n\nOr contact the organizers directly via Telegram: **@irazkisra** 📱`;
+};
+
 // Simple markdown formatter for chat messages
 const formatMessage = (text) => {
   if (!text) return '';
@@ -108,30 +230,6 @@ const formatInlineMarkdown = (text) => {
 // Use imported knowledge base from auto-generated file
 // This is generated by running: python scripts/process_excel_data.py
 
-// System prompt for the AI
-const SYSTEM_PROMPT = `You are a friendly and helpful AI assistant for Winter Camp 2026. Your role is to answer questions about the event based on the knowledge base provided below.
-
-INSTRUCTIONS:
-1. Answer questions accurately based ONLY on the knowledge base information
-2. Be enthusiastic and welcoming - this is an exciting winter adventure event in Saint Petersburg!
-3. If someone asks something not covered in the knowledge base, politely say you don't have that specific information and suggest they contact the organizers via Telegram: @irazkisra
-4. Keep responses concise but helpful (2-4 sentences when possible)
-5. Use emojis sparingly to keep the tone friendly (❄️ 🏰 🎭 🇮🇩 🇷🇺)
-6. Always encourage users to register if they seem interested
-7. If asked about the developer, mention Muhammad Aris Septanugroho and his LinkedIn
-8. The event is in Pushkin (near Saint Petersburg), NOT Murmansk
-9. All food is 100% Halal
-10. Indonesian citizens need to provide KBRI proof (Lapor Diri)
-
-KNOWLEDGE BASE:
-${knowledgeBase}
-
-Remember: Be helpful, accurate, and enthusiastic about Winter Camp 2026!`;
-
-// Cloudflare Worker Proxy URL
-// Deploy the worker from /cloudflare-worker folder, then replace this URL
-const PROXY_URL = 'https://winter-camp-chatbot.muhammadaris1945.workers.dev';
-
 function Chatbot() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -162,71 +260,26 @@ function Chatbot() {
 
     const userMessage = { role: 'user', content: inputMessage };
     setMessages(prev => [...prev, userMessage]);
+    const currentInput = inputMessage;
     setInputMessage('');
     setIsLoading(true);
 
+    // Simulate a small delay for natural feel
+    await new Promise(resolve => setTimeout(resolve, 500 + Math.random() * 500));
+
     try {
-      // Build conversation history for context
-      const conversationHistory = messages.slice(-6).map(msg => ({
-        role: msg.role,
-        content: msg.content
-      }));
-
-      const response = await fetch(PROXY_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'Qwen/Qwen3-32B',
-          messages: [
-            { role: 'system', content: SYSTEM_PROMPT },
-            ...conversationHistory,
-            { role: 'user', content: inputMessage }
-          ],
-          stream: false,
-          max_tokens: 512,
-          temperature: 0.7
-        })
-      });
-
-      // Check if response is ok
-      if (!response.ok) {
-        console.error('API response not ok:', response.status, response.statusText);
-        throw new Error(`API error: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log('Chatbot API response:', data);
+      // Use local smart response generator
+      const response = generateLocalResponse(currentInput);
       
-      if (data.choices && data.choices[0]?.message?.content) {
-        let content = data.choices[0].message.content;
-        // Clean up any thinking tags if present
-        content = content.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
-        
-        const assistantMessage = {
-          role: 'assistant',
-          content: content
-        };
-        setMessages(prev => [...prev, assistantMessage]);
-      } else if (data.error) {
-        console.error('API returned error:', data.error);
-        setMessages(prev => [...prev, {
-          role: 'assistant',
-          content: `Sorry, I encountered an error: ${data.error.message || data.error || 'Please try again.'}`
-        }]);
-      } else {
-        console.error('Unexpected API response format:', data);
-        setMessages(prev => [...prev, {
-          role: 'assistant',
-          content: "I'm sorry, I couldn't process that request. The API returned an unexpected response. Please try again! ❄️"
-        }]);
-      }
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: response
+      }]);
     } catch (error) {
       console.error('Chatbot error:', error);
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: `Sorry, I'm having trouble connecting right now. Error: ${error.message}. Please try again in a moment! 🏔️`
+        content: "Sorry, something went wrong. Please try again! ❄️"
       }]);
     } finally {
       setIsLoading(false);
@@ -331,7 +384,7 @@ function Chatbot() {
                   fontSize: '11px',
                   color: 'rgba(255, 255, 255, 0.8)'
                 }}>
-                  Powered by Qwen AI • RAG System
+                  Smart Assistant • Knowledge Base
                 </p>
               </div>
             </div>
