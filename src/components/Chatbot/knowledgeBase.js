@@ -1,0 +1,278 @@
+// Auto-generated knowledge base for Winter Camp 2026 Chatbot
+// Last updated: 2026-01-23 05:00:14
+
+export const knowledgeBase = `
+## General Information
+
+PERMIRA Winter Camp 2026 is organized by PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia).
+
+Event Details:
+- Event Name: PERMIRA Winter Camp 2026
+- Organizer: PERMIRA Saint Petersburg
+- Location: Pushkin (Tsarskoye Selo), Saint Petersburg, Russia
+- Dates: February 2-3, 2026
+- Description: A winter camp experience near the beautiful palaces of Saint Petersburg
+
+The event features dacha (Russian country house) accommodation near world-famous palaces including Catherine Palace (Ekaterininsky Dvorets) and opportunities to visit Peterhof Grand Palace and the Hermitage Museum.
+
+
+## Event Schedule
+Event Schedule / Rundown:
+
+
+Hari Pertama | ПЕРВЫЙ ДЕНЬ
+========================================
+- 11:00:00: Pengecekan Lokasi | ОСМОТР ГЕОЛОКАЦИИ
+  Details: Pengecekan dilakukan oleh panitia dari berbagai divisi.
+- 14:00-14:15: Titik Kumpul | СБОР УЧАСТНИКОВ
+  Details: Ближайшая станция метро от лагери. Участников встретят волонтёры с маленьким флагом PERMIRA St. Petersburg.
+- 14:15 - 16:15: ЗАЕЗД В ДЕТСКИЙ ОЗДОРОВИТЕЛЬНЫЙ ЛАГЕРЬ
+  Details: Участников встретят волонтёры с маленьким флагом PERMIRA St. Petersburg и направят в комнату. Выяснение о технике пожарной безопасности и проведение малой экскурсии по территории. Тот, которы опоздает, тогда доберется до лагеря самостоятельно. | Selama di perjalanan menggunakan bus, volunteer melakukan kegiatan interaktif dengan peserta.
+- 16:15 - 16:45: Pembukaan Non-Formal | НЕФОРМАЛЬНОЕ ОТКРЫТИЕ
+  Details: Peserta memasuki ruangan. Lalu, dilanjutkan dengan pembukaan oleh 2 pembawa acara, yang mana 1 dari Indonesia dan 1 dari Rusia. | Lalu, kegiatan dibuka dengan sambutan dari Fikria Shaleha selaku Ketua Umum PERMIRA St. Petersburg dan beberapa tamu. Maksimal waktu sambutan secara total adalah 30 menit.
+- 16:45 - 18:15: Talk Show | ТОК-ШОУ
+  Details: Lalu, dilanjutkan dengan talkshow yang dibawa oleh 1 orang moderator yang memiliki kemampuan bahasa Indonesia dan Rusia yang baik. | Dalam waktu 45 menit narasumber harus bercerita tentang pengalamannya dengan metode diskusi interaktif. 1 orang dari Indonesia dan 1 orang dari Rusia sesuai dengan tema yang diberikan oleh panitia.
+- 18:15 - 18:45: Curhat Colongan | РАЗГОВОР ПО ДУШЕ
+  Details: Lalu, moderator mengarahkan agar peserta memindai QR-code di layar yang menyambungkan dengan formulir daring dan disana bakal ada text box yang harus diisi oleh peserta dengan pengalaman unik/lucu/menantang/menyeramkan yang pernah dialami selama tinggal di Rusia. Lalu, peserta akan diundi untuk menceritakannya melalui online spinner.
+- 18:45-19:00: Foto Bersama dan Kapsul Waktu | ОБЩАЯ ФОТОГРАФИЯ И КАПСУЛА ВРЕМЕНИ
+  Details: Peserta dan panitia diarahkan untuk berfoto bersama serta merekam video singkat. Lalu, mereka diarahkan untuk menuliskan harapan serta keinginannya yang berkaitan dengan Indonesia-Rusia pada sebuah papan harapan yang merupakan terbuat dari kertas karton dan kemudian menandatanganinya sebagai bentuk kapsul waktu untuk kegiatan winter camp selanjutnya. | Sebagai catatan: peserta dan panitia dapat menuliskannya selama kegiatan winter camp berlangsung.
+- 19:00 - 20:30: Makan Malam dan Kegiatan Non-Formal | УЖИН И НЕФОРМАЛЬНАЯ ОБСТАНОВКА
+  Details: Участников и организаторов выдадут плов.
+- 20:30-22:00: Anjangsana | ЗНАКОМСТВО ПО КОМАНДАМ И КОМАНДНАЯ ИГРА В ПОМЕЩЕНИИ
+  Details: Panitia secara acak akan membagikan kelompok dengan komposisi setengah dari Indonesia dan Rusia untuk selama kegiatan winter camp. Kelompok ini selama winter camp akan mengikuti seluruh kegiatan dan diakhir kegiatan akan diberikan hadiah kepada kelompok pemenang sesuai dengan kategori-kategori yang ditentukan oleh panitia.
+- 22:00 - 23:00: Waktu Bebas | НЕФОРМАЛЬНАЯ ОБСТАНОВКА
+- 23:00: Istirahat | ОТБОЙ
+
+Hari Kedua | ВТОРОЙ ДЕНЬ
+========================================
+- 08:00 - 09:00: Sarapan | ЗАВТРАК
+  Details: Участников и организаторов выдадут индонезийскую жаренную лапшу
+- 09:30 - 10:30: Perjalanan ke museum | ЗАЕЗД В МУЗЕЙ
+  Details: Selama di perjalanan menggunakan bus, volunteer melakukan kegiatan interaktif dengan peserta. Termasuk menjelaskan tentang hal-hal yang boleh dan tidak boleh dilakukan selama berada di museum.
+- 10:30-11:10: Pembukaan Resmi | ТОРЖЕСТВЕННОЕ ОТКРЫТИЕ
+  Details: Sambutan oleh: (1) Duta Besar Luar Biasa dan Berkuasa Penuh Republik Indonesia untuk Federasi Rusia merangkap Republik Belarus - Jose Antonio Morato Tavares, (2) Вице-Губернатор Санкт-Петербурга Чечина Наталья Валентиновна, (3) Председатель Комитета по внешним связям Санкт-Петербурга Григорьев Евгений Дмитриевич, (4) Временно исполняющий обязанности Комитета по молодежной политике и взаимодействию с общественными организациями Волковский Роман Игоревич, (5) Руководитель музея, (6) Председатель Петербургского отделения Ассоциации индонезийских студентов в России Шалеха Фикрия. | Lalu ditutup dengan foto bersama.
+- 11:15 - 14:00: Permainan Edukatif di Museum | ОБРАЗОВАТЕЛЬНО-ИГРОВОЙ КВЕСТ ПО МУЗЕЮ "УРОК ПРОШЛОГО ПОКОЛЕНИЯ"
+  Details: Основная повестка «III Российско-индонезийский студенческий зимний слёт» представляет собой образовательно-игровой квест по музею, основанный на карте, подсказках и викторинах, связанных с тематикой конкретного избранного музея. Участники делятся на 6 команд по 5 человек из Индонезии и России, где в каждой составляет всего 10 человек. Таким образом, общее количество участников зимнего слёта составляет 60 человек. Главная цель этой игры — повышение и укрепление командной работе среди российско-индонезийских студентов, углублённому пониманию российской истории и межкультурному взаимодействию через образовательно-увлекательную игру и молодёжную дипломатию.
+- 14:00 - 14:30: Pengumpulan Peserta dan Pengumuman Pemenang | СБОР УЧАСТНИКОВ И ОБЪЯВЛЕНИЕ ПОБЕДИТЕЛЕЙ КВЕСТА
+  Details: Penyerahan hadiah oleh pihak museum dan panitia kepada para pemenang permainan dan disertai dengan foto bersama.
+- 14:30 - 15:30: Perjalanan Kembali ke Camp | ОБРАТНАЯ ПОЕЗДКА В ЛАГЕРЬ
+- 15:30 - 17:00: Makan Siang | ОБЕД
+  Details: Участников и организаторов выдадут индонезийскую жаренный рис.
+- 17:00 - 18:30: Kegiatan Non-Formal | НЕФОРМАЛЬНАЯ ОБСТАНОВКА
+  Details: Panitia melakukan persiapan untuk penampilan.
+- 18:30-20:00: Makan Malam | УЖИН
+  Details: Участников и организаторов выдадут индонезийский "печел аям" (жаренная курица с перцем).
+- 20:00 - 21:00: Malam Keakraban dan Pentas Seni | КУЛЬТУРНАЯ ПРОГРАМММА
+  Details: Dua penampilan kebudayaan dari Rusia dan Indonesia. Kegiatan ini akan dibawakan oleh 2 pembawa acara, yaitu 1 orang Indonesia dan 1 orang Rusia.
+- 21:00 - 22:00: Kesan Pesan dan Renungan | РЕФЛЕКСИЯ
+  Details: Satu peserta / panitia akan memegang lilin atau boneka untuk memulai cerita dan kesan pesan selama kegiatan. Lalu, setelah selesai, maka peserta akan memberikan lilin atau boneka tersebut ke peserta disebelahnya. Setiap peserta / panitia selesai membagikan ceritanya, maka semuanya akan mengusap tangannya menggantikan tepuk tangan sebagai bagian dari apresiasi kepada yang telah bercerita.
+- 22:00 - 23:00: Waktu Bebas | НЕФОРМАЛЬНАЯ ОБСТАНОВКА
+- 23:00: Istirahat | ОТБОЙ
+- 07:00 - 09:00: Sarapan dan persiapan pulang | ЗАВТРАК И СБОР ВЕЩЕЙ
+  Details: Участников и организаторов выдадут бургер и картофельное пюре.
+- 09:00 - 10:30: Permainan Tim Di Luar Ruangan | КОМАНДНЫЕ ИГРЫ  В ОТКРЫТОМ ВОЗДУХЕ
+  Details: Предварительный список игр в приложении № 3. Permainan utama adalah lomba boneka salju. Jika tidak ada salju, maka telah disiapkan beberapa opsi permainan lainnya seperti: gobak sodor, benteng-bentengan, tarik tambang, voli/bola, estafet
+- 10:30 - 11:30: Pengumuman Kelompok Pemenang | ОБЪЯВЛЕНИЕ ОБЩЕКОМАНДНЫХ ПОБЕДИТЕЛЕЙ
+  Details: Pengumuman pemenang, pembagian hadiah dan Foto Bersama. Akan ada 5 kategori pemenang. | juara 1 pentas: 1000 rub dll.
+- 11:30 - 12:00: Pengumpulan Peserta dan Kembali ke Kota | СБОР УЧАСТНИКОВ И ВЫЕЗД В ГОРОД
+
+
+## Eco-Friendly Policy
+
+Environmental / Ecologization Policy:
+
+Untuk mendorong ekologisasi kegiatan ini, maka: (1) untuk peserta tidak akan disediakan alat-alat makanan plastik, (2) pengetatan porsi makanan sehingga mengurangi sampah makanan, (3) pembuangan sampah akan dilakukan berdasarkan jenis sampahnya, (4) meminimalisir penggunaan kertas atau plastik sekali pakai, dimana dalam pelaksanaan kuis akan menggunakan QR-code.
+
+Key Points:
+- Participants should bring their own reusable utensils
+- No plastic disposable items will be provided
+- We encourage all participants to practice waste sorting
+- Help us keep the dacha and surrounding areas clean
+
+
+## Budget Information
+
+Budget / Cost Information:
+
+The event budget covers:
+- Transportation (bus rental)
+- Accommodation (dacha rental)
+- Food and beverages (all meals included, 100% Halal)
+- Activities and games
+- Emergency fund
+
+Note: All food served at the event is 100% Halal. Participants with allergies should inform the organizers in advance.
+
+For specific pricing details, please contact the organizers via Telegram: @irazkisra
+
+
+## Transportation
+
+Transportation Information:
+
+Available transport options:
+- Minibus / Микроавтобус Мерседес Спринтер (Mercedes Sprinter) 516 VIP (Capacity: 19 seats)
+- Bus (Capacity: 45 seats)
+
+Transportation is arranged from Saint Petersburg city center to Pushkin (Tsarskoye Selo).
+
+Meeting point will be announced closer to the event date.
+Participants should arrive on time at the designated meeting point.
+
+
+## Location
+
+Event Location:
+
+Address: Pushkin (Tsarskoye Selo), Saint Petersburg, Russia
+Coordinates: 59.714°N, 30.395°E
+
+Pushkin, also known as Tsarskoye Selo (Tsar's Village), is a municipal town located 24 km south of Saint Petersburg. 
+It's famous for its royal residences and beautiful parks.
+
+Nearby Attractions:
+- Catherine Palace (Екатерининский дворец) - Home of the famous Amber Room
+- Peterhof Grand Palace - Known as the "Russian Versailles"
+- Hermitage Museum Old Village branch
+- Alexander Palace
+
+The dacha accommodation provides a cozy Russian country house experience with:
+- Warm indoor heating
+- Traditional Russian banya (sauna) available
+- Outdoor bonfire area
+- Beautiful winter scenery
+
+
+## Volunteer Roles
+
+Volunteer Opportunities:
+
+We're looking for volunteers to help with the following roles:
+- Mengurus menu masak dan jenis makanan yang akan dihidangkan untuk makan makan pagi, sore dan malam
+- Mengurus pembukaan dan pembawa acara selama kegiatan
+- Mengurus poster dan media sosial
+- Mendokumentasikan seluruh aspek kegiatan
+- Mengurus seluruh komunikasi, mengarahkan dan membersamai peserta baik sebelum dan saat kegiatan
+
+If you're interested in volunteering, please indicate this in your registration form.
+Volunteers may receive special benefits and recognition.
+
+
+## Games and Activities
+
+Games and Activities:
+
+Indoor Activities (Permainan Di Dalam Ruangan):
+- Nama Permainan | НАЗВАНИЕ ИГР
+- Find Animal Voice |
+ПОИСК ГОЛОСА ЖИВОТНОГО
+- Shadow Boxing | Бокс с тенью
+- The Counting Game | Игра Считалка
+
+Outdoor Activities (Winter activities):
+- Snow activities (weather permitting)
+- Bonfire gatherings
+- Photography at historical sites
+- Nature walks in winter scenery
+
+Cultural Activities:
+- Indonesian cultural exchange
+- Russian cultural experience
+- Language exchange opportunities
+- Traditional food tasting
+
+
+## Food and Menu
+
+Food Menu Information:
+
+🍽️ ALL FOOD IS 100% HALAL 🍽️
+
+Day 1 - Dinner:
+- Plov / ПЛОВ
+- Total / СУММА
+- Sate Taichan / САТЕ ТАЙЧАН
+- Total / СУММА
+- Shakshouka / ШАКШУКА
+
+Day 2 - Breakfast:
+- Vladimir Salad / САЛАТ «ВЛАДИМИРСКИЙ»
+- Total / СУММА
+- Mie Goreng / ЖАРЕННАЯ ЛАПША
+- Total / СУММА
+
+Day 2 - Lunch:
+- Nasi Goreng / ЖАРЕННЫЙ РИС
+- Total / СУММА
+
+Day 2 - Dinner:
+- Pecel  Ayam / ПЕЧЕЛ АЯМ (ЖАРЕННАЯ КУРИЦА С ПЕРЦЕМ)
+- Total / СУММА
+- Burger dengan Sapi / БУРГЕР С ГОВЯДИНОЙ
+- Total / СУММА
+- Mashed Potatoes (Kentang Tumbuk) / КАРТОФЕЛЬНОЕ ПЮРЕ
+
+Note: 
+- All meals are prepared fresh at the dacha
+- Special dietary requirements can be accommodated (please inform in advance)
+- Vegetarian options available upon request
+- Please inform us of any food allergies during registration
+
+
+## Frequently Asked Questions (FAQ)
+
+Frequently Asked Questions:
+
+Q: When and where is Winter Camp 2026?
+A: February 2-3, 2026 in Pushkin (Tsarskoye Selo), near Saint Petersburg, Russia.
+
+Q: Who can participate?
+A: Indonesian students in Russia and Russian students interested in cultural exchange. Both Indonesian and Russian citizens are welcome.
+
+Q: Is the food Halal?
+A: Yes! All food served is 100% Halal.
+
+Q: What should I bring?
+A: Warm winter clothes, personal items, reusable utensils (eco-friendly policy), camera, and a positive attitude!
+
+Q: How do I register?
+A: Fill out the registration form on our website. Indonesian citizens need to upload their KBRI registration proof (Lapor Diri).
+
+Q: What's the cost?
+A: Please contact the organizers for current pricing. Contact via Telegram: @irazkisra
+
+Q: Is transportation provided?
+A: Yes, bus transportation from Saint Petersburg city center to the venue is arranged.
+
+Q: Can I perform at the event?
+A: Yes! If you want to perform (singing, dancing, poetry, music, etc.), indicate this in the registration form.
+
+Q: What activities are planned?
+A: Palace visits, bonfire gatherings, games (indoor and outdoor), cultural exchange, photography, and more!
+
+Q: What if I have food allergies?
+A: Please mention all allergies in the registration form. We'll do our best to accommodate your needs.
+
+Q: Who organizes this event?
+A: PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia).
+
+Q: How can I contact the organizers?
+A: Via Telegram: @irazkisra
+
+
+`;
+
+export const knowledgeTopics = [
+  "General Information",
+  "Event Schedule",
+  "Eco-Friendly Policy",
+  "Budget Information",
+  "Transportation",
+  "Location",
+  "Volunteer Roles",
+  "Games and Activities",
+  "Food and Menu",
+  "Frequently Asked Questions (FAQ)"
+];
+
+export default knowledgeBase;

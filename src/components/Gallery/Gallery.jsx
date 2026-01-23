@@ -135,10 +135,11 @@ function Gallery() {
 
         {/* Main Carousel */}
         <div className="relative glass rounded-2xl overflow-hidden">
-          {/* Main Image */}
+          {/* Main Image - Fixed aspect ratio container */}
+        <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
           <div 
             ref={slideRef}
-            className="relative aspect-video cursor-pointer"
+            className="absolute inset-0 cursor-pointer bg-midnight/50"
             onClick={() => openModal(images[currentIndex])}
           >
             <img
@@ -159,6 +160,7 @@ function Gallery() {
               {t('clickToExpand', 'Click to expand')}
             </div>
           </div>
+        </div>
 
           {/* Navigation Arrows */}
           <button
@@ -247,23 +249,45 @@ function Gallery() {
         </div>
       </section>
 
-      {/* Fullscreen Modal */}
+      {/* Fullscreen Modal - Fixed version with better closing */}
       {isModalOpen && modalImage && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-          style={{ backgroundColor: 'rgba(10, 22, 40, 0.95)' }}
-          onClick={closeModal}
+          className="fixed inset-0 z-[100] flex items-center justify-center"
+          style={{ backgroundColor: 'rgba(10, 22, 40, 0.98)' }}
         >
-          {/* Close button */}
+          {/* Clickable backdrop for closing - covers entire screen */}
+          <div 
+            className="absolute inset-0 cursor-pointer"
+            onClick={closeModal}
+            aria-label="Close modal"
+          />
+          
+          {/* Close button - more prominent */}
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 w-12 h-12 rounded-full glass flex items-center justify-center text-2xl hover:scale-110 transition-transform"
-            style={{ color: colors.frost }}
+            className="absolute top-4 right-4 z-[110] w-14 h-14 rounded-full flex items-center justify-center text-3xl hover:scale-110 transition-all duration-200"
+            style={{ 
+              color: colors.frost,
+              backgroundColor: 'rgba(239, 68, 68, 0.8)',
+              border: '2px solid rgba(255, 255, 255, 0.3)'
+            }}
+            aria-label="Close"
           >
             ✕
           </button>
 
-          {/* Modal Navigation */}
+          {/* Click anywhere hint */}
+          <div 
+            className="absolute top-4 left-1/2 -translate-x-1/2 z-[110] px-4 py-2 rounded-full text-sm"
+            style={{ 
+              color: colors.frostDark,
+              backgroundColor: 'rgba(0, 0, 0, 0.5)'
+            }}
+          >
+            Click anywhere to close
+          </div>
+
+          {/* Modal Navigation - higher z-index */}
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -271,8 +295,9 @@ function Gallery() {
               setCurrentIndex(newIndex);
               setModalImage(images[newIndex]);
             }}
-            className="absolute left-4 w-12 h-12 rounded-full glass flex items-center justify-center text-2xl hover:scale-110 transition-transform"
+            className="absolute left-4 z-[110] w-14 h-14 rounded-full glass flex items-center justify-center text-2xl hover:scale-110 transition-transform"
             style={{ color: colors.frost }}
+            aria-label="Previous image"
           >
             ←
           </button>
@@ -283,23 +308,32 @@ function Gallery() {
               setCurrentIndex(newIndex);
               setModalImage(images[newIndex]);
             }}
-            className="absolute right-4 w-12 h-12 rounded-full glass flex items-center justify-center text-2xl hover:scale-110 transition-transform"
+            className="absolute right-4 z-[110] w-14 h-14 rounded-full glass flex items-center justify-center text-2xl hover:scale-110 transition-transform"
             style={{ color: colors.frost }}
+            aria-label="Next image"
           >
             →
           </button>
 
-          {/* Modal Image */}
-          <img
-            src={modalImage.src}
-            alt={modalImage.alt}
-            className="max-w-full max-h-[85vh] object-contain rounded-lg"
+          {/* Modal Image Container - Fixed size with consistent aspect ratio */}
+          <div 
+            className="relative z-[105] w-[90vw] h-[75vh] max-w-5xl flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
-          />
+          >
+            <img
+              src={modalImage.src}
+              alt={modalImage.alt}
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              style={{ 
+                maxHeight: '75vh',
+                maxWidth: '90vw'
+              }}
+            />
+          </div>
 
           {/* Image counter in modal */}
           <div 
-            className="absolute bottom-4 left-1/2 -translate-x-1/2 glass px-4 py-2 rounded-full"
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[110] glass px-6 py-3 rounded-full text-lg"
             style={{ color: colors.frost }}
           >
             {currentIndex + 1} / {images.length}

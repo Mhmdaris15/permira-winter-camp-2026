@@ -7,6 +7,9 @@ import LanguageSelector from './components/LanguageSelector/LanguageSelectorNew'
 import EventDetails from './components/EventDetails/EventDetailsNew';
 import RegistrationForm from './components/RegistrationForm/RegistrationFormNew';
 import Gallery from './components/Gallery/Gallery';
+import Rundown from './components/Rundown/Rundown';
+import FAQ from './components/FAQ/FAQ';
+import WhatToBring from './components/WhatToBring/WhatToBring';
 import Chatbot from './components/Chatbot/Chatbot';
 
 // Register GSAP plugins
@@ -262,7 +265,10 @@ function App() {
         {/* Main Content */}
         <main ref={mainContentRef} className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
           <EventDetails />
+          <Rundown />
+          <WhatToBring />
           <Gallery />
+          <FAQ />
           <RegistrationForm />
         </main>
 
