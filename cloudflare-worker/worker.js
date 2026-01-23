@@ -11,8 +11,8 @@
 
 // Chutes.ai Configuration
 const CHUTES_API_URL = 'https://llm.chutes.ai/v1/chat/completions';
-const CHUTES_API_KEY = 'cpk_2d6fffb89cee42898c51bb1fa2008eab.9fc77daccdea5b69b631c41d6f6cf3a8.E1nxscbWCtwYS7nv2hr5ZVB5TPtF52vX';
-
+// const CHUTES_API_KEY = 'cpk_2d6fffb89cee42898c51bb1fa2008eab.9fc77daccdea5b69b631c41d6f6cf3a8.E1nxscbWCtwYS7nv2hr5ZVB5TPtF52vX';
+const CHUTES_API_KEY = "cpk_d5c7447cffcc441993d96a5439b7afc0.9fc77daccdea5b69b631c41d6f6cf3a8.CSHcX2v65P8dhVf4IuizyqvF2EA3mOZs";
 // Google Apps Script Configuration (for Google Sheets & Drive)
 // Deploy a Google Apps Script with doPost function and get the URL
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9pS8XWDLzChFibtFfyNflaOIfNojz1DupkwICnVOm-QGBREPo_rMgU79x_80Qnfs/exec';
