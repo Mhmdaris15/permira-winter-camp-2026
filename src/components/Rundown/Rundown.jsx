@@ -130,7 +130,7 @@ function Rundown() {
           <div className="h-1 w-12 rounded" style={{ background: `linear-gradient(90deg, ${colors.auroraCyan}, ${colors.auroraGreen})` }}></div>
         </div>
         <p className="mt-4 text-base" style={{ color: colors.frostDark }}>
-          {t('rundownSubtitle', 'February 2-3, 2026 • Pushkin, Saint Petersburg')}
+          {t('rundownSubtitle', 'February 12-14, 2026 • Pushkin, Saint Petersburg')}
         </p>
       </div>
 

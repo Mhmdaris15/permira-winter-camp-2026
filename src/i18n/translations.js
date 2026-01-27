@@ -2,8 +2,8 @@ export const translations = {
   en: {
     translation: {
       // Header
-      title: "Winter Camp 2026",
-      subtitle: "Experience the magic of Saint Petersburg's winter palaces with PERMIRA!",
+      title: "Winter Camp 2025",
+      subtitle: "Experience the magic of Saint Petersburg's winter with PERMIRA!",
       
       // Language selector
       language: "Language",
@@ -15,20 +15,20 @@ export const translations = {
       // Event Details
       eventDetails: "Event Details",
       dateTime: "Date & Time",
-      dateTimeValue: "February 2-3, 2026",
+      dateTimeValue: "February 12-14, 2025",
       location: "Location",
-      locationValue: "Pushkin, Saint Petersburg, Russia",
+      locationValue: "Центр «Молодёжный», Saint Petersburg, Russia",
       organizer: "Organizer",
       organizerValue: "PERMIRA Saint Petersburg",
       eventOverview: "Event Overview",
-      eventDescription: "Join us for an unforgettable Russian winter experience! Winter Camp 2026 by PERMIRA features dacha accommodation near world-famous palaces:",
+      eventDescription: "Join us for an unforgettable Russian winter experience! Winter Camp 2025 by PERMIRA features accommodation at Youth Center with visits to museums:",
       activities: {
-        skiing: "Visit Catherine Palace (Ekaterininsky Dvorets)",
-        hiking: "Explore Peterhof Grand Palace",
-        bonfire: "Cozy bonfire gatherings at the dacha",
+        skiing: "Visit Central Naval Museum",
+        hiking: "Sharing & Networking Sessions",
+        bonfire: "Cultural Night & Performances",
         workshops: "Photography at historical sites",
         photography: "Cultural exchange with Indonesian students",
-        games: "Visit Hermitage Museum (Old Village branch)"
+        games: "Team building & indoor games"
       },
       
       // Registration Form
@@ -97,12 +97,12 @@ export const translations = {
       
       // Terms & Participation
       termsConditions: "Terms & Conditions",
-      termsText: "I agree to the terms and conditions of Winter Camp 2026",
+      termsText: "I agree to the terms and conditions of Winter Camp 2025",
       willingnessToParticipate: "Willingness to Participate",
       yes: "Yes, I'm excited to participate!",
       no: "No, I'm not sure yet",
-      reasonForJoining: "Tell us why you want to join Winter Camp 2026...",
-      reasonPlaceholder: "e.g., I want to experience Russian winter culture and visit the beautiful palaces of Saint Petersburg...",
+      reasonForJoining: "Tell us why you want to join Winter Camp 2025...",
+      reasonPlaceholder: "e.g., I want to experience Russian winter culture and meet Indonesian students in Russia...",
       
       // Buttons
       submit: "Submit Registration",
@@ -118,7 +118,7 @@ export const translations = {
       
       // Success message
       successTitle: "Registration Successful!",
-      successMessage: "Thank you for registering for Winter Camp 2026. We'll contact you soon with more details.",
+      successMessage: "Thank you for registering for Winter Camp 2025! Join our Telegram group for updates: t.me/+JOsH5fKgo2I3ZTc1",
       
       // Chatbot
       chatbot: "Winter Camp Assistant",
@@ -148,15 +148,15 @@ export const translations = {
 
       // FAQ Section
       faqTitle: "Frequently Asked Questions",
-      faqSubtitle: "Find answers to common questions about Winter Camp 2026",
+      faqSubtitle: "Find answers to common questions about Winter Camp 2025",
       expandAll: "Expand All",
       collapseAll: "Collapse All",
-      faqMoreQuestions: "Still have questions? We're here to help!",
+      faqMoreQuestions: "Still have questions? Contact us!",
       contactTelegram: "Contact via Telegram",
       faq: {
         whenWhere: {
-          q: "When and where is Winter Camp 2026?",
-          a: "February 2-3, 2026 in Pushkin (Tsarskoye Selo), near Saint Petersburg, Russia. The venue is a dacha (Russian country house) near the famous Catherine Palace."
+          q: "When and where is Winter Camp 2025?",
+          a: "February 12-14, 2025 at Центр «Молодёжный» (Youth Center), Saint Petersburg, Russia. We will also visit the Central Naval Museum!"
         },
         whoParticipate: {
           q: "Who can participate?",
@@ -176,11 +176,11 @@ export const translations = {
         },
         cost: {
           q: "What's the cost?",
-          a: "Please contact the organizers for current pricing. The fee includes accommodation, all meals, transportation, and activities. Contact via Telegram: @irazkisra"
+          a: "Please contact the organizers for current pricing. Contact: Fikriya (+79111495385), Aris (+79810409453), or Abil (+6285121080413)."
         },
         transport: {
           q: "Is transportation provided?",
-          a: "Yes! Bus transportation from Saint Petersburg city center to the venue is arranged. Meeting point will be announced closer to the event date."
+          a: "Yes! Transportation from Saint Petersburg city center to the venue is arranged. Meeting point will be announced closer to the event date."
         },
         perform: {
           q: "Can I perform at the event?",
@@ -188,7 +188,7 @@ export const translations = {
         },
         activities: {
           q: "What activities are planned?",
-          a: "Palace/museum visits with educational quest games, bonfire gatherings, indoor & outdoor games, cultural exchange, photography sessions, talk shows, and more!"
+          a: "Museum visit to Central Naval Museum, sharing & networking sessions, cultural exchange, indoor & outdoor games, photography sessions, talk shows, and more!"
         },
         allergies: {
           q: "What if I have food allergies?",
@@ -196,32 +196,32 @@ export const translations = {
         },
         organizer: {
           q: "Who organizes this event?",
-          a: "PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia), led by Fikria Shaleha."
+          a: "PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia), supported by KBRI Moscow."
         },
         contact: {
           q: "How can I contact the organizers?",
-          a: "Via Telegram: @irazkisra. You can also use the chatbot on this website for quick answers!"
+          a: "Fikriya: +79111495385, Aris: +79810409453, Abil: +6285121080413. Telegram: @permiraspb"
         }
       },
 
       // Rundown Section
       rundownTitle: "Event Schedule",
-      rundownSubtitle: "February 2-3, 2026 • Pushkin, Saint Petersburg",
+      rundownSubtitle: "February 12-14, 2025 • Центр «Молодёжный», Saint Petersburg",
       rundownAllHalal: "All Food 100% Halal",
       rundownHalalDesc: "Indonesian & Russian dishes",
-      rundownMuseum: "Museum Quest",
-      rundownMuseumDesc: "Educational game at palace",
+      rundownMuseum: "Naval Museum",
+      rundownMuseumDesc: "Visit Central Naval Museum",
       rundownCultural: "Cultural Night",
       rundownCulturalDesc: "Performances & exchange",
       rundown: {
         day1: {
-          date: "Feb 2 (Sat)",
+          date: "Feb 12 (Wed)",
           title: "Day 1 - Arrival",
           gathering: "Gathering at meeting point",
           arrival: "Arrival at camp & orientation",
           opening: "Opening ceremony",
           talkshow: "Talk show with speakers",
-          sharing: "Experience sharing session",
+          sharing: "Sharing & networking session",
           photo: "Group photo & time capsule",
           dinner: "Dinner (Plov)",
           teambuilding: "Team building & indoor games",
@@ -229,24 +229,24 @@ export const translations = {
           rest: "Rest"
         },
         day2: {
-          date: "Feb 3 (Sun)",
+          date: "Feb 13 (Thu)",
           title: "Day 2 - Museum",
           breakfast: "Breakfast (Mie Goreng)",
-          tomuseum: "Travel to museum",
+          tomuseum: "Travel to Central Naval Museum",
           ceremony: "Official opening ceremony with VIPs",
-          museumquest: "Museum educational quest game",
-          winners: "Quest winners announcement",
+          museumquest: "Museum tour & educational activities",
+          winners: "Activity winners announcement",
           returncamp: "Return to camp",
           lunch: "Lunch (Nasi Goreng)",
           preparation: "Preparation for cultural night",
           dinner: "Dinner (Pecel Ayam)",
           cultural: "Cultural night performances",
-          reflection: "Reflection & sharing session",
+          reflection: "Sharing & networking session",
           freetime: "Free time",
           rest: "Rest"
         },
         day3: {
-          date: "Feb 4 (Mon)",
+          date: "Feb 14 (Fri)",
           title: "Day 3 - Departure",
           breakfast: "Breakfast (Burger & Mashed Potatoes)",
           outdoor: "Outdoor team games (snowman contest!)",
@@ -273,8 +273,8 @@ export const translations = {
   id: {
     translation: {
       // Header
-      title: "Winter Camp 2026",
-      subtitle: "Rasakan keajaiban istana musim dingin Saint Petersburg bersama PERMIRA!",
+      title: "Winter Camp 2025",
+      subtitle: "Rasakan keajaiban musim dingin Saint Petersburg bersama PERMIRA!",
       
       // Language selector
       language: "Bahasa",
@@ -286,20 +286,20 @@ export const translations = {
       // Event Details
       eventDetails: "Detail Acara",
       dateTime: "Tanggal & Waktu",
-      dateTimeValue: "2-3 Februari 2026",
+      dateTimeValue: "12-14 Februari 2025",
       location: "Lokasi",
-      locationValue: "Pushkin, Saint Petersburg, Rusia",
+      locationValue: "Центр «Молодёжный», Saint Petersburg, Rusia",
       organizer: "Penyelenggara",
       organizerValue: "PERMIRA Saint Petersburg",
       eventOverview: "Ringkasan Acara",
-      eventDescription: "Bergabunglah dalam pengalaman musim dingin Rusia yang tak terlupakan! Winter Camp 2026 oleh PERMIRA menawarkan akomodasi dacha di dekat istana-istana terkenal dunia:",
+      eventDescription: "Bergabunglah dalam pengalaman musim dingin Rusia yang tak terlupakan! Winter Camp 2025 oleh PERMIRA menawarkan akomodasi di Pusat Pemuda dengan kunjungan museum:",
       activities: {
-        skiing: "Kunjungi Istana Catherine (Ekaterininsky Dvorets)",
-        hiking: "Jelajahi Istana Besar Peterhof",
-        bonfire: "Api unggun di dacha yang nyaman",
+        skiing: "Kunjungi Museum Angkatan Laut Pusat",
+        hiking: "Sesi Sharing & Networking",
+        bonfire: "Malam Budaya & Pentas Seni",
         workshops: "Fotografi di situs bersejarah",
         photography: "Pertukaran budaya dengan mahasiswa Indonesia",
-        games: "Kunjungi Museum Hermitage (cabang Old Village)"
+        games: "Team building & permainan dalam ruangan"
       },
       
       // Registration Form
@@ -368,12 +368,12 @@ export const translations = {
       
       // Terms & Participation
       termsConditions: "Syarat & Ketentuan",
-      termsText: "Saya setuju dengan syarat dan ketentuan Kemah Musim Dingin 2026",
+      termsText: "Saya setuju dengan syarat dan ketentuan Kemah Musim Dingin 2025",
       willingnessToParticipate: "Kesediaan untuk Berpartisipasi",
       yes: "Ya, saya sangat ingin berpartisipasi!",
       no: "Tidak, saya belum yakin",
-      reasonForJoining: "Ceritakan mengapa Anda ingin bergabung dengan Kemah Musim Dingin 2026...",
-      reasonPlaceholder: "contoh: Saya ingin merasakan budaya musim dingin Rusia dan mengunjungi istana-istana indah Saint Petersburg...",
+      reasonForJoining: "Ceritakan mengapa Anda ingin bergabung dengan Kemah Musim Dingin 2025...",
+      reasonPlaceholder: "contoh: Saya ingin merasakan budaya musim dingin Rusia dan bertemu mahasiswa Indonesia di Rusia...",
       
       // Buttons
       submit: "Kirim Pendaftaran",
@@ -389,7 +389,7 @@ export const translations = {
       
       // Success message
       successTitle: "Pendaftaran Berhasil!",
-      successMessage: "Terima kasih telah mendaftar Kemah Musim Dingin 2026. Kami akan segera menghubungi Anda dengan detail lebih lanjut.",
+      successMessage: "Terima kasih telah mendaftar Kemah Musim Dingin 2025! Gabung grup Telegram kami: t.me/+JOsH5fKgo2I3ZTc1",
       
       // Chatbot
       chatbot: "Asisten Kemah Musim Dingin",
@@ -419,15 +419,15 @@ export const translations = {
 
       // FAQ Section
       faqTitle: "Pertanyaan yang Sering Diajukan",
-      faqSubtitle: "Temukan jawaban untuk pertanyaan umum tentang Winter Camp 2026",
+      faqSubtitle: "Temukan jawaban untuk pertanyaan umum tentang Winter Camp 2025",
       expandAll: "Buka Semua",
       collapseAll: "Tutup Semua",
-      faqMoreQuestions: "Masih ada pertanyaan? Kami siap membantu!",
+      faqMoreQuestions: "Masih ada pertanyaan? Hubungi kami!",
       contactTelegram: "Hubungi via Telegram",
       faq: {
         whenWhere: {
-          q: "Kapan dan di mana Winter Camp 2026?",
-          a: "2-3 Februari 2026 di Pushkin (Tsarskoye Selo), dekat Saint Petersburg, Rusia. Lokasinya adalah dacha (rumah pedesaan Rusia) dekat Istana Catherine yang terkenal."
+          q: "Kapan dan di mana Winter Camp 2025?",
+          a: "12-14 Februari 2025 di Центр «Молодёжный» (Pusat Pemuda), Saint Petersburg, Rusia. Kami juga akan mengunjungi Museum Angkatan Laut Pusat!"
         },
         whoParticipate: {
           q: "Siapa yang bisa berpartisipasi?",
@@ -447,11 +447,11 @@ export const translations = {
         },
         cost: {
           q: "Berapa biayanya?",
-          a: "Silakan hubungi panitia untuk harga terkini. Biaya termasuk akomodasi, semua makanan, transportasi, dan kegiatan. Hubungi via Telegram: @irazkisra"
+          a: "Silakan hubungi panitia untuk harga terkini. Kontak: Fikriya (+79111495385), Aris (+79810409453), atau Abil (+6285121080413)."
         },
         transport: {
           q: "Apakah transportasi disediakan?",
-          a: "Ya! Transportasi bus dari pusat kota Saint Petersburg ke lokasi acara sudah diatur. Titik kumpul akan diumumkan mendekati tanggal acara."
+          a: "Ya! Transportasi dari pusat kota Saint Petersburg ke lokasi acara sudah diatur. Titik kumpul akan diumumkan mendekati tanggal acara."
         },
         perform: {
           q: "Bisakah saya tampil di acara?",
@@ -459,7 +459,7 @@ export const translations = {
         },
         activities: {
           q: "Kegiatan apa saja yang direncanakan?",
-          a: "Kunjungan istana/museum dengan permainan quest edukatif, api unggun, permainan dalam & luar ruangan, pertukaran budaya, sesi foto, talk show, dan lainnya!"
+          a: "Kunjungan Museum Angkatan Laut Pusat, sesi sharing & networking, pertukaran budaya, permainan dalam & luar ruangan, sesi foto, talk show, dan lainnya!"
         },
         allergies: {
           q: "Bagaimana jika saya punya alergi makanan?",
@@ -467,32 +467,32 @@ export const translations = {
         },
         organizer: {
           q: "Siapa penyelenggara acara ini?",
-          a: "PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia), dipimpin oleh Fikria Shaleha."
+          a: "PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia), didukung oleh KBRI Moskow."
         },
         contact: {
           q: "Bagaimana cara menghubungi panitia?",
-          a: "Via Telegram: @irazkisra. Anda juga bisa menggunakan chatbot di website ini untuk jawaban cepat!"
+          a: "Fikriya: +79111495385, Aris: +79810409453, Abil: +6285121080413. Telegram: @permiraspb"
         }
       },
 
       // Rundown Section
       rundownTitle: "Jadwal Acara",
-      rundownSubtitle: "2-3 Februari 2026 • Pushkin, Saint Petersburg",
+      rundownSubtitle: "12-14 Februari 2025 • Центр «Молодёжный», Saint Petersburg",
       rundownAllHalal: "Semua Makanan 100% Halal",
       rundownHalalDesc: "Masakan Indonesia & Rusia",
-      rundownMuseum: "Quest Museum",
-      rundownMuseumDesc: "Permainan edukatif di istana",
+      rundownMuseum: "Museum Angkatan Laut",
+      rundownMuseumDesc: "Kunjungan Museum Angkatan Laut Pusat",
       rundownCultural: "Malam Budaya",
       rundownCulturalDesc: "Penampilan & pertukaran",
       rundown: {
         day1: {
-          date: "2 Feb (Sab)",
+          date: "12 Feb (Rab)",
           title: "Hari 1 - Kedatangan",
           gathering: "Berkumpul di titik kumpul",
           arrival: "Tiba di camp & orientasi",
           opening: "Pembukaan non-formal",
           talkshow: "Talk show dengan narasumber",
-          sharing: "Sesi berbagi pengalaman",
+          sharing: "Sesi sharing & networking",
           photo: "Foto bersama & kapsul waktu",
           dinner: "Makan malam (Plov)",
           teambuilding: "Pembentukan tim & permainan",
@@ -500,24 +500,24 @@ export const translations = {
           rest: "Istirahat"
         },
         day2: {
-          date: "3 Feb (Min)",
+          date: "13 Feb (Kam)",
           title: "Hari 2 - Museum",
           breakfast: "Sarapan (Mie Goreng)",
-          tomuseum: "Perjalanan ke museum",
+          tomuseum: "Perjalanan ke Museum Angkatan Laut Pusat",
           ceremony: "Pembukaan resmi dengan VIP",
-          museumquest: "Permainan quest edukatif museum",
-          winners: "Pengumuman pemenang quest",
+          museumquest: "Tur museum & kegiatan edukatif",
+          winners: "Pengumuman pemenang kegiatan",
           returncamp: "Kembali ke camp",
           lunch: "Makan siang (Nasi Goreng)",
           preparation: "Persiapan malam budaya",
           dinner: "Makan malam (Pecel Ayam)",
           cultural: "Pentas seni malam budaya",
-          reflection: "Kesan pesan & renungan",
+          reflection: "Sesi sharing & networking",
           freetime: "Waktu bebas",
           rest: "Istirahat"
         },
         day3: {
-          date: "4 Feb (Sen)",
+          date: "14 Feb (Jum)",
           title: "Hari 3 - Kepulangan",
           breakfast: "Sarapan (Burger & Kentang Tumbuk)",
           outdoor: "Permainan tim di luar (lomba boneka salju!)",
@@ -544,8 +544,8 @@ export const translations = {
   ru: {
     translation: {
       // Header
-      title: "Зимний Лагерь 2026",
-      subtitle: "Окунитесь в волшебство зимних дворцов Санкт-Петербурга с PERMIRA!",
+      title: "Зимний Лагерь 2025",
+      subtitle: "Окунитесь в волшебство зимнего Санкт-Петербурга с PERMIRA!",
       
       // Language selector
       language: "Язык",
@@ -557,20 +557,20 @@ export const translations = {
       // Event Details
       eventDetails: "Детали Мероприятия",
       dateTime: "Дата и Время",
-      dateTimeValue: "2-3 февраля 2026",
+      dateTimeValue: "12-14 февраля 2025",
       location: "Место проведения",
-      locationValue: "Пушкин, Санкт-Петербург, Россия",
+      locationValue: "Центр «Молодёжный», Санкт-Петербург, Россия",
       organizer: "Организатор",
       organizerValue: "PERMIRA Санкт-Петербург",
       eventOverview: "Обзор Мероприятия",
-      eventDescription: "Присоединяйтесь к незабываемому зимнему приключению в России! Зимний Лагерь 2026 от PERMIRA предлагает проживание на даче рядом с всемирно известными дворцами:",
+      eventDescription: "Присоединяйтесь к незабываемому зимнему приключению в России! Зимний Лагерь 2025 от PERMIRA предлагает проживание в Молодёжном центре с посещением музеев:",
       activities: {
-        skiing: "Посещение Екатерининского дворца",
-        hiking: "Экскурсия в Большой Петергофский дворец",
-        bonfire: "Уютные посиделки у костра на даче",
+        skiing: "Посещение Центрального Военно-морского музея",
+        hiking: "Сессии обмена опытом и нетворкинг",
+        bonfire: "Культурный вечер и выступления",
         workshops: "Фотосессия у исторических достопримечательностей",
         photography: "Культурный обмен с индонезийскими студентами",
-        games: "Посещение Эрмитажа (филиал Старая Деревня)"
+        games: "Тимбилдинг и игры в помещении"
       },
       
       // Registration Form
@@ -639,12 +639,12 @@ export const translations = {
       
       // Terms & Participation
       termsConditions: "Правила и Условия",
-      termsText: "Я согласен с правилами и условиями Зимнего Лагеря 2026",
+      termsText: "Я согласен с правилами и условиями Зимнего Лагеря 2025",
       willingnessToParticipate: "Готовность Участвовать",
       yes: "Да, я с нетерпением жду участия!",
       no: "Нет, я пока не уверен",
-      reasonForJoining: "Расскажите, почему вы хотите присоединиться к Зимнему Лагерю 2026...",
-      reasonPlaceholder: "например: Я хочу познакомиться с русской зимней культурой и посетить прекрасные дворцы Санкт-Петербурга...",
+      reasonForJoining: "Расскажите, почему вы хотите присоединиться к Зимнему Лагерю 2025...",
+      reasonPlaceholder: "например: Я хочу познакомиться с русской зимней культурой и встретить индонезийских студентов в России...",
       
       // Buttons
       submit: "Отправить Регистрацию",
@@ -660,7 +660,7 @@ export const translations = {
       
       // Success message
       successTitle: "Регистрация Успешна!",
-      successMessage: "Спасибо за регистрацию на Зимний Лагерь 2026. Мы свяжемся с вами в ближайшее время с дополнительной информацией.",
+      successMessage: "Спасибо за регистрацию на Зимний Лагерь 2025! Присоединяйтесь к нашей группе в Telegram: t.me/+JOsH5fKgo2I3ZTc1",
       
       // Chatbot
       chatbot: "Помощник Зимнего Лагеря",
@@ -690,15 +690,15 @@ export const translations = {
 
       // FAQ Section
       faqTitle: "Часто Задаваемые Вопросы",
-      faqSubtitle: "Найдите ответы на часто задаваемые вопросы о Зимнем Лагере 2026",
+      faqSubtitle: "Найдите ответы на часто задаваемые вопросы о Зимнем Лагере 2025",
       expandAll: "Развернуть всё",
       collapseAll: "Свернуть всё",
       faqMoreQuestions: "Остались вопросы? Мы готовы помочь!",
       contactTelegram: "Связаться через Telegram",
       faq: {
         whenWhere: {
-          q: "Когда и где пройдёт Зимний Лагерь 2026?",
-          a: "2-3 февраля 2026 года в Пушкине (Царское Село), недалеко от Санкт-Петербурга. Место проведения — дача рядом с знаменитым Екатерининским дворцом."
+          q: "Когда и где пройдёт Зимний Лагерь 2025?",
+          a: "12-14 февраля 2025 года в Центре «Молодёжный», Санкт-Петербург. Мы также посетим Центральный Военно-морской музей!"
         },
         whoParticipate: {
           q: "Кто может участвовать?",
@@ -718,7 +718,7 @@ export const translations = {
         },
         cost: {
           q: "Какова стоимость?",
-          a: "Пожалуйста, свяжитесь с организаторами для уточнения цены. Стоимость включает проживание, все приёмы пищи, транспорт и мероприятия. Telegram: @irazkisra"
+          a: "Пожалуйста, свяжитесь с организаторами для уточнения цены. Контакты: Фикрия (+79111495385), Арис (+79810409453), Абил (+6285121080413)."
         },
         transport: {
           q: "Предоставляется ли транспорт?",
@@ -730,7 +730,7 @@ export const translations = {
         },
         activities: {
           q: "Какие мероприятия запланированы?",
-          a: "Посещение дворца/музея с образовательным квестом, посиделки у костра, игры на улице и в помещении, культурный обмен, фотосессии, ток-шоу и многое другое!"
+          a: "Посещение Центрального Военно-морского музея, сессии обмена опытом и нетворкинг, игры на улице и в помещении, культурный обмен, фотосессии, ток-шоу и многое другое!"
         },
         allergies: {
           q: "Что делать, если у меня аллергия на еду?",
@@ -738,57 +738,57 @@ export const translations = {
         },
         organizer: {
           q: "Кто организует это мероприятие?",
-          a: "PERMIRA Санкт-Петербург (Ассоциация индонезийских студентов в России) под руководством Фикрии Шалехи."
+          a: "PERMIRA Санкт-Петербург (Ассоциация индонезийских студентов в России) при поддержке KBRI Москва."
         },
         contact: {
           q: "Как связаться с организаторами?",
-          a: "Через Telegram: @irazkisra. Также можете использовать чат-бота на этом сайте для быстрых ответов!"
+          a: "Фикрия: +79111495385, Арис: +79810409453, Абил: +6285121080413. Telegram: @permiraspb"
         }
       },
 
       // Rundown Section
       rundownTitle: "Расписание Мероприятия",
-      rundownSubtitle: "2-3 февраля 2026 • Пушкин, Санкт-Петербург",
+      rundownSubtitle: "12-14 февраля 2025 • Центр «Молодёжный», Санкт-Петербург",
       rundownAllHalal: "Вся Еда 100% Халяль",
       rundownHalalDesc: "Индонезийские и русские блюда",
-      rundownMuseum: "Квест в Музее",
-      rundownMuseumDesc: "Образовательная игра во дворце",
+      rundownMuseum: "Военно-морской музей",
+      rundownMuseumDesc: "Посещение Центрального Военно-морского музея",
       rundownCultural: "Культурный Вечер",
       rundownCulturalDesc: "Выступления и обмен",
       rundown: {
         day1: {
-          date: "2 фев (Сб)",
+          date: "12 фев (Ср)",
           title: "День 1 - Приезд",
           gathering: "Сбор участников в точке встречи",
           arrival: "Заезд в лагерь и ориентация",
-          opening: "Неформальное открытие",
+          opening: "Церемония открытия",
           talkshow: "Ток-шоу со спикерами",
-          sharing: "Сессия обмена опытом",
+          sharing: "Сессия обмена опытом и нетворкинг",
           photo: "Общая фотография и капсула времени",
           dinner: "Ужин (Плов)",
-          teambuilding: "Формирование команд и игры",
+          teambuilding: "Тимбилдинг и игры в помещении",
           freetime: "Свободное время",
           rest: "Отбой"
         },
         day2: {
-          date: "3 фев (Вс)",
+          date: "13 фев (Чт)",
           title: "День 2 - Музей",
           breakfast: "Завтрак (Ми Горенг)",
-          tomuseum: "Поездка в музей",
+          tomuseum: "Поездка в Центральный Военно-морской музей",
           ceremony: "Торжественное открытие с VIP",
-          museumquest: "Образовательный квест по музею",
-          winners: "Объявление победителей квеста",
+          museumquest: "Экскурсия по музею и образовательные мероприятия",
+          winners: "Объявление победителей мероприятий",
           returncamp: "Возвращение в лагерь",
           lunch: "Обед (Наси Горенг)",
           preparation: "Подготовка к культурному вечеру",
           dinner: "Ужин (Печел Аям)",
           cultural: "Культурная программа и выступления",
-          reflection: "Рефлексия и обмен впечатлениями",
+          reflection: "Сессия обмена опытом и нетворкинг",
           freetime: "Свободное время",
           rest: "Отбой"
         },
         day3: {
-          date: "4 фев (Пн)",
+          date: "14 фев (Пт)",
           title: "День 3 - Отъезд",
           breakfast: "Завтрак (Бургер и пюре)",
           outdoor: "Командные игры на улице (конкурс снеговиков!)",

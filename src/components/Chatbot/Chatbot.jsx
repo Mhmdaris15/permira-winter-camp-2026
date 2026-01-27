@@ -11,83 +11,83 @@ import { CHATBOT_CONFIG, SYSTEM_PROMPT } from './chatbotConfig';
 const knowledgePatterns = [
   {
     keywords: ['when', 'date', 'kapan', 'tanggal', 'когда', 'дата', 'time'],
-    response: `**Winter Camp 2026** will be held on **February 2-3, 2026** ❄️\n\nThe event spans 2 full days with activities starting from the afternoon on Day 1 and ending around noon on Day 3. Mark your calendars! 📅`
+    response: `**Winter Camp 2025** will be held on **February 12-14, 2025**\n\nThe event spans 3 days with activities starting from the afternoon on Day 1 and ending around noon on Day 3. Mark your calendars!`
   },
   {
-    keywords: ['where', 'location', 'dimana', 'lokasi', 'где', 'место', 'address', 'alamat', 'venue'],
-    response: `**Location:** Pushkin (Tsarskoye Selo), Saint Petersburg, Russia 🏰\n\nPushkin is about 24 km south of Saint Petersburg city center. It's famous for the beautiful Catherine Palace with the legendary Amber Room!\n\nWe'll stay at a cozy Russian dacha (country house) with heating, banya (sauna), and bonfire area. ❄️🔥`
+    keywords: ['where', 'location', 'dimana', 'lokasi', 'где', 'место', 'address', 'alamat', 'venue', 'camp'],
+    response: `**Camp Location:** Центр «Молодёжный» (Youth Center), Saint Petersburg\nMap: https://yandex.com/maps/-/CLxJIDLR\n\n**Museum Visit:** Central Naval Museum\nMap: https://yandex.com/maps/-/CLxJUDO0\n\nThe Youth Center is a place for active and talented youth with a unique atmosphere for development and self-expression.`
   },
   {
     keywords: ['food', 'eat', 'meal', 'makan', 'makanan', 'halal', 'еда', 'питание', 'menu', 'breakfast', 'lunch', 'dinner', 'sarapan', 'makan siang', 'makan malam'],
-    response: `**🍽️ ALL FOOD IS 100% HALAL! 🍽️**\n\n**Menu highlights:**\n- Day 1 Dinner: Plov (Pilaf), Sate Taichan, Shakshouka\n- Day 2 Breakfast: Vladimir Salad, Mie Goreng\n- Day 2 Lunch: Nasi Goreng\n- Day 2 Dinner: Pecel Ayam, Burger\n- Day 3 Breakfast: Burger with Mashed Potatoes\n\nVegetarian options available! Please mention any allergies in your registration. 🥗`
+    response: `**ALL FOOD IS 100% HALAL!**\n\n**Menu:**\n- Day 1 Dinner: Plov\n- Day 2 Breakfast: Mie Goreng\n- Day 2 Lunch: Nasi Goreng\n- Day 2 Dinner: Pecel Ayam\n- Day 3 Breakfast: Burger & Mashed Potatoes\n\nVegetarian options available! Please mention any allergies in your registration.`
   },
   {
     keywords: ['register', 'sign up', 'join', 'daftar', 'gabung', 'регистрация', 'how to', 'cara'],
-    response: `**How to Register:** 📝\n\n1. Fill out the registration form on our website\n2. Indonesian citizens must upload KBRI proof (Lapor Diri)\n3. Wait for confirmation from the organizers\n\nBoth Indonesian and Russian students are welcome to join!\n\nQuestions? Contact us via Telegram: **@irazkisra** 📱`
+    response: `**How to Register:**\n\n1. Fill out the registration form on our website\n2. Indonesian citizens must upload KBRI proof (Lapor Diri)\n3. After registration, join the Telegram group: t.me/+JOsH5fKgo2I3ZTc1\n\nBoth Indonesian and Russian students are welcome!\n\n**Contact:**\nFikriya: +79111495385\nAris: +79810409453\nAbil: +6285121080413`
   },
   {
     keywords: ['cost', 'price', 'fee', 'biaya', 'harga', 'bayar', 'цена', 'стоимость', 'money', 'budget'],
-    response: `**Registration covers:**\n- Transportation (bus from city center)\n- Accommodation (dacha rental)\n- All meals (100% Halal)\n- Activities and games\n- Emergency fund\n\nFor specific pricing, please contact the organizers via Telegram: **@irazkisra** 💰`
+    response: `**Registration covers:**\n- Transportation (bus from city center)\n- Accommodation at Youth Center\n- All meals (100% Halal)\n- Museum visit & activities\n\nFor specific pricing, please contact:\nFikriya: +79111495385\nAris: +79810409453\nAbil: +6285121080413`
   },
   {
     keywords: ['transport', 'bus', 'how to get', 'meeting point', 'kumpul', 'транспорт', 'автобус'],
-    response: `**Transportation:** 🚌\n\nBus transportation is provided from Saint Petersburg city center to Pushkin.\n\n- **Meeting Point:** Will be announced closer to the event (nearest metro station)\n- **Vehicles:** Mercedes Sprinter VIP (19 seats) or Bus (45 seats)\n- **Arrival Time:** Please be on time! Latecomers will need to arrange their own transport.\n\nVolunteers with PERMIRA flags will greet you at the meeting point! 🇮🇩🇷🇺`
+    response: `**Transportation:**\n\nBus transportation is provided from Saint Petersburg city center to the Youth Center.\n\n**Meeting Point:** Will be announced closer to the event\n**Arrival Time:** Please be on time! Latecomers may need to arrange their own transport.\n\nVolunteers with PERMIRA flags will greet you at the meeting point!`
   },
   {
     keywords: ['schedule', 'rundown', 'jadwal', 'acara', 'agenda', 'расписание', 'program', 'activity', 'activities', 'kegiatan'],
-    response: `**📅 Event Schedule Highlights:**\n\n**Day 1 (Feb 2):**\n- 14:00 - Meeting at metro station\n- 16:15 - Opening ceremony\n- 16:45 - Talk show & discussion\n- 19:00 - Dinner\n- 20:30 - Team building games\n\n**Day 2 (Feb 3):**\n- 08:00 - Breakfast\n- 10:30 - Museum visit & quest game\n- 15:30 - Lunch\n- 20:00 - Cultural performances\n\n**Day 3:**\n- 09:00 - Outdoor team games\n- 11:30 - Awards & departure\n\nFull schedule on the website! 🎭`
+    response: `**Event Schedule:**\n\n**Day 1 (Feb 12):**\n- 14:00 - Gathering & arrival\n- 16:15 - Opening ceremony\n- 16:45 - Talk show\n- 18:15 - Sharing session\n- 19:00 - Dinner\n- 20:30 - Team building\n\n**Day 2 (Feb 13):**\n- 08:00 - Breakfast\n- 10:30 - Museum visit (Naval Museum)\n- 15:30 - Lunch\n- 20:00 - Cultural night\n- 21:00 - Networking session\n\n**Day 3 (Feb 14):**\n- 09:00 - Outdoor games\n- 11:30 - Awards & departure`
   },
   {
     keywords: ['bring', 'pack', 'bawa', 'что брать', 'prepare', 'packing', 'essentials'],
-    response: `**What to Bring:** 🎒\n\n**Essential:**\n- Warm winter clothes (coat, gloves, hat, scarf)\n- Comfortable indoor clothes\n- Personal toiletries\n- Reusable utensils (eco-friendly policy! 🌱)\n- Camera for memories 📸\n- Positive attitude! 😊\n\n**Optional:**\n- Swimsuit (if you want to try banya/sauna)\n- Musical instruments for performances\n- Traditional items for cultural exchange`
+    response: `**What to Bring:**\n\n**Essential:**\n- Warm winter clothes (coat, gloves, hat, scarf)\n- Comfortable indoor clothes\n- Personal toiletries & medications\n- Reusable utensils (eco-friendly policy!)\n- Water bottle\n- Camera\n- Passport/ID\n- KBRI proof (Indonesian citizens)\n- Power bank\n- Positive attitude!`
   },
   {
     keywords: ['who', 'organizer', 'siapa', 'permira', 'организатор', 'contact', 'telegram', 'hubungi', 'kontak'],
-    response: `**Organized by:** PERMIRA Saint Petersburg 🇮🇩🇷🇺\n\n(Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia)\n\n**Contact:**\n- Telegram: **@irazkisra**\n- Chair: Fikria Shaleha\n\nWe're excited to welcome Indonesian and Russian students for this amazing cultural exchange! ❄️`
-  },
-  {
-    keywords: ['volunteer', 'help', 'relawan', 'panitia', 'волонтёр', 'assist'],
-    response: `**Volunteer Opportunities:** 🙋\n\nWe need help with:\n- Food & menu coordination\n- Event hosting (MC)\n- Social media & posters\n- Documentation & photography\n- Participant coordination\n\nInterested? Indicate it in your registration form! Volunteers get special benefits and recognition. ⭐`
+    response: `**Organized by:** PERMIRA Saint Petersburg\n(Persatuan Mahasiswa Indonesia di Rusia)\n\n**Contact:**\n- Fikriya: +79111495385 (WA/TG)\n- Aris: +79810409453 (WA/TG)\n- Abil: +6285121080413 (WA/TG)\n\n**Telegram Channel:** @permiraspb\n**Participant Group:** t.me/+JOsH5fKgo2I3ZTc1`
   },
   {
     keywords: ['game', 'play', 'permainan', 'игра', 'fun', 'outdoor', 'indoor', 'snow', 'salju'],
-    response: `**Games & Activities:** 🎮\n\n**Indoor Games:**\n- Find Animal Voice\n- Shadow Boxing\n- The Counting Game\n- Interactive quizzes\n\n**Outdoor (weather permitting):**\n- Snowman competition ⛄\n- Gobak Sodor\n- Tug of war\n- Volleyball\n\n**Special:**\n- Museum quest game with prizes!\n- Cultural performances\n- Bonfire gathering 🔥`
+    response: `**Games & Activities:**\n\n**Indoor:**\n- Team building games\n- Interactive quizzes\n- Sharing sessions\n\n**Outdoor (weather permitting):**\n- Team competitions\n- Snowman contest\n- Group games\n\n**Special:**\n- Museum quest with prizes!\n- Cultural night performances\n- Networking sessions`
   },
   {
     keywords: ['eco', 'environment', 'plastic', 'lingkungan', 'экология', 'green', 'utensils'],
-    response: `**🌱 Eco-Friendly Policy:**\n\nWe care about the environment!\n\n- **No plastic utensils provided** - bring your own reusable ones!\n- Strict portion control to reduce food waste\n- Waste sorting (please separate your trash)\n- QR codes instead of paper materials\n- Help keep the dacha and nature clean! 🌍`
+    response: `**Eco-Friendly Policy:**\n\nWe care about the environment!\n\n- **No plastic utensils provided** - bring your own reusable ones!\n- Strict portion control to reduce food waste\n- Waste sorting practiced\n- QR codes instead of paper materials\n- Help keep the venue clean!`
   },
   {
-    keywords: ['palace', 'museum', 'catherine', 'peterhof', 'hermitage', 'istana', 'музей', 'дворец', 'tourist', 'sight'],
-    response: `**Nearby Attractions:** 🏛️\n\n**Must-see places near Pushkin:**\n- **Catherine Palace** - Home of the famous Amber Room! 💛\n- **Alexander Palace**\n- **Peterhof Grand Palace** - "Russian Versailles"\n- **Hermitage Museum** branches\n\nWe'll have an educational quest game at a museum! Perfect for photos and learning Russian history. 📸`
+    keywords: ['museum', 'naval', 'морской', 'музей', 'tourist', 'sight'],
+    response: `**Museum Visit:**\n\nWe'll visit the **Central Naval Museum** - one of the world's largest naval museums!\n\nMap: https://yandex.com/maps/-/CLxJUDO0\n\nActivities include:\n- Guided tour\n- Educational quest game\n- Prize competition\n- Group photos`
   },
   {
     keywords: ['hello', 'hi', 'hey', 'halo', 'hai', 'привет', 'здравствуйте', 'help', 'start'],
-    response: `**Hello!** 👋 Welcome to Winter Camp 2026!\n\nI'm here to help you with information about:\n- 📅 Event dates & schedule\n- 📍 Location & transportation\n- 🍽️ Food (100% Halal!)\n- 📝 Registration\n- 🎮 Activities & games\n- And more!\n\nWhat would you like to know? ❄️🏔️`
+    response: `**Hello!** Welcome to Winter Camp 2025!\n\nI'm here to help you with information about:\n- Event dates & schedule\n- Location & transportation\n- Food (100% Halal!)\n- Registration\n- Activities & games\n- Contact information\n\nWhat would you like to know?`
   },
   {
     keywords: ['thank', 'thanks', 'terima kasih', 'makasih', 'спасибо', 'great', 'awesome', 'good'],
-    response: `You're welcome! 😊\n\nIf you have more questions, feel free to ask anytime!\n\nHope to see you at Winter Camp 2026! ❄️🎉\n\nDon't forget to register and follow us for updates!`
+    response: `You're welcome!\n\nIf you have more questions, feel free to ask anytime!\n\nHope to see you at Winter Camp 2025!\n\nDon't forget to register and join our Telegram group: t.me/+JOsH5fKgo2I3ZTc1`
   },
   {
     keywords: ['developer', 'made', 'built', 'created', 'pembuat', 'website', 'who made', 'разработчик'],
-    response: `This website was developed by **Muhammad Aris Septanugroho** 👨‍💻\n\nConnect with him on LinkedIn:\nhttps://www.linkedin.com/in/muhammad-aris-septanugroho/\n\nThe chatbot uses a local AI system to answer your questions about Winter Camp 2026! 🤖`
+    response: `This website was developed by **Muhammad Aris Septanugroho**\n\nConnect with him on LinkedIn:\nhttps://www.linkedin.com/in/muhammad-aris-septanugroho/`
   },
   {
     keywords: ['kbri', 'lapor diri', 'indonesian', 'wni', 'citizen', 'warga negara', 'passport'],
-    response: `**For Indonesian Citizens:** 🇮🇩\n\nYou need to provide **KBRI proof (Lapor Diri)** during registration.\n\nThis is a requirement from the Indonesian Embassy for Indonesian citizens living abroad.\n\nIf you haven't registered with KBRI yet, please do so first before registering for Winter Camp.`
+    response: `**For Indonesian Citizens:**\n\nYou need to provide **KBRI proof (Lapor Diri)** during registration.\n\nThis is a requirement from the Indonesian Embassy for Indonesian citizens living abroad.\n\nIf you haven't registered with KBRI yet, please do so first before registering for Winter Camp.`
   },
   {
     keywords: ['russian', 'россия', 'russia', 'rusia', 'student', 'mahasiswa', 'студент'],
-    response: `**Who Can Join?** 🇮🇩🇷🇺\n\n- Indonesian students studying in Russia\n- Russian students interested in cultural exchange\n- Both nationalities welcome!\n\nThis is a great opportunity for Indonesian-Russian friendship and cultural exchange! 🤝`
+    response: `**Who Can Join?**\n\n- Indonesian students studying in Russia\n- Russian students interested in cultural exchange\n- Both nationalities welcome!\n\nThis is a great opportunity for Indonesian-Russian friendship and cultural exchange!`
   },
   {
     keywords: ['perform', 'performance', 'sing', 'dance', 'music', 'tampil', 'penampilan', 'выступление', 'nyanyi', 'tari'],
-    response: `**Want to Perform?** 🎭\n\nWe welcome performances at our Cultural Night!\n\n- Singing 🎤\n- Dancing 💃\n- Poetry 📜\n- Music 🎸\n- Traditional performances\n\nIndicate your interest in the registration form. Share your talent and represent your culture! 🌟`
+    response: `**Want to Perform?**\n\nWe welcome performances at our Cultural Night!\n\n- Singing\n- Dancing\n- Poetry\n- Music\n- Traditional performances\n\nIndicate your interest in the registration form. Share your talent and represent your culture!`
   },
   {
-    keywords: ['banya', 'sauna', 'bath', 'mandi', 'баня'],
-    response: `**Russian Banya (Sauna):** 🧖\n\nOur dacha has a traditional Russian banya available!\n\nIt's a unique Russian experience - hot steam room with birch branches for a traditional bathing ritual.\n\nBring a swimsuit if you'd like to try it! Towels recommended. 🔥`
+    keywords: ['sharing', 'networking', 'session', 'diskusi', 'discussion'],
+    response: `**Sharing & Networking Sessions:**\n\nWinter Camp 2025 features special sessions for:\n\n- Talk shows with experienced speakers\n- Sharing personal experiences in Russia\n- Networking with Indonesian & Russian students\n- Building connections and friendships\n- Cultural exchange discussions\n\nGreat opportunity to learn and make new friends!`
+  },
+  {
+    keywords: ['group', 'telegram', 'chat', 'grup'],
+    response: `**Telegram Information:**\n\n**Channel:** @permiraspb\nhttps://t.me/permiraspb\n\n**Participant Group (after registration):**\nhttps://t.me/+JOsH5fKgo2I3ZTc1\n\nJoin the group after submitting your registration form!`
   }
 ];
 
@@ -122,7 +122,7 @@ const generateLocalResponse = (userMessage) => {
   }
   
   // Default response for unmatched queries
-  return `I'm not sure about that specific question, but I'd love to help! 🤔\n\n**Here's what I can tell you about:**\n- 📅 Event dates (February 2-3, 2026)\n- 📍 Location (Pushkin, Saint Petersburg)\n- 🍽️ Food (100% Halal!)\n- 📝 How to register\n- 🎮 Activities and games\n- 🚌 Transportation\n\nOr contact the organizers directly via Telegram: **@irazkisra** 📱`;
+  return `I'm not sure about that specific question, but I'd love to help! 🤔\n\n**Here's what I can tell you about:**\n- 📅 Event dates (February 12-14, 2025)\n- 📍 Location (Центр «Молодёжный», Saint Petersburg)\n- 🍽️ Food (100% Halal!)\n- 📝 How to register\n- 🎮 Activities and games\n- 🚌 Transportation\n\nOr contact the organizers directly via Telegram: **@permiraspb** 📱`;
 };
 
 // Simple markdown formatter for chat messages

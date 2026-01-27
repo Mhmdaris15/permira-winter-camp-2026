@@ -2,6 +2,9 @@ name = "winter-camp-chatbot-proxy"
 main = "worker.js"
 compatibility_date = "2024-01-01"
 
+[vars]
+RESEND_API_KEY = "re_GGE5qsJR_14U6zsjF9MgY1Cc5WjCBRHfk"
+
 # Optional: Add your custom domain
 # routes = [
 #   { pattern = "chatbot-api.yourdomain.com/*", zone_name = "yourdomain.com" }

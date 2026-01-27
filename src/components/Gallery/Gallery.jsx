@@ -5,6 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Base URL for assets
+const BASE_URL = import.meta.env.BASE_URL || '/';
+const getAssetUrl = (path) => `${BASE_URL}${path}`.replace('//', '/');
+
 // Style constants
 const colors = {
   midnight: '#0a1628',
@@ -17,18 +21,18 @@ const colors = {
 
 // Image list from public/carousel folder
 const images = [
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (1).jpeg', alt: 'PERMIRA Event 1' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (2).jpeg', alt: 'PERMIRA Event 2' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (3).jpeg', alt: 'PERMIRA Event 3' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (4).jpeg', alt: 'PERMIRA Event 4' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (5).jpeg', alt: 'PERMIRA Event 5' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (6).jpeg', alt: 'PERMIRA Event 6' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (7).jpeg', alt: 'PERMIRA Event 7' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (8).jpeg', alt: 'PERMIRA Event 8' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (9).jpeg', alt: 'PERMIRA Event 9' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (10).jpeg', alt: 'PERMIRA Event 10' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (11).jpeg', alt: 'PERMIRA Event 11' },
-  { src: '/permira-winter-camp-2026/carousel/permira-img-for-website (12).jpeg', alt: 'PERMIRA Event 12' },
+  { src: 'carousel/permira-img-for-website (1).jpeg', alt: 'PERMIRA Event 1' },
+  { src: 'carousel/permira-img-for-website (2).jpeg', alt: 'PERMIRA Event 2' },
+  { src: 'carousel/permira-img-for-website (3).jpeg', alt: 'PERMIRA Event 3' },
+  { src: 'carousel/permira-img-for-website (4).jpeg', alt: 'PERMIRA Event 4' },
+  { src: 'carousel/permira-img-for-website (5).jpeg', alt: 'PERMIRA Event 5' },
+  { src: 'carousel/permira-img-for-website (6).jpeg', alt: 'PERMIRA Event 6' },
+  { src: 'carousel/permira-img-for-website (7).jpeg', alt: 'PERMIRA Event 7' },
+  { src: 'carousel/permira-img-for-website (8).jpeg', alt: 'PERMIRA Event 8' },
+  { src: 'carousel/permira-img-for-website (9).jpeg', alt: 'PERMIRA Event 9' },
+  { src: 'carousel/permira-img-for-website (10).jpeg', alt: 'PERMIRA Event 10' },
+  { src: 'carousel/permira-img-for-website (11).jpeg', alt: 'PERMIRA Event 11' },
+  { src: 'carousel/permira-img-for-website (12).jpeg', alt: 'PERMIRA Event 12' },
 ];
 
 function Gallery() {
@@ -144,7 +148,7 @@ function Gallery() {
             style={{ backgroundColor: '#0a1628' }}
           >
             <img
-              src={images[currentIndex].src}
+              src={getAssetUrl(images[currentIndex].src)}
               alt={images[currentIndex].alt}
               className="max-w-full max-h-full object-contain"
             />
@@ -215,7 +219,7 @@ function Gallery() {
                 }}
               >
                 <img
-                  src={image.src}
+                  src={getAssetUrl(image.src)}
                   alt={image.alt}
                   className="w-full h-full object-cover"
                 />
@@ -322,7 +326,7 @@ function Gallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={modalImage.src}
+              src={getAssetUrl(modalImage.src)}
               alt={modalImage.alt}
               className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
               style={{ 

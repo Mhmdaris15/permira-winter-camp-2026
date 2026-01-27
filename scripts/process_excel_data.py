@@ -63,7 +63,7 @@ class PermiraCampDataProcessor:
             "event_name": "PERMIRA Winter Camp 2026",
             "organizer": "PERMIRA Saint Petersburg",
             "location": "Pushkin (Tsarskoye Selo), Saint Petersburg, Russia",
-            "dates": "February 2-3, 2026",
+            "dates": "February 12-14, 2026",
             "description": "A winter camp experience near the beautiful palaces of Saint Petersburg"
         }
 
@@ -207,7 +207,7 @@ The event budget covers:
 
 Note: All food served at the event is 100% Halal. Participants with allergies should inform the organizers in advance.
 
-For specific pricing details, please contact the organizers via Telegram: @irazkisra
+For specific pricing details, please contact the organizers via Telegram: @permiraspb
 """
         })
 
@@ -449,7 +449,7 @@ Note:
 Frequently Asked Questions:
 
 Q: When and where is Winter Camp 2026?
-A: February 2-3, 2026 in Pushkin (Tsarskoye Selo), near Saint Petersburg, Russia.
+A: February 12-14, 2026 in Pushkin (Tsarskoye Selo), near Saint Petersburg, Russia.
 
 Q: Who can participate?
 A: Indonesian students in Russia and Russian students interested in cultural exchange. Both Indonesian and Russian citizens are welcome.
@@ -464,7 +464,7 @@ Q: How do I register?
 A: Fill out the registration form on our website. Indonesian citizens need to upload their KBRI registration proof (Lapor Diri).
 
 Q: What's the cost?
-A: Please contact the organizers for current pricing. Contact via Telegram: @irazkisra
+A: Please contact the organizers for current pricing. Contact via Telegram: @permiraspb
 
 Q: Is transportation provided?
 A: Yes, bus transportation from Saint Petersburg city center to the venue is arranged.
@@ -482,7 +482,7 @@ Q: Who organizes this event?
 A: PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia).
 
 Q: How can I contact the organizers?
-A: Via Telegram: @irazkisra
+A: Via Telegram: @permiraspb
 """
         })
 

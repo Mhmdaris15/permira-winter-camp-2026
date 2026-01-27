@@ -258,7 +258,7 @@ function EventDetails() {
 
         {/* Organizer Card */}
         <a 
-          href="https://t.me/irazkisra"
+          href="https://t.me/permiraspb"
           target="_blank"
           rel="noopener noreferrer"
           className="glass rounded-2xl p-6 group hover:scale-[1.02] transition-transform duration-300 cursor-pointer block"
@@ -283,7 +283,7 @@ function EventDetails() {
               <p style={{ color: colors.frost }} className="text-lg">{t('organizerValue') || 'PERMIRA Saint Petersburg'}</p>
               <p style={{ color: colors.frostDark }} className="text-xs mt-1 flex items-center gap-1">
                 <span>💬</span> Contact via Telegram
-                <span className="ml-2" style={{ color: '#0088cc' }}>→ @irazkisra</span>
+                <span className="ml-2" style={{ color: '#0088cc' }}>→ @permiraspb</span>
               </p>
             </div>
           </div>

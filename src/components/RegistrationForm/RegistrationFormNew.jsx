@@ -6,9 +6,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // Cloudflare Worker URLs - Update with your deployed worker URL
-const CLOUDFLARE_WORKER_URL = 'https://winter-camp-chatbot.muhammadaris1945.workers.dev'; // UPDATE THIS
+const CLOUDFLARE_WORKER_URL = 'https://winter-camp-chatbot-proxy.muhammadaris1945.workers.dev';
 const REGISTER_URL = `${CLOUDFLARE_WORKER_URL}/api/register`;
 const UPLOAD_URL = `${CLOUDFLARE_WORKER_URL}/api/upload`;
+const EMAIL_URL = `${CLOUDFLARE_WORKER_URL}/api/send-email`;
 
 // Style constants
 const colors = {
@@ -333,6 +334,27 @@ function RegistrationForm() {
         });
         
         const result = await response.json();
+        
+        // Send confirmation email (don't block on failure)
+        if (result.success !== false && data.email) {
+          try {
+            await fetch(EMAIL_URL, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                email: data.email,
+                name: data.fullName,
+                citizenship: data.citizenship
+              })
+            });
+          } catch (emailError) {
+            console.warn('Confirmation email could not be sent:', emailError);
+            // Don't fail registration if email fails
+          }
+        }
+        
         return result.success !== false;
       }
       
