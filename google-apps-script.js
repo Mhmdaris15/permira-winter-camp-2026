@@ -54,7 +54,7 @@ function doPost(e) {
   try {
     const sheet = getOrCreateSheet();
     const data = JSON.parse(e.postData.contents);
-    
+
     // Add row to sheet
     const row = [
       data.timestamp || new Date().toISOString(),
@@ -74,17 +74,17 @@ function doPost(e) {
       data.willingToParticipate || '',
       data.reasonForJoining || ''
     ];
-    
+
     sheet.appendRow(row);
-    
+
     // Optional: Send confirmation email
     // sendConfirmationEmail(data);
-    
+
     return ContentService.createTextOutput(JSON.stringify({
       status: 'success',
       message: 'Registration submitted successfully!'
     })).setMimeType(ContentService.MimeType.JSON);
-    
+
   } catch (error) {
     return ContentService.createTextOutput(JSON.stringify({
       status: 'error',
@@ -99,7 +99,7 @@ function doPost(e) {
 function getOrCreateSheet() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName(SHEET_NAME);
-  
+
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME);
     // Add headers
@@ -116,7 +116,7 @@ function getOrCreateSheet() {
       sheet.autoResizeColumn(i);
     }
   }
-  
+
   return sheet;
 }
 
@@ -125,7 +125,7 @@ function getOrCreateSheet() {
  */
 function sendConfirmationEmail(data) {
   if (!data.email) return;
-  
+
   const subject = '❄️ Winter Camp 2026 - Registration Confirmed!';
   const body = `
 Dear ${data.fullName},
@@ -134,8 +134,8 @@ Thank you for registering for Winter Camp 2026! 🏔️
 
 We have received your registration with the following details:
 
-📅 Event: January 15-20, 2026
-📍 Location: Alpine Mountain Resort, Switzerland
+📅 Event: February 12-14, 2026
+📍 Location: Центр «Молодёжный», Saint Petersburg, Russia
 
 Your Registration Details:
 - Name: ${data.fullName}
@@ -152,7 +152,7 @@ Winter Camp 2026 Team
 
 ⛷️🏂❄️
   `;
-  
+
   try {
     MailApp.sendEmail(data.email, subject, body);
   } catch (e) {
