@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [
     react()
   ],
-  // For GitHub Pages deployment, set the base to your repository name
-  base: '/permira-winter-camp-2026/',
+  // For Custom Domain deployment, set base to root '/'
+  base: '/',
 })
