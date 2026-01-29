@@ -9,9 +9,8 @@
  * Deploy this to Cloudflare Workers (free tier: 100,000 requests/day)
  */
 
-// Chutes.ai Configuration
-const CHUTES_API_URL = 'https://llm.chutes.ai/v1/chat/completions';
-const CHUTES_API_KEY = "cpk_d5c7447cffcc441993d96a5439b7afc0.9fc77daccdea5b69b631c41d6f6cf3a8.CSHcX2v65P8dhVf4IuizyqvF2EA3mOZs";
+// DeepSeek API Configuration
+const DEEPSEEK_API_URL = 'https://api.deepseek.com/chat/completions';
 
 // Resend Email Configuration
 const RESEND_API_KEY = 're_GGE5qsJR_14U6zsjF9MgY1Cc5WjCBRHfk';
@@ -38,9 +37,14 @@ export default {
       return handleCORS(request);
     }
 
+    // Check for DeepSeek API Key in environment variables
+    if (!env.DEEPSEEK_API_KEY) {
+      console.warn('DEEPSEEK_API_KEY secret is not set!');
+    }
+
     // Route requests based on path
     if (path === '/api/chat' || path === '/') {
-      return handleChatRequest(request);
+      return handleChatRequest(request, env);
     } else if (path === '/api/register') {
       return handleRegisterRequest(request);
     } else if (path === '/api/upload') {
@@ -54,41 +58,29 @@ export default {
   },
 };
 
-// CORS Headers
-function corsHeaders() {
-  return {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-  };
-}
+// ... (CORS Headers and handleCORS remain the same) ...
 
-function handleCORS(request) {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Max-Age': '86400',
-    },
-  });
-}
-
-// Handle Chutes.ai Chat requests
-async function handleChatRequest(request) {
+// Handle DeepSeek Chat requests
+async function handleChatRequest(request, env) {
   if (request.method !== 'POST') {
     return new Response('Method not allowed', { status: 405 });
   }
 
   try {
     const body = await request.json();
+    const apiKey = env.DEEPSEEK_API_KEY;
 
-    const response = await fetch(CHUTES_API_URL, {
+    if (!apiKey) {
+      return new Response(JSON.stringify({ error: 'Server misconfiguration: Missing API Key' }), {
+        status: 500,
+        headers: corsHeaders(),
+      });
+    }
+
+    const response = await fetch(DEEPSEEK_API_URL, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${CHUTES_API_KEY}`,
+        'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),

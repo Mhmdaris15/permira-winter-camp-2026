@@ -12,7 +12,6 @@ import FAQ from './components/FAQ/FAQ';
 import WhatToBring from './components/WhatToBring/WhatToBring';
 import Chatbot from './components/Chatbot/Chatbot';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
-import { Button } from '@headlessui/react'
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -402,11 +401,11 @@ function AppContent() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-10">
 
-              <Button
-                as="a"
+              <a
                 href="#register"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-xl text-sm font-semibold text-white transition-all hover:scale-105"
                 style={{
+                  padding: '12px 24px',
                   background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
                   boxShadow: '0 8px 30px rgba(124, 58, 237, 0.4)'
                 }}
@@ -415,11 +414,12 @@ function AppContent() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </Button>
+              </a>
               <a
                 href="#event"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-xl text-sm font-semibold transition-all hover:bg-white/10"
                 style={{
+                  padding: '12px 24px',
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 255, 255, 0.15)',
                   color: 'white'
@@ -430,7 +430,7 @@ function AppContent() {
             </div>
 
             {/* Supported By - Clean & Subtle */}
-            <div ref={heroIconsRef} className="flex flex-col items-center gap-3">
+            <div ref={heroIconsRef} className="flex flex-col items-center gap-3 mt-16 px-4">
               <span className="text-xs uppercase tracking-widest text-gray-500">Supported by</span>
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">

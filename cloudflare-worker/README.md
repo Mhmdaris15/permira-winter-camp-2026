@@ -11,16 +11,16 @@ This Cloudflare Worker acts as a proxy to bypass CORS restrictions when calling 
 ### Step 2: Deploy via Dashboard (Easiest)
 1. Go to [Cloudflare Workers](https://dash.cloudflare.com/?to=/:account/workers-and-pages)
 2. Click **"Create"** → **"Create Worker"**
-3. Give it a name like `winter-camp-chatbot`
+3. Give it a name like `winter-camp-chatbot-proxy`
 4. Delete the default code
 5. Copy and paste the contents of `worker.js`
 6. Click **"Deploy"**
-7. Copy your Worker URL (looks like: `https://winter-camp-chatbot.muhammadaris1945.workers.dev`)
+7. Copy your Worker URL (looks like: `https://winter-camp-chatbot-proxy.muhammadaris1945.workers.dev`)
 
 ### Step 3: Update Your App
 Update the `PROXY_URL` in `src/components/Chatbot/Chatbot.jsx`:
 ```javascript
-const PROXY_URL = 'https://winter-camp-chatbot.muhammadaris1945.workers.dev';
+const PROXY_URL = 'https://winter-camp-chatbot-proxy.muhammadaris1945.workers.dev';
 ```
 
 ## Alternative: Deploy via CLI

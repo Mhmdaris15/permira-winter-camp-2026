@@ -336,177 +336,135 @@ function FAQ() {
         ))}
       </div>
 
-      {/* Contact CTA - Redesigned */}
+      {/* Contact CTA - Redesigned & Fixed */}
       <div
-        className="mt-12 rounded-3xl overflow-hidden max-w-3xl mx-auto"
-        style={{
-          background: 'linear-gradient(135deg, rgba(10, 22, 40, 0.9) 0%, rgba(15, 25, 45, 0.95) 100%)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)'
-        }}
+        className="mt-16 max-w-4xl mx-auto"
       >
-        {/* Header */}
-        <div
-          className="px-8 py-6 text-center"
-          style={{
-            background: 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
-          }}
-        >
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke={colors.auroraCyan}>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-            </svg>
-            <h3 className="text-xl font-bold" style={{ color: colors.frost }}>
-              {t('faqMoreQuestions', 'Still have questions? Contact us!')}
-            </h3>
-          </div>
-          <p className="text-sm" style={{ color: colors.frostDark }}>
-            Our team is ready to help you
+        {/* Section Title */}
+        <div className="text-center mb-8">
+          <h3 className="text-2xl font-bold mb-2 flex items-center justify-center gap-3" style={{ color: colors.frost }}>
+            <span className="text-3xl">💬</span>
+            {t('faqMoreQuestions', 'Still have questions?')}
+          </h3>
+          <p style={{ color: colors.frostDark }}>
+            Feel free to contact us via WhatsApp or Telegram
           </p>
         </div>
 
-        {/* Contact Cards Grid */}
-        <div className="p-6 grid sm:grid-cols-3 gap-4">
-          {/* Contact 1 - Lead */}
-          <a
-            href="https://wa.me/79111495385"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-4 rounded-2xl text-center transition-all duration-300 hover:scale-[1.02]"
-            style={{
-              background: 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(255, 255, 255, 0.08)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)';
-              e.currentTarget.style.borderColor = 'rgba(79, 172, 254, 0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-            }}
-          >
+        {/* Contact Cards List */}
+        <div className="flex flex-col gap-4">
+          {[
+            {
+              name: 'Fikriya',
+              role: 'Lead Coordinator',
+              phone: '+7 911 149 5385',
+              wa: 'https://wa.me/79111495385',
+              tg: 'https://t.me/fikriya',
+              avatar: '👩‍💼'
+            },
+            {
+              name: 'Aris',
+              role: 'Tech & Media',
+              phone: '+7 981 040 9453',
+              wa: 'https://wa.me/79810409453',
+              tg: 'https://t.me/aris',
+              avatar: '👨‍💻'
+            },
+            {
+              name: 'Abil',
+              role: 'Registration',
+              phone: '+62 851 2108 0413',
+              wa: 'https://wa.me/6285121080413',
+              tg: null,
+              avatar: '�'
+            }
+          ].map((contact, idx) => (
             <div
-              className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center text-xl"
-              style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
-            >
-              👩
-            </div>
-            <p className="font-semibold text-sm mb-1" style={{ color: colors.frost }}>Fikriya</p>
-            <p className="text-xs mb-2" style={{ color: colors.frostDark }}>Lead Coordinator</p>
-            <p
-              className="text-xs font-medium px-2 py-1 rounded-full inline-block"
+              key={idx}
+              className="group relative rounded-2xl p-6 transition-all duration-300 hover:translate-x-1"
               style={{
-                background: 'rgba(37, 211, 102, 0.15)',
-                color: '#25D366'
+                background: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)'
               }}
             >
-              +7 911 149 5385
-            </p>
-          </a>
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                {/* Avatar */}
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center text-3xl shrink-0"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1))',
+                    border: '1px solid rgba(255, 255, 255, 0.1)'
+                  }}
+                >
+                  {contact.avatar}
+                </div>
 
-          {/* Contact 2 */}
-          <a
-            href="https://wa.me/79810409453"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-4 rounded-2xl text-center transition-all duration-300 hover:scale-[1.02]"
-            style={{
-              background: 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(255, 255, 255, 0.08)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)';
-              e.currentTarget.style.borderColor = 'rgba(79, 172, 254, 0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-            }}
-          >
-            <div
-              className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center text-xl"
-              style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
-            >
-              👨
-            </div>
-            <p className="font-semibold text-sm mb-1" style={{ color: colors.frost }}>Aris</p>
-            <p className="text-xs mb-2" style={{ color: colors.frostDark }}>Tech & Media</p>
-            <p
-              className="text-xs font-medium px-2 py-1 rounded-full inline-block"
-              style={{
-                background: 'rgba(37, 211, 102, 0.15)',
-                color: '#25D366'
-              }}
-            >
-              +7 981 040 9453
-            </p>
-          </a>
+                {/* Info */}
+                <div className="flex-grow text-center sm:text-left">
+                  <h4 className="text-xl font-bold mb-1" style={{ color: colors.frost }}>{contact.name}</h4>
+                  <p className="text-sm font-medium opacity-80" style={{ color: colors.auroraBlue }}>{contact.role}</p>
+                  <p className="text-sm mt-1 opacity-60" style={{ color: colors.frostDark }}>{contact.phone}</p>
+                </div>
 
-          {/* Contact 3 */}
-          <a
-            href="https://wa.me/6285121080413"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-4 rounded-2xl text-center transition-all duration-300 hover:scale-[1.02]"
-            style={{
-              background: 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(255, 255, 255, 0.08)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)';
-              e.currentTarget.style.borderColor = 'rgba(79, 172, 254, 0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-            }}
-          >
-            <div
-              className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center text-xl"
-              style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
-            >
-              👨
+                {/* Actions */}
+                <div className="flex items-center gap-4">
+                  {/* WhatsApp */}
+                  <a
+                    href={contact.wa}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-xl transition-all hover:scale-105 hover:bg-white/5"
+                    style={{ border: '1px solid rgba(37, 211, 102, 0.3)' }}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}whatsapp-logo.png`.replace('//', '/')}
+                      alt="WhatsApp"
+                      style={{ width: '24px', height: '24px', objectFit: 'contain' }}
+                    />
+                    <span className="hidden sm:inline text-sm font-medium" style={{ color: '#25D366' }}>Chat</span>
+                  </a>
+
+                  {/* Telegram */}
+                  <a
+                    href="https://t.me/permiraspb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-xl transition-all hover:scale-105 hover:bg-white/5"
+                    style={{ border: '1px solid rgba(0, 136, 204, 0.3)' }}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}telegram-logo.png`.replace('//', '/')}
+                      alt="Telegram"
+                      style={{ width: '24px', height: '24px', objectFit: 'contain' }}
+                    />
+                    <span className="hidden sm:inline text-sm font-medium" style={{ color: '#0088cc' }}>Channel</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <p className="font-semibold text-sm mb-1" style={{ color: colors.frost }}>Abil</p>
-            <p className="text-xs mb-2" style={{ color: colors.frostDark }}>Registration</p>
-            <p
-              className="text-xs font-medium px-2 py-1 rounded-full inline-block"
-              style={{
-                background: 'rgba(37, 211, 102, 0.15)',
-                color: '#25D366'
-              }}
-            >
-              +62 851 2108 0413
-            </p>
-          </a>
+          ))}
         </div>
 
-        {/* Telegram CTA */}
-        <div
-          className="px-6 py-5 text-center"
-          style={{
-            background: 'rgba(0, 0, 0, 0.2)',
-            borderTop: '1px solid rgba(255, 255, 255, 0.05)'
-          }}
-        >
+        {/* Official Channel Banner */}
+        <div className="mt-8 text-center">
           <a
             href="https://t.me/permiraspb"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-3 px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg"
             style={{
-              background: 'linear-gradient(135deg, #0088cc, #0077b5)',
+              background: 'linear-gradient(90deg, #0088cc 0%, #00a2ff 100%)',
               color: 'white',
-              boxShadow: '0 4px 15px rgba(0, 136, 204, 0.4)'
+              boxShadow: '0 4px 20px rgba(0, 136, 204, 0.3)'
             }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
-            </svg>
-            Join @permiraspb
-            <span className="text-xs opacity-80">Official Channel</span>
+            <img
+              src={`${import.meta.env.BASE_URL}telegram-logo.png`.replace('//', '/')}
+              alt="Telegram"
+              style={{ width: '24px', height: '24px', filter: 'brightness(0) invert(1)' }}
+            />
+            Join Our Official Channel
           </a>
         </div>
       </div>

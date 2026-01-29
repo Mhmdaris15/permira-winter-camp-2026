@@ -20,22 +20,22 @@
 export const CHATBOT_CONFIG = {
   // Set to true to use AI API, false for local pattern matching
   USE_AI_API: true,
-  
-  // Cloudflare Worker Proxy URL (for AI mode)
+
+  // Cloudflare Worker Proxy URL (Secures your API Key)
   PROXY_URL: 'https://winter-camp-chatbot-proxy.muhammadaris1945.workers.dev',
-  
-  // AI Model to use (for AI mode)
-  AI_MODEL: 'Qwen/Qwen3-32B',
-  
+
+  // AI Model to use (DeepSeek V3)
+  AI_MODEL: 'deepseek-chat',
+
   // Max tokens for AI response
   MAX_TOKENS: 512,
-  
+
   // Temperature for AI (0-1, higher = more creative)
   TEMPERATURE: 0.7,
-  
+
   // Fallback to local mode if API fails
   FALLBACK_TO_LOCAL: true,
-  
+
   // Show which mode is active in the UI
   SHOW_MODE_INDICATOR: true,
 };
