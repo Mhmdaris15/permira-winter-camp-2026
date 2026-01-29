@@ -2,26 +2,26 @@ export const translations = {
   en: {
     translation: {
       // Header
-      title: "Winter Camp 2025",
+      title: "Winter Camp 2026",
       subtitle: "Experience the magic of Saint Petersburg's winter with PERMIRA!",
-      
+
       // Language selector
       language: "Language",
-      
+
       // Gallery
       galleryTitle: "Our Memories",
       clickToExpand: "Click to expand",
-      
+
       // Event Details
       eventDetails: "Event Details",
       dateTime: "Date & Time",
-      dateTimeValue: "February 12-14, 2025",
+      dateTimeValue: "February 12-14, 2026",
       location: "Location",
       locationValue: "Центр «Молодёжный», Saint Petersburg, Russia",
       organizer: "Organizer",
       organizerValue: "PERMIRA Saint Petersburg",
       eventOverview: "Event Overview",
-      eventDescription: "Join us for an unforgettable Russian winter experience! Winter Camp 2025 by PERMIRA features accommodation at Youth Center with visits to museums:",
+      eventDescription: "Join us for an unforgettable Russian winter experience! Winter Camp 2026 by PERMIRA features accommodation at Youth Center with visits to museums:",
       activities: {
         skiing: "Visit Central Naval Museum",
         hiking: "Sharing & Networking Sessions",
@@ -30,7 +30,7 @@ export const translations = {
         photography: "Cultural exchange with Indonesian students",
         games: "Team building & indoor games"
       },
-      
+
       // Registration Form
       registrationForm: "Registration Form",
       personalInfo: "Personal Information",
@@ -51,7 +51,7 @@ export const translations = {
       pleaseSpecify: "Please specify",
       age: "Age",
       agePlaceholder: "Enter your age",
-      
+
       // New Contact Fields
       phoneNumber: "Phone Number",
       phonePlaceholder: "+1 (123) 456-7890",
@@ -62,7 +62,7 @@ export const translations = {
       vkPlaceholder: "VK profile link or ID",
       telegramUsername: "Telegram",
       telegramPlaceholder: "@username",
-      
+
       // How did you hear about us
       hearAboutUs: "How did you hear about this event?",
       hearOptions: {
@@ -74,12 +74,12 @@ export const translations = {
         poster: "Poster/Flyer",
         other: "Other"
       },
-      
+
       // Dietary & Allergies
       foodIsHalal: "All food served is 100% Halal",
       allergies: "Allergies",
       allergiesPlaceholder: "e.g., peanuts, lactose, seafood, gluten",
-      
+
       // KBRI Proof (Indonesian citizens)
       kbriProof: "KBRI Registration Proof (Lapor Diri)",
       kbriProofDescription: "Upload screenshot of your KBRI registration (max 2MB)",
@@ -87,39 +87,39 @@ export const translations = {
       maxFileSize: "Max file size: 2MB",
       fileTooLarge: "File size exceeds 2MB limit",
       kbriRequired: "KBRI proof is required for Indonesian citizens",
-      
+
       // Performance
       wantToPerform: "Would you like to perform something at the event?",
       yesPerform: "Yes, I'd like to perform",
       noPerform: "No, thank you",
       performanceDetails: "What would you like to perform?",
       performanceDetailsPlaceholder: "Describe your performance (e.g., singing, dancing, poetry, music, etc.)",
-      
+
       // Terms & Participation
       termsConditions: "Terms & Conditions",
-      termsText: "I agree to the terms and conditions of Winter Camp 2025",
+      termsText: "I agree to the terms and conditions of Winter Camp 2026",
       willingnessToParticipate: "Willingness to Participate",
       yes: "Yes, I'm excited to participate!",
       no: "No, I'm not sure yet",
-      reasonForJoining: "Tell us why you want to join Winter Camp 2025...",
+      reasonForJoining: "Tell us why you want to join Winter Camp 2026...",
       reasonPlaceholder: "e.g., I want to experience Russian winter culture and meet Indonesian students in Russia...",
-      
+
       // Buttons
       submit: "Submit Registration",
       submitting: "Submitting...",
       reset: "Reset Form",
-      
+
       // Validation messages
       required: "This field is required",
       invalidAge: "Please enter a valid age (1-120)",
       invalidEmail: "Please enter a valid email address",
       invalidPhone: "Please enter a valid phone number",
       mustAgreeTerms: "You must agree to the terms and conditions",
-      
+
       // Success message
       successTitle: "Registration Successful!",
-      successMessage: "Thank you for registering for Winter Camp 2025! Join our Telegram group for updates: t.me/+JOsH5fKgo2I3ZTc1",
-      
+      successMessage: "Thank you for registering for Winter Camp 2026! Join our Telegram group for updates: t.me/+JOsH5fKgo2I3ZTc1",
+
       // Chatbot
       chatbot: "Winter Camp Assistant",
       chatbotWelcome: "Hi! I'm your Winter Camp assistant. Ask me anything about the event!",
@@ -127,7 +127,7 @@ export const translations = {
       send: "Send",
       apiKeyPlaceholder: "Enter your Gemini API key",
       apiKeyInfo: "Get your API key from Google AI Studio",
-      
+
       // Countries
       countries: {
         indonesia: "Indonesia",
@@ -148,15 +148,15 @@ export const translations = {
 
       // FAQ Section
       faqTitle: "Frequently Asked Questions",
-      faqSubtitle: "Find answers to common questions about Winter Camp 2025",
+      faqSubtitle: "Find answers to common questions about Winter Camp 2026",
       expandAll: "Expand All",
       collapseAll: "Collapse All",
       faqMoreQuestions: "Still have questions? Contact us!",
       contactTelegram: "Contact via Telegram",
       faq: {
         whenWhere: {
-          q: "When and where is Winter Camp 2025?",
-          a: "February 12-14, 2025 at Центр «Молодёжный» (Youth Center), Saint Petersburg, Russia. We will also visit the Central Naval Museum!"
+          q: "When and where is Winter Camp 2026?",
+          a: "February 12-14, 2026 at Центр «Молодёжный» (Youth Center), Saint Petersburg, Russia. We will also visit the Central Naval Museum!"
         },
         whoParticipate: {
           q: "Who can participate?",
@@ -206,7 +206,7 @@ export const translations = {
 
       // Rundown Section
       rundownTitle: "Event Schedule",
-      rundownSubtitle: "February 12-14, 2025 • Центр «Молодёжный», Saint Petersburg",
+      rundownSubtitle: "February 12-14, 2026 • Центр «Молодёжный», Saint Petersburg",
       rundownAllHalal: "All Food 100% Halal",
       rundownHalalDesc: "Indonesian & Russian dishes",
       rundownMuseum: "Naval Museum",
@@ -273,26 +273,26 @@ export const translations = {
   id: {
     translation: {
       // Header
-      title: "Winter Camp 2025",
+      title: "Winter Camp 2026",
       subtitle: "Rasakan keajaiban musim dingin Saint Petersburg bersama PERMIRA!",
-      
+
       // Language selector
       language: "Bahasa",
-      
+
       // Gallery
       galleryTitle: "Kenangan Kami",
       clickToExpand: "Klik untuk memperbesar",
-      
+
       // Event Details
       eventDetails: "Detail Acara",
       dateTime: "Tanggal & Waktu",
-      dateTimeValue: "12-14 Februari 2025",
+      dateTimeValue: "12-14 Februari 2026",
       location: "Lokasi",
       locationValue: "Центр «Молодёжный», Saint Petersburg, Rusia",
       organizer: "Penyelenggara",
       organizerValue: "PERMIRA Saint Petersburg",
       eventOverview: "Ringkasan Acara",
-      eventDescription: "Bergabunglah dalam pengalaman musim dingin Rusia yang tak terlupakan! Winter Camp 2025 oleh PERMIRA menawarkan akomodasi di Pusat Pemuda dengan kunjungan museum:",
+      eventDescription: "Bergabunglah dalam pengalaman musim dingin Rusia yang tak terlupakan! Winter Camp 2026 oleh PERMIRA menawarkan akomodasi di Pusat Pemuda dengan kunjungan museum:",
       activities: {
         skiing: "Kunjungi Museum Angkatan Laut Pusat",
         hiking: "Sesi Sharing & Networking",
@@ -301,7 +301,7 @@ export const translations = {
         photography: "Pertukaran budaya dengan mahasiswa Indonesia",
         games: "Team building & permainan dalam ruangan"
       },
-      
+
       // Registration Form
       registrationForm: "Formulir Pendaftaran",
       personalInfo: "Informasi Pribadi",
@@ -322,7 +322,7 @@ export const translations = {
       pleaseSpecify: "Mohon sebutkan",
       age: "Usia",
       agePlaceholder: "Masukkan usia Anda",
-      
+
       // New Contact Fields
       phoneNumber: "Nomor Telepon",
       phonePlaceholder: "+62 812 3456 7890",
@@ -333,7 +333,7 @@ export const translations = {
       vkPlaceholder: "Link profil VK atau ID",
       telegramUsername: "Telegram",
       telegramPlaceholder: "@namapengguna",
-      
+
       // How did you hear about us
       hearAboutUs: "Dari mana Anda mendengar tentang acara ini?",
       hearOptions: {
@@ -345,12 +345,12 @@ export const translations = {
         poster: "Poster/Selebaran",
         other: "Lainnya"
       },
-      
+
       // Dietary & Allergies
       foodIsHalal: "Semua makanan yang disajikan 100% Halal",
       allergies: "Alergi",
       allergiesPlaceholder: "contoh: kacang, laktosa, makanan laut, gluten",
-      
+
       // KBRI Proof (Indonesian citizens)
       kbriProof: "Bukti Lapor Diri KBRI",
       kbriProofDescription: "Unggah screenshot bukti lapor diri KBRI (maks 2MB)",
@@ -358,39 +358,39 @@ export const translations = {
       maxFileSize: "Ukuran file maks: 2MB",
       fileTooLarge: "Ukuran file melebihi batas 2MB",
       kbriRequired: "Bukti lapor diri KBRI wajib untuk WNI",
-      
+
       // Performance
       wantToPerform: "Apakah Anda ingin tampil di acara ini?",
       yesPerform: "Ya, saya ingin tampil",
       noPerform: "Tidak, terima kasih",
       performanceDetails: "Apa yang ingin Anda tampilkan?",
       performanceDetailsPlaceholder: "Jelaskan penampilan Anda (misalnya: menyanyi, menari, puisi, musik, dll.)",
-      
+
       // Terms & Participation
       termsConditions: "Syarat & Ketentuan",
-      termsText: "Saya setuju dengan syarat dan ketentuan Kemah Musim Dingin 2025",
+      termsText: "Saya setuju dengan syarat dan ketentuan Kemah Musim Dingin 2026",
       willingnessToParticipate: "Kesediaan untuk Berpartisipasi",
       yes: "Ya, saya sangat ingin berpartisipasi!",
       no: "Tidak, saya belum yakin",
-      reasonForJoining: "Ceritakan mengapa Anda ingin bergabung dengan Kemah Musim Dingin 2025...",
+      reasonForJoining: "Ceritakan mengapa Anda ingin bergabung dengan Kemah Musim Dingin 2026...",
       reasonPlaceholder: "contoh: Saya ingin merasakan budaya musim dingin Rusia dan bertemu mahasiswa Indonesia di Rusia...",
-      
+
       // Buttons
       submit: "Kirim Pendaftaran",
       submitting: "Mengirim...",
       reset: "Reset Formulir",
-      
+
       // Validation messages
       required: "Bidang ini wajib diisi",
       invalidAge: "Masukkan usia yang valid (1-120)",
       invalidEmail: "Masukkan alamat email yang valid",
       invalidPhone: "Masukkan nomor telepon yang valid",
       mustAgreeTerms: "Anda harus menyetujui syarat dan ketentuan",
-      
+
       // Success message
       successTitle: "Pendaftaran Berhasil!",
-      successMessage: "Terima kasih telah mendaftar Kemah Musim Dingin 2025! Gabung grup Telegram kami: t.me/+JOsH5fKgo2I3ZTc1",
-      
+      successMessage: "Terima kasih telah mendaftar Kemah Musim Dingin 2026! Gabung grup Telegram kami: t.me/+JOsH5fKgo2I3ZTc1",
+
       // Chatbot
       chatbot: "Asisten Kemah Musim Dingin",
       chatbotWelcome: "Hai! Saya asisten Kemah Musim Dingin Anda. Tanyakan apa saja tentang acara ini!",
@@ -398,7 +398,7 @@ export const translations = {
       send: "Kirim",
       apiKeyPlaceholder: "Masukkan API key Gemini Anda",
       apiKeyInfo: "Dapatkan API key dari Google AI Studio",
-      
+
       // Countries
       countries: {
         indonesia: "Indonesia",
@@ -419,15 +419,15 @@ export const translations = {
 
       // FAQ Section
       faqTitle: "Pertanyaan yang Sering Diajukan",
-      faqSubtitle: "Temukan jawaban untuk pertanyaan umum tentang Winter Camp 2025",
+      faqSubtitle: "Temukan jawaban untuk pertanyaan umum tentang Winter Camp 2026",
       expandAll: "Buka Semua",
       collapseAll: "Tutup Semua",
       faqMoreQuestions: "Masih ada pertanyaan? Hubungi kami!",
       contactTelegram: "Hubungi via Telegram",
       faq: {
         whenWhere: {
-          q: "Kapan dan di mana Winter Camp 2025?",
-          a: "12-14 Februari 2025 di Центр «Молодёжный» (Pusat Pemuda), Saint Petersburg, Rusia. Kami juga akan mengunjungi Museum Angkatan Laut Pusat!"
+          q: "Kapan dan di mana Winter Camp 2026?",
+          a: "12-14 Februari 2026 di Центр «Молодёжный» (Pusat Pemuda), Saint Petersburg, Rusia. Kami juga akan mengunjungi Museum Angkatan Laut Pusat!"
         },
         whoParticipate: {
           q: "Siapa yang bisa berpartisipasi?",
@@ -477,7 +477,7 @@ export const translations = {
 
       // Rundown Section
       rundownTitle: "Jadwal Acara",
-      rundownSubtitle: "12-14 Februari 2025 • Центр «Молодёжный», Saint Petersburg",
+      rundownSubtitle: "12-14 Februari 2026 • Центр «Молодёжный», Saint Petersburg",
       rundownAllHalal: "Semua Makanan 100% Halal",
       rundownHalalDesc: "Masakan Indonesia & Rusia",
       rundownMuseum: "Museum Angkatan Laut",
@@ -544,26 +544,26 @@ export const translations = {
   ru: {
     translation: {
       // Header
-      title: "Зимний Лагерь 2025",
+      title: "Зимний Лагерь 2026",
       subtitle: "Окунитесь в волшебство зимнего Санкт-Петербурга с PERMIRA!",
-      
+
       // Language selector
       language: "Язык",
-      
+
       // Gallery
       galleryTitle: "Наши Воспоминания",
       clickToExpand: "Нажмите для увеличения",
-      
+
       // Event Details
       eventDetails: "Детали Мероприятия",
       dateTime: "Дата и Время",
-      dateTimeValue: "12-14 февраля 2025",
+      dateTimeValue: "12-14 февраля 2026",
       location: "Место проведения",
       locationValue: "Центр «Молодёжный», Санкт-Петербург, Россия",
       organizer: "Организатор",
       organizerValue: "PERMIRA Санкт-Петербург",
       eventOverview: "Обзор Мероприятия",
-      eventDescription: "Присоединяйтесь к незабываемому зимнему приключению в России! Зимний Лагерь 2025 от PERMIRA предлагает проживание в Молодёжном центре с посещением музеев:",
+      eventDescription: "Присоединяйтесь к незабываемому зимнему приключению в России! Зимний Лагерь 2026 от PERMIRA предлагает проживание в Молодёжном центре с посещением музеев:",
       activities: {
         skiing: "Посещение Центрального Военно-морского музея",
         hiking: "Сессии обмена опытом и нетворкинг",
@@ -572,7 +572,7 @@ export const translations = {
         photography: "Культурный обмен с индонезийскими студентами",
         games: "Тимбилдинг и игры в помещении"
       },
-      
+
       // Registration Form
       registrationForm: "Форма Регистрации",
       personalInfo: "Личная Информация",
@@ -593,7 +593,7 @@ export const translations = {
       pleaseSpecify: "Пожалуйста, уточните",
       age: "Возраст",
       agePlaceholder: "Введите ваш возраст",
-      
+
       // New Contact Fields
       phoneNumber: "Номер Телефона",
       phonePlaceholder: "+7 (123) 456-7890",
@@ -604,7 +604,7 @@ export const translations = {
       vkPlaceholder: "Ссылка на профиль или ID",
       telegramUsername: "Telegram",
       telegramPlaceholder: "@имяпользователя",
-      
+
       // How did you hear about us
       hearAboutUs: "Как вы узнали о мероприятии?",
       hearOptions: {
@@ -616,12 +616,12 @@ export const translations = {
         poster: "Плакат/Листовка",
         other: "Другое"
       },
-      
+
       // Dietary & Allergies
       foodIsHalal: "Все блюда 100% Халяль",
       allergies: "Аллергии",
       allergiesPlaceholder: "например: арахис, лактоза, морепродукты, глютен",
-      
+
       // KBRI Proof (Indonesian citizens)
       kbriProof: "Подтверждение регистрации в KBRI",
       kbriProofDescription: "Загрузите скриншот регистрации в KBRI (макс. 2МБ)",
@@ -629,39 +629,39 @@ export const translations = {
       maxFileSize: "Макс. размер файла: 2МБ",
       fileTooLarge: "Размер файла превышает лимит 2МБ",
       kbriRequired: "Подтверждение KBRI обязательно для граждан Индонезии",
-      
+
       // Performance
       wantToPerform: "Хотите ли вы выступить на мероприятии?",
       yesPerform: "Да, я хочу выступить",
       noPerform: "Нет, спасибо",
       performanceDetails: "Что вы хотите исполнить?",
       performanceDetailsPlaceholder: "Опишите ваше выступление (например: пение, танцы, поэзия, музыка и т.д.)",
-      
+
       // Terms & Participation
       termsConditions: "Правила и Условия",
-      termsText: "Я согласен с правилами и условиями Зимнего Лагеря 2025",
+      termsText: "Я согласен с правилами и условиями Зимнего Лагеря 2026",
       willingnessToParticipate: "Готовность Участвовать",
       yes: "Да, я с нетерпением жду участия!",
       no: "Нет, я пока не уверен",
-      reasonForJoining: "Расскажите, почему вы хотите присоединиться к Зимнему Лагерю 2025...",
+      reasonForJoining: "Расскажите, почему вы хотите присоединиться к Зимнему Лагерю 2026...",
       reasonPlaceholder: "например: Я хочу познакомиться с русской зимней культурой и встретить индонезийских студентов в России...",
-      
+
       // Buttons
       submit: "Отправить Регистрацию",
       submitting: "Отправка...",
       reset: "Сбросить Форму",
-      
+
       // Validation messages
       required: "Это поле обязательно",
       invalidAge: "Пожалуйста, введите корректный возраст (1-120)",
       invalidEmail: "Пожалуйста, введите корректный email",
       invalidPhone: "Пожалуйста, введите корректный номер телефона",
       mustAgreeTerms: "Вы должны согласиться с правилами и условиями",
-      
+
       // Success message
       successTitle: "Регистрация Успешна!",
-      successMessage: "Спасибо за регистрацию на Зимний Лагерь 2025! Присоединяйтесь к нашей группе в Telegram: t.me/+JOsH5fKgo2I3ZTc1",
-      
+      successMessage: "Спасибо за регистрацию на Зимний Лагерь 2026! Присоединяйтесь к нашей группе в Telegram: t.me/+JOsH5fKgo2I3ZTc1",
+
       // Chatbot
       chatbot: "Помощник Зимнего Лагеря",
       chatbotWelcome: "Привет! Я ваш помощник Зимнего Лагеря. Спрашивайте что угодно о мероприятии!",
@@ -669,7 +669,7 @@ export const translations = {
       send: "Отправить",
       apiKeyPlaceholder: "Введите ваш API ключ Gemini",
       apiKeyInfo: "Получите API ключ в Google AI Studio",
-      
+
       // Countries
       countries: {
         indonesia: "Индонезия",
@@ -690,15 +690,15 @@ export const translations = {
 
       // FAQ Section
       faqTitle: "Часто Задаваемые Вопросы",
-      faqSubtitle: "Найдите ответы на часто задаваемые вопросы о Зимнем Лагере 2025",
+      faqSubtitle: "Найдите ответы на часто задаваемые вопросы о Зимнем Лагере 2026",
       expandAll: "Развернуть всё",
       collapseAll: "Свернуть всё",
       faqMoreQuestions: "Остались вопросы? Мы готовы помочь!",
       contactTelegram: "Связаться через Telegram",
       faq: {
         whenWhere: {
-          q: "Когда и где пройдёт Зимний Лагерь 2025?",
-          a: "12-14 февраля 2025 года в Центре «Молодёжный», Санкт-Петербург. Мы также посетим Центральный Военно-морской музей!"
+          q: "Когда и где пройдёт Зимний Лагерь 2026?",
+          a: "12-14 февраля 2026 года в Центре «Молодёжный», Санкт-Петербург. Мы также посетим Центральный Военно-морской музей!"
         },
         whoParticipate: {
           q: "Кто может участвовать?",
@@ -748,7 +748,7 @@ export const translations = {
 
       // Rundown Section
       rundownTitle: "Расписание Мероприятия",
-      rundownSubtitle: "12-14 февраля 2025 • Центр «Молодёжный», Санкт-Петербург",
+      rundownSubtitle: "12-14 февраля 2026 • Центр «Молодёжный», Санкт-Петербург",
       rundownAllHalal: "Вся Еда 100% Халяль",
       rundownHalalDesc: "Индонезийские и русские блюда",
       rundownMuseum: "Военно-морской музей",

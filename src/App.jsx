@@ -234,7 +234,7 @@ function AppContent() {
               <h1 className="hidden sm:block font-bold text-base tracking-wide
         bg-gradient-to-r from-[#ac6aff] via-[#7c3aed] to-[#a855f7]
         bg-clip-text text-transparent">
-                Winter Camp 2025
+                Winter Camp 2026
               </h1>
             </div>
             {/* Center: Nav Links */}
@@ -300,7 +300,7 @@ function AppContent() {
                 }}
               >
                 <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-                February 12-14, 2025
+                February 12-14, 2026
               </span>
             </div>
 
@@ -319,8 +319,8 @@ function AppContent() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-10">
-              
-              <Button 
+
+              <Button
                 as="a"
                 href="#register"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white transition-all hover:scale-105"
@@ -419,7 +419,7 @@ function AppContent() {
             </div>
 
             <p className="text-frost-dark text-sm">
-              © 2025 Winter Camp by PERMIRA Saint Petersburg
+              © 2026 Winter Camp by PERMIRA Saint Petersburg
             </p>
             <p className="text-frost-dark/60 text-xs mt-2">
               Persatuan Mahasiswa Indonesia di Rusia

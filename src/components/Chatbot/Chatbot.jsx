@@ -11,7 +11,7 @@ import { CHATBOT_CONFIG, SYSTEM_PROMPT } from './chatbotConfig';
 const knowledgePatterns = [
   {
     keywords: ['when', 'date', 'kapan', 'tanggal', 'когда', 'дата', 'time'],
-    response: `**Winter Camp 2025** will be held on **February 12-14, 2025**\n\nThe event spans 3 days with activities starting from the afternoon on Day 1 and ending around noon on Day 3. Mark your calendars!`
+    response: `**Winter Camp 2026** will be held on **February 12-14, 2026**\n\nThe event spans 3 days with activities starting from the afternoon on Day 1 and ending around noon on Day 3. Mark your calendars!`
   },
   {
     keywords: ['where', 'location', 'dimana', 'lokasi', 'где', 'место', 'address', 'alamat', 'venue', 'camp'],
@@ -59,11 +59,11 @@ const knowledgePatterns = [
   },
   {
     keywords: ['hello', 'hi', 'hey', 'halo', 'hai', 'привет', 'здравствуйте', 'help', 'start'],
-    response: `**Hello!** Welcome to Winter Camp 2025!\n\nI'm here to help you with information about:\n- Event dates & schedule\n- Location & transportation\n- Food (100% Halal!)\n- Registration\n- Activities & games\n- Contact information\n\nWhat would you like to know?`
+    response: `**Hello!** Welcome to Winter Camp 2026!\n\nI'm here to help you with information about:\n- Event dates & schedule\n- Location & transportation\n- Food (100% Halal!)\n- Registration\n- Activities & games\n- Contact information\n\nWhat would you like to know?`
   },
   {
     keywords: ['thank', 'thanks', 'terima kasih', 'makasih', 'спасибо', 'great', 'awesome', 'good'],
-    response: `You're welcome!\n\nIf you have more questions, feel free to ask anytime!\n\nHope to see you at Winter Camp 2025!\n\nDon't forget to register and join our Telegram group: t.me/+JOsH5fKgo2I3ZTc1`
+    response: `You're welcome!\n\nIf you have more questions, feel free to ask anytime!\n\nHope to see you at Winter Camp 2026!\n\nDon't forget to register and join our Telegram group: t.me/+JOsH5fKgo2I3ZTc1`
   },
   {
     keywords: ['developer', 'made', 'built', 'created', 'pembuat', 'website', 'who made', 'разработчик'],
@@ -83,7 +83,7 @@ const knowledgePatterns = [
   },
   {
     keywords: ['sharing', 'networking', 'session', 'diskusi', 'discussion'],
-    response: `**Sharing & Networking Sessions:**\n\nWinter Camp 2025 features special sessions for:\n\n- Talk shows with experienced speakers\n- Sharing personal experiences in Russia\n- Networking with Indonesian & Russian students\n- Building connections and friendships\n- Cultural exchange discussions\n\nGreat opportunity to learn and make new friends!`
+    response: `**Sharing & Networking Sessions:**\n\nWinter Camp 2026 features special sessions for:\n\n- Talk shows with experienced speakers\n- Sharing personal experiences in Russia\n- Networking with Indonesian & Russian students\n- Building connections and friendships\n- Cultural exchange discussions\n\nGreat opportunity to learn and make new friends!`
   },
   {
     keywords: ['group', 'telegram', 'chat', 'grup'],
@@ -94,11 +94,11 @@ const knowledgePatterns = [
 // Smart response generator
 const generateLocalResponse = (userMessage) => {
   const message = userMessage.toLowerCase();
-  
+
   // Find best matching pattern
   let bestMatch = null;
   let bestScore = 0;
-  
+
   for (const pattern of knowledgePatterns) {
     let score = 0;
     for (const keyword of pattern.keywords) {
@@ -115,25 +115,25 @@ const generateLocalResponse = (userMessage) => {
       bestMatch = pattern;
     }
   }
-  
+
   // Return best match or default response
   if (bestMatch && bestScore > 0) {
     return bestMatch.response;
   }
-  
+
   // Default response for unmatched queries
-  return `I'm not sure about that specific question, but I'd love to help! 🤔\n\n**Here's what I can tell you about:**\n- 📅 Event dates (February 12-14, 2025)\n- 📍 Location (Центр «Молодёжный», Saint Petersburg)\n- 🍽️ Food (100% Halal!)\n- 📝 How to register\n- 🎮 Activities and games\n- 🚌 Transportation\n\nOr contact the organizers directly via Telegram: **@permiraspb** 📱`;
+  return `I'm not sure about that specific question, but I'd love to help! 🤔\n\n**Here's what I can tell you about:**\n- 📅 Event dates (February 12-14, 2026)\n- 📍 Location (Центр «Молодёжный», Saint Petersburg)\n- 🍽️ Food (100% Halal!)\n- 📝 How to register\n- 🎮 Activities and games\n- 🚌 Transportation\n\nOr contact the organizers directly via Telegram: **@permiraspb** 📱`;
 };
 
 // Simple markdown formatter for chat messages
 const formatMessage = (text) => {
   if (!text) return '';
-  
+
   // Split into lines for processing
   let lines = text.split('\n');
   let result = [];
   let inList = false;
-  
+
   lines.forEach((line, index) => {
     // Handle bullet points (- or •)
     if (line.trim().startsWith('- ') || line.trim().startsWith('• ')) {
@@ -185,29 +185,29 @@ const formatMessage = (text) => {
       inList = false;
     }
   });
-  
+
   return result;
 };
 
 // Format inline markdown (bold, italic, links)
 const formatInlineMarkdown = (text) => {
   if (!text) return text;
-  
+
   const parts = [];
   let remaining = text;
   let key = 0;
-  
+
   // Process text for **bold** and *italic*
   const regex = /(\*\*(.+?)\*\*|\*(.+?)\*)/g;
   let lastIndex = 0;
   let match;
-  
+
   while ((match = regex.exec(text)) !== null) {
     // Add text before match
     if (match.index > lastIndex) {
       parts.push(<span key={key++}>{text.substring(lastIndex, match.index)}</span>);
     }
-    
+
     // Add formatted text
     if (match[2]) {
       // Bold **text**
@@ -216,15 +216,15 @@ const formatInlineMarkdown = (text) => {
       // Italic *text*
       parts.push(<em key={key++} style={{ fontStyle: 'italic' }}>{match[3]}</em>);
     }
-    
+
     lastIndex = regex.lastIndex;
   }
-  
+
   // Add remaining text
   if (lastIndex < text.length) {
     parts.push(<span key={key++}>{text.substring(lastIndex)}</span>);
   }
-  
+
   return parts.length > 0 ? parts : text;
 };
 
@@ -256,7 +256,7 @@ const sendAIRequest = async (inputMessage, conversationHistory) => {
   }
 
   const data = await response.json();
-  
+
   if (data.choices && data.choices[0]?.message?.content) {
     let content = data.choices[0].message.content;
     // Clean up any thinking tags if present
@@ -306,7 +306,7 @@ function Chatbot() {
 
     try {
       let response;
-      
+
       if (usingAI && CHATBOT_CONFIG.USE_AI_API) {
         // Try AI API mode
         try {
@@ -314,11 +314,11 @@ function Chatbot() {
             role: msg.role,
             content: msg.content
           }));
-          
+
           response = await sendAIRequest(currentInput, conversationHistory);
         } catch (apiError) {
           console.error('AI API error:', apiError);
-          
+
           // Fallback to local mode if enabled
           if (CHATBOT_CONFIG.FALLBACK_TO_LOCAL) {
             console.log('Falling back to local mode...');
@@ -333,7 +333,7 @@ function Chatbot() {
         await new Promise(resolve => setTimeout(resolve, 300 + Math.random() * 400));
         response = generateLocalResponse(currentInput);
       }
-      
+
       setMessages(prev => [...prev, {
         role: 'assistant',
         content: response
@@ -344,7 +344,7 @@ function Chatbot() {
         role: 'assistant',
         content: `Sorry, I'm having trouble right now. ${CHATBOT_CONFIG.FALLBACK_TO_LOCAL ? 'Switching to offline mode...' : 'Please try again!'} ❄️`
       }]);
-      
+
       // Auto-switch to local mode on error
       if (CHATBOT_CONFIG.FALLBACK_TO_LOCAL) {
         setUsingAI(false);
@@ -380,8 +380,8 @@ function Chatbot() {
           alignItems: 'center',
           justifyContent: 'center',
           boxShadow: '0 4px 20px rgba(79, 172, 254, 0.5)',
-          background: isOpen 
-            ? '#dc2626' 
+          background: isOpen
+            ? '#dc2626'
             : 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
           animation: isOpen ? 'none' : 'pulse-glow 2s infinite',
           transition: 'all 0.3s ease'
@@ -398,7 +398,7 @@ function Chatbot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div 
+        <div
           style={{
             position: 'fixed',
             bottom: '100px',
@@ -417,14 +417,14 @@ function Chatbot() {
           }}
         >
           {/* Header */}
-          <div 
-            style={{ 
+          <div
+            style={{
               padding: '16px',
               background: 'linear-gradient(90deg, #4facfe, #00f2fe)'
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div 
+              <div
                 style={{
                   width: '40px',
                   height: '40px',
@@ -438,7 +438,7 @@ function Chatbot() {
                 <span style={{ fontSize: '20px' }}>🏔️</span>
               </div>
               <div style={{ flex: 1 }}>
-                <h3 style={{ 
+                <h3 style={{
                   margin: 0,
                   fontFamily: "'Bebas Neue', sans-serif",
                   fontSize: '18px',
@@ -448,7 +448,7 @@ function Chatbot() {
                   {t('chatbot') || 'Winter Camp Assistant'}
                 </h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <p style={{ 
+                  <p style={{
                     margin: 0,
                     fontSize: '11px',
                     color: 'rgba(255, 255, 255, 0.8)'
@@ -479,7 +479,7 @@ function Chatbot() {
           </div>
 
           {/* Messages */}
-          <div 
+          <div
             style={{
               height: '320px',
               overflowY: 'auto',
@@ -506,16 +506,16 @@ function Chatbot() {
                     lineHeight: '1.5',
                     ...(message.role === 'user'
                       ? {
-                          background: 'linear-gradient(90deg, #4facfe, #00f2fe)',
-                          color: 'white',
-                          borderBottomRightRadius: '4px'
-                        }
+                        background: 'linear-gradient(90deg, #4facfe, #00f2fe)',
+                        color: 'white',
+                        borderBottomRightRadius: '4px'
+                      }
                       : {
-                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                          color: '#e8f4fc',
-                          border: '1px solid rgba(255, 255, 255, 0.1)',
-                          borderBottomLeftRadius: '4px'
-                        }
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        color: '#e8f4fc',
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        borderBottomLeftRadius: '4px'
+                      }
                     )
                   }}
                 >
@@ -525,7 +525,7 @@ function Chatbot() {
             ))}
             {isLoading && (
               <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                <div 
+                <div
                   style={{
                     padding: '12px 16px',
                     borderRadius: '16px',
@@ -535,24 +535,24 @@ function Chatbot() {
                   }}
                 >
                   <div style={{ display: 'flex', gap: '6px' }}>
-                    <div style={{ 
-                      width: '8px', 
-                      height: '8px', 
-                      borderRadius: '50%', 
+                    <div style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
                       backgroundColor: '#00f2fe',
                       animation: 'bounce 1s infinite'
                     }} />
-                    <div style={{ 
-                      width: '8px', 
-                      height: '8px', 
-                      borderRadius: '50%', 
+                    <div style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
                       backgroundColor: '#00f2fe',
                       animation: 'bounce 1s infinite 0.15s'
                     }} />
-                    <div style={{ 
-                      width: '8px', 
-                      height: '8px', 
-                      borderRadius: '50%', 
+                    <div style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
                       backgroundColor: '#00f2fe',
                       animation: 'bounce 1s infinite 0.3s'
                     }} />
@@ -564,7 +564,7 @@ function Chatbot() {
           </div>
 
           {/* Input */}
-          <div style={{ 
+          <div style={{
             padding: '16px',
             borderTop: '1px solid rgba(255, 255, 255, 0.1)'
           }}>

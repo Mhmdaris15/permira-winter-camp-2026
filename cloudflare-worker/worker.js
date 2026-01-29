@@ -127,7 +127,7 @@ async function sendConfirmationEmail(formData) {
           <tr>
             <td style="padding: 40px 40px 20px; text-align: center; background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%); border-radius: 16px 16px 0 0;">
               <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700;">
-                PERMIRA Winter Camp 2025
+                PERMIRA Winter Camp 2026
               </h1>
               <p style="margin: 10px 0 0; color: #a0c4e8; font-size: 16px;">
                 Registration Confirmation
@@ -142,7 +142,7 @@ async function sendConfirmationEmail(formData) {
                 Dear <strong>${formData.fullName}</strong>,
               </p>
               <p style="margin: 15px 0 0; color: #555; font-size: 15px; line-height: 1.6;">
-                Thank you for registering for <strong>PERMIRA Winter Camp 2025</strong>! We are excited to have you join us for this unforgettable winter experience in Saint Petersburg.
+                Thank you for registering for <strong>PERMIRA Winter Camp 2026</strong>! We are excited to have you join us for this unforgettable winter experience in Saint Petersburg.
               </p>
             </td>
           </tr>
@@ -157,7 +157,7 @@ async function sendConfirmationEmail(formData) {
                     <table role="presentation" style="width: 100%; border-collapse: collapse;">
                       <tr>
                         <td style="padding: 8px 0; color: #666; font-size: 14px; width: 120px;">Dates:</td>
-                        <td style="padding: 8px 0; color: #333; font-size: 14px; font-weight: 600;">February 12-14, 2025</td>
+                        <td style="padding: 8px 0; color: #333; font-size: 14px; font-weight: 600;">February 12-14, 2026</td>
                       </tr>
                       <tr>
                         <td style="padding: 8px 0; color: #666; font-size: 14px;">Camp:</td>
@@ -248,7 +248,7 @@ async function sendConfirmationEmail(formData) {
           <tr>
             <td style="padding: 30px 40px; text-align: center; background-color: #f8fafc; border-radius: 0 0 16px 16px;">
               <p style="margin: 0 0 10px; color: #666; font-size: 12px;">
-                2025 PERMIRA Saint Petersburg
+                2026 PERMIRA Saint Petersburg
               </p>
               <p style="margin: 0; color: #999; font-size: 11px;">
                 Persatuan Mahasiswa Indonesia di Rusia
@@ -272,7 +272,7 @@ async function sendConfirmationEmail(formData) {
       body: JSON.stringify({
         from: 'PERMIRA Winter Camp <onboarding@resend.dev>',
         to: formData.email,
-        subject: 'Registration Confirmed - PERMIRA Winter Camp 2025',
+        subject: 'Registration Confirmed - PERMIRA Winter Camp 2026',
         html: emailHtml,
       }),
     });

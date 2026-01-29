@@ -1,8 +1,8 @@
-# Winter Camp 2025 Registration Form 🏔️❄️
+# Winter Camp 2026 Registration Form 🏔️❄️
 
-A stunning, professional registration form web application for Winter Camp 2025. Features a breathtaking northern lights winter theme, AI-powered chatbot with RAG system, and Google Sheets integration via Cloudflare Workers.
+A stunning, professional registration form web application for Winter Camp 2026. Features a breathtaking northern lights winter theme, AI-powered chatbot with RAG system, and Google Sheets integration via Cloudflare Workers.
 
-![Winter Camp 2025](https://img.shields.io/badge/Winter%20Camp-2025-blue?style=for-the-badge)
+![Winter Camp 2026](https://img.shields.io/badge/Winter%20Camp-2026-blue?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?style=for-the-badge&logo=tailwind-css)
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite)
@@ -150,7 +150,7 @@ winter-camp-registration/
 
 | Detail | Information |
 |--------|-------------|
-| **Date** | February 12-14, 2025 |
+| **Date** | February 12-14, 2026 |
 | **Location** | Центр «Молодёжный», Saint Petersburg, Russia |
 | **Organizer** | PERMIRA Saint Petersburg |
 | **Supported by** | KBRI Moscow |

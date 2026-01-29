@@ -1,17 +1,17 @@
-// Knowledge base for Winter Camp 2025 Chatbot
-// Last updated: 2025-01-27
+// Knowledge base for Winter Camp 2026 Chatbot
+// Last updated: 2026-01-27
 
 export const knowledgeBase = `
 ## General Information
 
-PERMIRA Winter Camp 2025 is organized by PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia).
+PERMIRA Winter Camp 2026 is organized by PERMIRA Saint Petersburg (Persatuan Mahasiswa Indonesia di Rusia - Indonesian Student Association in Russia).
 
 Event Details:
-- Event Name: PERMIRA Winter Camp 2025
+- Event Name: PERMIRA Winter Camp 2026
 - Organizer: PERMIRA Saint Petersburg
 - Camp Location: Центр «Молодёжный» (Youth Center), Saint Petersburg, Russia
 - Museum Visit: Central Naval Museum
-- Dates: February 12-14, 2025
+- Dates: February 12-14, 2026
 - Description: A winter camp experience for Indonesian and Russian students featuring cultural exchange, museum visits, sharing sessions, and networking opportunities.
 
 Maps:
@@ -21,7 +21,7 @@ Maps:
 
 ## Event Schedule
 
-Day 1 (February 12, 2025) - Arrival:
+Day 1 (February 12, 2026) - Arrival:
 - 14:00-14:15: Gathering at meeting point
 - 14:15-16:15: Arrival at camp & orientation
 - 16:15-16:45: Opening ceremony
@@ -33,7 +33,7 @@ Day 1 (February 12, 2025) - Arrival:
 - 22:00-23:00: Free time
 - 23:00: Rest
 
-Day 2 (February 13, 2025) - Museum Day:
+Day 2 (February 13, 2026) - Museum Day:
 - 08:00-09:00: Breakfast (Mie Goreng)
 - 09:30-10:30: Travel to Central Naval Museum
 - 10:30-11:10: Official opening ceremony with VIPs
@@ -48,7 +48,7 @@ Day 2 (February 13, 2025) - Museum Day:
 - 22:00-23:00: Free time
 - 23:00: Rest
 
-Day 3 (February 14, 2025) - Departure:
+Day 3 (February 14, 2026) - Departure:
 - 07:00-09:00: Breakfast (Burger & Mashed Potatoes) & packing
 - 09:00-10:30: Outdoor team games
 - 10:30-11:30: Award ceremony & group photo
@@ -155,8 +155,8 @@ We follow an eco-friendly policy:
 
 ## Frequently Asked Questions
 
-Q: When and where is Winter Camp 2025?
-A: February 12-14, 2025 at Центр «Молодёжный» (Youth Center), Saint Petersburg. We will also visit the Central Naval Museum.
+Q: When and where is Winter Camp 2026?
+A: February 12-14, 2026 at Центр «Молодёжный» (Youth Center), Saint Petersburg. We will also visit the Central Naval Museum.
 
 Q: Who can participate?
 A: Indonesian students in Russia and Russian students interested in cultural exchange.
