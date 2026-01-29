@@ -113,17 +113,17 @@ function FAQItem({ item, isOpen, onToggle, t }) {
   }, [isOpen]);
 
   return (
-    <div 
+    <div
       className="group rounded-2xl overflow-hidden transition-all duration-300"
       style={{
-        background: isOpen 
+        background: isOpen
           ? 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)'
           : 'rgba(255, 255, 255, 0.03)',
-        border: isOpen 
-          ? '1px solid rgba(0, 242, 254, 0.4)' 
+        border: isOpen
+          ? '1px solid rgba(0, 242, 254, 0.4)'
           : '1px solid rgba(255, 255, 255, 0.08)',
-        boxShadow: isOpen 
-          ? '0 8px 32px rgba(0, 242, 254, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)' 
+        boxShadow: isOpen
+          ? '0 8px 32px rgba(0, 242, 254, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
           : 'none'
       }}
     >
@@ -132,10 +132,10 @@ function FAQItem({ item, isOpen, onToggle, t }) {
         className="w-full p-5 flex items-center gap-4 text-left transition-all duration-200 hover:bg-white/5"
       >
         {/* Icon with gradient background */}
-        <div 
+        <div
           className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
           style={{
-            background: isOpen 
+            background: isOpen
               ? `linear-gradient(135deg, ${colors.auroraBlue}, ${colors.auroraCyan})`
               : 'rgba(255, 255, 255, 0.08)',
             boxShadow: isOpen ? '0 4px 15px rgba(79, 172, 254, 0.3)' : 'none'
@@ -143,57 +143,57 @@ function FAQItem({ item, isOpen, onToggle, t }) {
         >
           {item.icon}
         </div>
-        
+
         {/* Question text */}
-        <span 
+        <span
           className="flex-grow font-medium text-base md:text-lg leading-snug"
           style={{ color: isOpen ? colors.auroraCyan : colors.frostDark }}
         >
           {t(item.questionKey)}
         </span>
-        
+
         {/* Toggle indicator */}
-        <div 
+        <div
           className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300"
-          style={{ 
+          style={{
             background: isOpen ? colors.auroraCyan : 'rgba(255, 255, 255, 0.1)',
             transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
           }}
         >
-          <svg 
-            width="14" 
-            height="14" 
-            viewBox="0 0 14 14" 
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
             fill="none"
             style={{ color: isOpen ? '#0a1628' : colors.frostDark }}
           >
-            <path 
-              d="M3 5L7 9L11 5" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
+            <path
+              d="M3 5L7 9L11 5"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
         </div>
       </button>
-      
+
       {/* Answer content */}
-      <div 
+      <div
         className="overflow-hidden transition-all duration-300 ease-out"
         style={{ height: `${height}px` }}
       >
-        <div 
+        <div
           ref={contentRef}
           className="px-5 pb-5"
         >
-          <div 
+          <div
             className="pl-16 text-base leading-relaxed"
             style={{ color: colors.frostDark }}
           >
-            <div 
+            <div
               className="p-4 rounded-xl"
-              style={{ 
+              style={{
                 background: 'rgba(0, 0, 0, 0.2)',
                 borderLeft: `3px solid ${colors.auroraCyan}`
               }}
@@ -280,7 +280,7 @@ function FAQ() {
     <section ref={sectionRef} className="py-8 md:py-12">
       {/* Section Header */}
       <div ref={headerRef} className="text-center mb-10">
-        <h2 
+        <h2
           className="font-adventure text-3xl md:text-4xl tracking-wider mb-3"
           style={{ color: colors.frost }}
         >
@@ -295,13 +295,13 @@ function FAQ() {
         <p className="mt-4 text-base max-w-xl mx-auto" style={{ color: colors.frostDark }}>
           {t('faqSubtitle', 'Find answers to common questions about Winter Camp 2026')}
         </p>
-        
+
         {/* Expand/Collapse buttons */}
         <div className="flex justify-center gap-3 mt-6">
           <button
             onClick={expandAll}
             className="px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 active:scale-95"
-            style={{ 
+            style={{
               background: `linear-gradient(135deg, ${colors.auroraBlue}30, ${colors.auroraCyan}20)`,
               color: colors.auroraBlue,
               border: `1px solid ${colors.auroraBlue}40`
@@ -312,7 +312,7 @@ function FAQ() {
           <button
             onClick={collapseAll}
             className="px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 active:scale-95"
-            style={{ 
+            style={{
               background: 'rgba(255, 255, 255, 0.05)',
               color: colors.frostDark,
               border: '1px solid rgba(255, 255, 255, 0.15)'
@@ -336,66 +336,177 @@ function FAQ() {
         ))}
       </div>
 
-      {/* Contact CTA */}
-      <div 
-        className="mt-10 text-center rounded-2xl p-8 max-w-2xl mx-auto"
+      {/* Contact CTA - Redesigned */}
+      <div
+        className="mt-12 rounded-3xl overflow-hidden max-w-3xl mx-auto"
         style={{
-          background: 'linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(67, 233, 123, 0.1) 100%)',
-          border: '1px solid rgba(255, 255, 255, 0.1)'
+          background: 'linear-gradient(135deg, rgba(10, 22, 40, 0.9) 0%, rgba(15, 25, 45, 0.95) 100%)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)'
         }}
       >
-        <div className="text-4xl mb-4">🤔</div>
-        <p className="text-lg mb-5 font-medium" style={{ color: colors.frost }}>
-          {t('faqMoreQuestions', "Still have questions? We're here to help!")}
-        </p>
-        <div className="flex flex-col gap-4 items-center">
+        {/* Header */}
+        <div
+          className="px-8 py-6 text-center"
+          style={{
+            background: 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+          }}
+        >
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke={colors.auroraCyan}>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+            </svg>
+            <h3 className="text-xl font-bold" style={{ color: colors.frost }}>
+              {t('faqMoreQuestions', 'Still have questions? Contact us!')}
+            </h3>
+          </div>
+          <p className="text-sm" style={{ color: colors.frostDark }}>
+            Our team is ready to help you
+          </p>
+        </div>
+
+        {/* Contact Cards Grid */}
+        <div className="p-6 grid sm:grid-cols-3 gap-4">
+          {/* Contact 1 - Lead */}
           <a
             href="https://wa.me/79111495385"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            className="group p-4 rounded-2xl text-center transition-all duration-300 hover:scale-[1.02]"
             style={{
-              background: `linear-gradient(135deg, ${colors.auroraBlue}, ${colors.auroraCyan})`,
-              color: '#0a1628',
-              fontWeight: '600',
-              boxShadow: '0 4px 20px rgba(79, 172, 254, 0.4)'
+              background: 'rgba(255, 255, 255, 0.03)',
+              border: '1px solid rgba(255, 255, 255, 0.08)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)';
+              e.currentTarget.style.borderColor = 'rgba(79, 172, 254, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
             }}
           >
-            <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.08 2.34 7.09L4 29l7.18-2.29A12.93 12.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.98 0-3.89-.52-5.54-1.5l-.39-.23-4.13 1.32 1.32-4.13-.23-.39A9.96 9.96 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.07-7.75c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.34-.26.27-1 1-.97 2.43.03 1.43 1.03 2.81 1.18 3.01.15.2 2.03 3.1 4.93 4.22.69.28 1.23.45 1.65.58.69.22 1.32.19 1.82.12.56-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
-            Fikriya: +79111495385
-            <span className="text-xs opacity-80">(WhatsApp/Telegram)</span>
+            <div
+              className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center text-xl"
+              style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
+            >
+              👩
+            </div>
+            <p className="font-semibold text-sm mb-1" style={{ color: colors.frost }}>Fikriya</p>
+            <p className="text-xs mb-2" style={{ color: colors.frostDark }}>Lead Coordinator</p>
+            <p
+              className="text-xs font-medium px-2 py-1 rounded-full inline-block"
+              style={{
+                background: 'rgba(37, 211, 102, 0.15)',
+                color: '#25D366'
+              }}
+            >
+              +7 911 149 5385
+            </p>
           </a>
+
+          {/* Contact 2 */}
           <a
             href="https://wa.me/79810409453"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            className="group p-4 rounded-2xl text-center transition-all duration-300 hover:scale-[1.02]"
             style={{
-              background: `linear-gradient(135deg, ${colors.auroraBlue}, ${colors.auroraCyan})`,
-              color: '#0a1628',
-              fontWeight: '600',
-              boxShadow: '0 4px 20px rgba(79, 172, 254, 0.4)'
+              background: 'rgba(255, 255, 255, 0.03)',
+              border: '1px solid rgba(255, 255, 255, 0.08)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)';
+              e.currentTarget.style.borderColor = 'rgba(79, 172, 254, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
             }}
           >
-            <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.08 2.34 7.09L4 29l7.18-2.29A12.93 12.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.98 0-3.89-.52-5.54-1.5l-.39-.23-4.13 1.32 1.32-4.13-.23-.39A9.96 9.96 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.07-7.75c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.34-.26.27-1 1-.97 2.43.03 1.43 1.03 2.81 1.18 3.01.15.2 2.03 3.1 4.93 4.22.69.28 1.23.45 1.65.58.69.22 1.32.19 1.82.12.56-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
-            Aris: +79810409453
-            <span className="text-xs opacity-80">(WhatsApp/Telegram)</span>
+            <div
+              className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center text-xl"
+              style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
+            >
+              👨
+            </div>
+            <p className="font-semibold text-sm mb-1" style={{ color: colors.frost }}>Aris</p>
+            <p className="text-xs mb-2" style={{ color: colors.frostDark }}>Tech & Media</p>
+            <p
+              className="text-xs font-medium px-2 py-1 rounded-full inline-block"
+              style={{
+                background: 'rgba(37, 211, 102, 0.15)',
+                color: '#25D366'
+              }}
+            >
+              +7 981 040 9453
+            </p>
           </a>
+
+          {/* Contact 3 */}
           <a
             href="https://wa.me/6285121080413"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            className="group p-4 rounded-2xl text-center transition-all duration-300 hover:scale-[1.02]"
             style={{
-              background: `linear-gradient(135deg, ${colors.auroraBlue}, ${colors.auroraCyan})`,
-              color: '#0a1628',
-              fontWeight: '600',
-              boxShadow: '0 4px 20px rgba(79, 172, 254, 0.4)'
+              background: 'rgba(255, 255, 255, 0.03)',
+              border: '1px solid rgba(255, 255, 255, 0.08)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.1) 100%)';
+              e.currentTarget.style.borderColor = 'rgba(79, 172, 254, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
             }}
           >
-            <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.08 2.34 7.09L4 29l7.18-2.29A12.93 12.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.98 0-3.89-.52-5.54-1.5l-.39-.23-4.13 1.32 1.32-4.13-.23-.39A9.96 9.96 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.07-7.75c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.34-.26.27-1 1-.97 2.43.03 1.43 1.03 2.81 1.18 3.01.15.2 2.03 3.1 4.93 4.22.69.28 1.23.45 1.65.58.69.22 1.32.19 1.82.12.56-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
-            Abil: +6285121080413
-            <span className="text-xs opacity-80">(WhatsApp/Telegram)</span>
+            <div
+              className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center text-xl"
+              style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
+            >
+              👨
+            </div>
+            <p className="font-semibold text-sm mb-1" style={{ color: colors.frost }}>Abil</p>
+            <p className="text-xs mb-2" style={{ color: colors.frostDark }}>Registration</p>
+            <p
+              className="text-xs font-medium px-2 py-1 rounded-full inline-block"
+              style={{
+                background: 'rgba(37, 211, 102, 0.15)',
+                color: '#25D366'
+              }}
+            >
+              +62 851 2108 0413
+            </p>
+          </a>
+        </div>
+
+        {/* Telegram CTA */}
+        <div
+          className="px-6 py-5 text-center"
+          style={{
+            background: 'rgba(0, 0, 0, 0.2)',
+            borderTop: '1px solid rgba(255, 255, 255, 0.05)'
+          }}
+        >
+          <a
+            href="https://t.me/permiraspb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+            style={{
+              background: 'linear-gradient(135deg, #0088cc, #0077b5)',
+              color: 'white',
+              boxShadow: '0 4px 15px rgba(0, 136, 204, 0.4)'
+            }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+            </svg>
+            Join @permiraspb
+            <span className="text-xs opacity-80">Official Channel</span>
           </a>
         </div>
       </div>

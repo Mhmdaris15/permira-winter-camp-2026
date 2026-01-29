@@ -205,80 +205,162 @@ function AppContent() {
 
       {/* Content Layer */}
       <div className="relative z-10">
-        {/* Header */}
+        {/* Header - Redesigned */}
         <header
           ref={headerRef}
-          className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${isNavHidden ? "-translate-y-full" : "translate-y-0"}
-            backdrop-blur-xl border-b border-white/10
-            ${theme === 'dark'
-              ? 'bg-[linear-gradient(180deg,rgba(10,10,30,0.98)_0%,rgba(15,15,40,0.95)_100%)]'
-              : 'bg-white/80 border-gray-200'}
-          `}
+          className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${isNavHidden ? "-translate-y-full" : "translate-y-0"}`}
+          style={{
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            background: theme === 'dark'
+              ? 'linear-gradient(180deg, rgba(10, 10, 30, 0.95) 0%, rgba(10, 10, 30, 0.9) 100%)'
+              : 'rgba(255, 255, 255, 0.9)'
+          }}
         >
-          <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
-            {/* Left: Logos & Brand */}
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2">
-                <img
-                  src={getAssetUrl("KBRI Logo.jpg")}
-                  alt="KBRI"
-                  className="w-8 h-8 rounded-full object-cover ring-2 ring-white/10"
-                />
-                <img
-                  src={getAssetUrl("Logo Permira SPB.png")}
-                  alt="PERMIRA SPB"
-                  className="h-8 w-auto max-w-[60px] object-contain"
-                />
-              </div>
-              <div className="hidden sm:block h-6 w-px bg-white/20" />
-              <h1 className="hidden sm:block font-bold text-base tracking-wide
-        bg-gradient-to-r from-[#ac6aff] via-[#7c3aed] to-[#a855f7]
-        bg-clip-text text-transparent">
-                Winter Camp 2026
-              </h1>
-            </div>
-            {/* Center: Nav Links */}
-            <nav className="hidden md:flex items-center gap-1">
-              {["Event", "Schedule", "FAQ", "Register"].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className={
-                    `px-4 py-2 text-sm ${theme === 'dark' ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'} transition-colors relative group`
-                  }
-                >
-                  {item}
-                  {item === "Register" && (
-                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-                  )}
-                </a>
-              ))}
-            </nav>
-            {/* Right: Language & CTA & Theme Toggle */}
-            <div className="flex items-center gap-3">
-              <LanguageSelector />
-              <button
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
-                className={`inline-flex items-center justify-center w-9 h-9 rounded-lg border transition-colors duration-200
-                  ${theme === 'dark' ? 'bg-slate-900 border-slate-700 text-yellow-300 hover:bg-slate-800' : 'bg-white border-gray-300 text-purple-600 hover:bg-gray-100'}`}
-                style={{ fontSize: 18 }}
-              >
-                {theme === 'dark' ? (
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.485-8.485h-1M4.515 12.515h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" /></svg>
-                ) : (
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" /></svg>
-                )}
-              </button>
-              <a
-                href="#register"
-                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white
-          transition-transform hover:scale-105
-          bg-gradient-to-br from-[#7c3aed] to-[#a855f7]
-          shadow-[0_4px_15px_rgba(124,58,237,0.4)]"
-              >
-                Register Now
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
+            <div className="flex items-center justify-between h-16">
+
+              {/* Left: Brand */}
+              <a href="#" className="flex items-center gap-3 group">
+                {/* Logo Stack */}
+                <div className="flex items-center -space-x-2">
+                  <img
+                    src={getAssetUrl("KBRI Logo.jpg")}
+                    style={{ width: '36px', height: '36px', maxWidth: '36px', maxHeight: '36px' }}
+                    alt="KBRI"
+                    className="w-9 h-9 rounded-full object-cover ring-2 ring-white/20 relative z-10"
+                  />
+                  <img
+                    src={getAssetUrl("Logo Permira SPB.png")}
+                    style={{ width: '36px', height: '36px', maxWidth: '36px', maxHeight: '36px' }}
+                    alt="PERMIRA SPB"
+                    className="w-9 h-9 rounded-full object-contain bg-white/10 ring-2 ring-white/20"
+                  />
+                </div>
+
+                {/* Brand Text */}
+                <div className="hidden sm:block">
+                  <h1 className="font-bold text-lg leading-tight bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">
+                    Winter Camp
+                  </h1>
+                  <p className="text-[10px] uppercase tracking-widest text-gray-400 -mt-0.5">
+                    PERMIRA SPB 2026
+                  </p>
+                </div>
               </a>
+
+              {/* Center: Navigation */}
+              <nav className="hidden md:flex items-center">
+                <div
+                  className="flex items-center gap-1 px-2 py-1 rounded-full"
+                  style={{ background: 'rgba(255, 255, 255, 0.03)' }}
+                >
+                  {[
+                    { name: "Event", icon: "📅" },
+                    { name: "Schedule", icon: "⏰" },
+                    { name: "FAQ", icon: "❓" },
+                    { name: "Register", icon: "📝", highlight: true }
+                  ].map((item) => (
+                    <a
+                      key={item.name}
+                      href={`#${item.name.toLowerCase()}`}
+                      className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200
+                        ${item.highlight
+                          ? 'bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 hover:from-purple-500/30 hover:to-purple-600/30'
+                          : 'text-gray-400 hover:text-white hover:bg-white/5'
+                        }`}
+                    >
+                      <span className="mr-1.5">{item.icon}</span>
+                      {item.name}
+                      {item.highlight && (
+                        <span className="absolute top-1 right-1 w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
+                      )}
+                    </a>
+                  ))}
+                </div>
+              </nav>
+
+              {/* Right: Actions */}
+              <div className="flex items-center gap-2">
+                {/* Language Selector */}
+                <LanguageSelector />
+
+                {/* Theme Toggle */}
+                <button
+                  onClick={toggleTheme}
+                  aria-label="Toggle theme"
+                  className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 hover:bg-white/10"
+                  style={{
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    color: theme === 'dark' ? '#fbbf24' : '#a855f7'
+                  }}
+                >
+                  {theme === 'dark' ? (
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.485-8.485h-1M4.515 12.515h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+                    </svg>
+                  )}
+                </button>
+
+                {/* CTA Button - Desktop */}
+                <a
+                  href="#register"
+                  className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
+                    color: 'white',
+                    boxShadow: '0 4px 15px rgba(124, 58, 237, 0.4)'
+                  }}
+                >
+                  Register Now
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+
+                {/* Mobile Menu Button */}
+                <button
+                  className="md:hidden w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/10"
+                  style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}
+                  onClick={() => {
+                    const mobileNav = document.getElementById('mobile-nav');
+                    if (mobileNav) {
+                      mobileNav.classList.toggle('hidden');
+                    }
+                  }}
+                >
+                  <svg className="w-5 h-5 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile Navigation */}
+            <div
+              id="mobile-nav"
+              className="hidden md:hidden pb-4"
+            >
+              <div className="flex flex-col gap-1">
+                {["Event", "Schedule", "FAQ", "Register"].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    className="px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                    onClick={() => {
+                      const mobileNav = document.getElementById('mobile-nav');
+                      if (mobileNav) mobileNav.classList.add('hidden');
+                    }}
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </header>
@@ -347,19 +429,19 @@ function AppContent() {
               </a>
             </div>
 
-            {/* Partner Logos */}
-            <div ref={heroIconsRef} className="flex justify-center items-center gap-4 flex-wrap">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                <img src={getAssetUrl('KBRI Logo.jpg')} alt="KBRI" className="w-8 h-8 rounded-full object-cover" />
-                <span className="text-xs text-gray-400">KBRI Moscow</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                <img src={getAssetUrl('Logo Permira SPB.png')} alt="PERMIRA SPB" className="w-8 h-8 object-contain" />
-                <span className="text-xs text-gray-400">PERMIRA SPB</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                <img src={getAssetUrl('permira-kepanitiaan-logo.png')} alt="Panitia" className="w-8 h-8 object-contain" />
-                <span className="text-xs text-gray-400">Committee</span>
+            {/* Supported By - Clean & Subtle */}
+            <div ref={heroIconsRef} className="flex flex-col items-center gap-3">
+              <span className="text-xs uppercase tracking-widest text-gray-500">Supported by</span>
+              <div className="flex items-center gap-6">
+                <div className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+                  <img src={getAssetUrl('KBRI Logo.jpg')} alt="KBRI" className="w-8 h-8 max-w-8 max-h-8 rounded-full object-cover grayscale hover:grayscale-0 transition-all" style={{ width: '32px', height: '32px', maxWidth: '32px', maxHeight: '32px' }} />
+                  <span className="text-xs text-gray-400 hidden sm:inline">KBRI Moscow</span>
+                </div>
+                <div className="w-px h-6 bg-white/10" />
+                <div className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+                  <img src={getAssetUrl('Logo Permira SPB.png')} alt="PERMIRA SPB" className="w-8 h-8 max-w-8 max-h-8 object-contain grayscale hover:grayscale-0 transition-all" style={{ width: '32px', height: '32px', maxWidth: '32px', maxHeight: '32px' }} />
+                  <span className="text-xs text-gray-400 hidden sm:inline">PERMIRA SPB</span>
+                </div>
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ function EventDetails() {
           {t('eventOverview')}
         </h3>
         <p className="description">{t('eventDescription')}</p>
-        
+
         <div className="activities-grid">
           {activities.map((activity) => (
             <div key={activity.key} className="activity-item">
