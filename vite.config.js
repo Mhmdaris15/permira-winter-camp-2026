@@ -7,5 +7,5 @@ export default defineConfig({
     react()
   ],
   // For GitHub Pages deployment, set the base to your repository name
-  base: '/permira-winter-camp-2025/',
+  base: '/permira-winter-camp-2026/',
 })

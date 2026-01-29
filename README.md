@@ -1,11 +1,11 @@
-# Winter Camp 2026 Registration Form 🏔️❄️
+# Winter Camp 2025 Registration Form 🏔️❄️
 
-A stunning, professional registration form web application for Winter Camp 2026, featuring a breathtaking northern lights winter theme, AI-powered chatbot, and Google Sheets integration.
+A stunning, professional registration form web application for Winter Camp 2025. Features a breathtaking northern lights winter theme, AI-powered chatbot with RAG system, and Google Sheets integration via Cloudflare Workers.
 
-![Winter Camp 2026](https://img.shields.io/badge/Winter%20Camp-2026-blue?style=for-the-badge)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
-![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?style=for-the-badge&logo=vite)
+![Winter Camp 2025](https://img.shields.io/badge/Winter%20Camp-2025-blue?style=for-the-badge)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite)
 
 ## ✨ Features
 
@@ -14,6 +14,7 @@ A stunning, professional registration form web application for Winter Camp 2026,
 - **Mountain Landscape** - Layered SVG mountains with pine trees
 - **Starry Night Sky** - Twinkling stars across the canvas
 - **Animated Snowfall** - Gentle snow particles falling
+- **Dark/Light Theme Toggle** - Switch between dark and light modes
 - **Adventure Typography** - Bold, outdoor-style fonts (Bebas Neue, Orbitron)
 - **Midnight Blue & Aurora Color Palette** - Deep blues, frosty whites, and vibrant aurora accents
 
@@ -24,47 +25,53 @@ A stunning, professional registration form web application for Winter Camp 2026,
 
 ### 📋 Comprehensive Registration Form
 **Personal Information:**
-- Citizenship (with "Other" option that reveals text input)
+- Citizenship (with "Other" option)
 - Full Name
 - University/Institution
-- Gender (with "Other" option for custom input)
+- Gender (with custom input option)
 - Age
 
 **Contact Information:**
 - Phone Number
 - Email Address
-- Social Media (Optional): Instagram, Twitter/X, LinkedIn
+- VK Profile (Optional)
+- Telegram Username (Optional)
 
 **Event Discovery:**
 - "How did you hear about us?" - Multi-select checkboxes
-  - Social Media, Friend/Family, University, Website, Email, Poster, Other
 
 **Additional Info:**
-- Dietary Restrictions
-- Allergies
+- Allergies (all food is 100% Halal)
+- KBRI Proof Upload (for Indonesian citizens)
+- Performance Interest (Cultural Night)
 - Terms & Conditions agreement
-- Willingness to Participate (Yes/No)
+- Willingness to Participate
 - Reason for Joining
 
 ### 🤖 AI-Powered Chatbot
 - Powered by **Chutes.ai** with **Qwen/Qwen3-32B** model
 - **RAG System** - Context-aware responses using knowledge base
+- **Local Fallback** - Smart pattern matching when API unavailable
 - Beautiful floating chat interface
-- No API key input required
+- Multi-language support
 
-### 📊 Google Sheets Integration
-- Form submissions sent directly to Google Sheets
-- Just like Google Forms, but with a beautiful custom design
-- Easy setup with provided Apps Script
+### 📊 Backend Integration
+- **Cloudflare Workers** - Proxy for form submission and file uploads
+- **Google Sheets** - Registration data storage
+- **Google Drive** - KBRI proof file storage
 
 ## 🛠️ Tech Stack
 
-- **React 18** - UI Library
-- **Vite** - Lightning-fast build tool
-- **Tailwind CSS v4** - Utility-first styling
-- **i18next** - Internationalization
-- **Chutes.ai API** - AI Chatbot (RAG System)
-- **Google Apps Script** - Google Sheets integration
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| React | 19.2 | UI Library |
+| Vite | 7.2 | Build tool |
+| Tailwind CSS | 4.1 | Styling |
+| i18next | 25.7 | Internationalization |
+| GSAP | 3.14 | Animations |
+| Headless UI | 2.2 | Accessible components |
+| Cloudflare Workers | - | Backend proxy |
+| Google Apps Script | - | Sheets integration |
 
 ## 🚀 Getting Started
 
@@ -90,49 +97,20 @@ Open [http://localhost:5173/winter-camp-registration/](http://localhost:5173/win
 
 ## 📊 Setting Up Google Sheets Integration
 
-1. **Create a Google Sheet**
-   - Go to [Google Sheets](https://sheets.google.com)
-   - Create a new spreadsheet
+### Option 1: Via Cloudflare Worker (Recommended)
 
-2. **Add Apps Script**
-   - Go to Extensions → Apps Script
-   - Delete any existing code
-   - Copy the contents of `google-apps-script.js` and paste it
-   - Save the project
+1. Navigate to `cloudflare-worker/` directory
+2. Follow the instructions in `cloudflare-worker/README.md`
+3. Deploy the worker and update the endpoint URL in `RegistrationFormNew.jsx`
 
-3. **Deploy as Web App**
-   - Click "Deploy" → "New deployment"
-   - Select type: "Web app"
-   - Set "Execute as": "Me"
-   - Set "Who has access": "Anyone"
-   - Click "Deploy" and authorize
+### Option 2: Direct Google Apps Script
 
-4. **Connect to Your App**
-   - Copy the Web App URL
-   - Open `src/components/RegistrationForm/RegistrationFormNew.jsx`
-   - Replace `YOUR_GOOGLE_APPS_SCRIPT_URL` with your URL
-
-## 🤖 Setting Up Chutes.ai Chatbot (RAG System)
-
-The chatbot now uses **Chutes.ai API** with a RAG (Retrieval-Augmented Generation) system:
-- Powered by **Qwen/Qwen3-32B** model
-- Pre-configured with comprehensive Winter Camp knowledge base
-- No API key input required (embedded in code)
-- Context-aware responses about the event
-
-## 🎨 Design Theme
-
-- **Background**: Mountainous winter landscapes with northern lights and starry skies
-- **Color Palette**: 
-  - Midnight Blue (#0a1628)
-  - Frosty White (#e8f4fc)
-  - Aurora Blue (#4facfe)
-  - Aurora Cyan (#00f2fe)
-  - Aurora Green (#43e97b)
-  - Evergreen (#1a5f4a)
-  - Camp Red (#dc2626)
-- **Typography**: Bebas Neue, Orbitron (adventure-style), Inter (body text)
-- **Animations**: Northern lights, floating elements, snowfall, twinkling stars
+1. **Create a Google Sheet** at [sheets.google.com](https://sheets.google.com)
+2. Go to **Extensions → Apps Script**
+3. Copy contents of `google-apps-script.js` and paste
+4. **Deploy → New deployment** as Web App
+5. Set **Execute as**: "Me" and **Who has access**: "Anyone"
+6. Copy the Web App URL to `src/components/RegistrationForm/RegistrationFormNew.jsx`
 
 ## 📁 Project Structure
 
@@ -141,26 +119,86 @@ winter-camp-registration/
 ├── src/
 │   ├── components/
 │   │   ├── Background/        # Northern lights & mountain background
-│   │   ├── Chatbot/          # Chutes.ai chatbot with RAG
-│   │   ├── EventDetails/     # Event information section
-│   │   ├── LanguageSelector/ # Multi-language switcher
-│   │   └── RegistrationForm/ # Complete registration form
-│   ├── i18n/                 # Translations (EN, ID, RU)
-│   ├── App.jsx
+│   │   ├── Chatbot/           # AI chatbot with RAG system
+│   │   ├── EventDetails/      # Event information section
+│   │   ├── FAQ/               # Expandable FAQ section
+│   │   ├── Gallery/           # Photo gallery
+│   │   ├── LanguageSelector/  # Multi-language switcher
+│   │   ├── RegistrationForm/  # Registration form with validation
+│   │   ├── Rundown/           # 3-day event schedule
+│   │   ├── Snowfall/          # Snowfall animation
+│   │   └── WhatToBring/       # Packing checklist
+│   ├── context/
+│   │   └── ThemeContext.jsx   # Dark/Light theme provider
+│   ├── data/                  # Knowledge base files
+│   ├── i18n/                  # Translations (EN, ID, RU)
+│   ├── App.jsx                # Main application
 │   ├── App.css
-│   ├── index.css            # Tailwind & global styles
-│   └── main.jsx
-├── google-apps-script.js    # Google Sheets integration
-├── .github/workflows/       # GitHub Actions for deployment
+│   ├── index.css              # Global styles & design system
+│   └── main.jsx               # Entry point
+├── cloudflare-worker/         # Cloudflare Worker for backend
+│   ├── worker.js              # Worker script
+│   ├── google-apps-script.js  # Enhanced Apps Script
+│   └── wrangler.toml          # Worker configuration
+├── data/                      # Excel/CSV data files
+├── public/                    # Static assets (logos)
+├── google-apps-script.js      # Basic Apps Script
 └── vite.config.js
 ```
+
+## 📅 Event Details
+
+| Detail | Information |
+|--------|-------------|
+| **Date** | February 12-14, 2025 |
+| **Location** | Центр «Молодёжный», Saint Petersburg, Russia |
+| **Organizer** | PERMIRA Saint Petersburg |
+| **Supported by** | KBRI Moscow |
+
+### Schedule Highlights
+- **Day 1**: Arrival, Opening Ceremony, Talk Show, Team Building
+- **Day 2**: Central Naval Museum Visit, Cultural Night Performances
+- **Day 3**: Outdoor Games (Snowman Contest!), Award Ceremony, Departure
+
+## 🎨 Design Theme
+
+**Color Palette:**
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Midnight Blue | `#0a1628` | Background |
+| Frosty White | `#e8f4fc` | Text |
+| Aurora Blue | `#4facfe` | Accents |
+| Aurora Cyan | `#00f2fe` | Highlights |
+| Aurora Green | `#43e97b` | Success states |
+| Camp Red | `#dc2626` | Errors |
+
+**Typography:**
+- Bebas Neue, Orbitron (adventure style)
+- Inter (body text)
+
+**Animations:**
+- Northern lights effect
+- Floating elements
+- Snowfall particles
+- Twinkling stars
+- GSAP scroll-triggered animations
+
+## 🎯 Form Validation
+
+- All required fields have validation
+- Email format validation
+- Phone number format validation
+- Age range validation (1-120)
+- File size validation (KBRI proof max 2MB)
+- Terms & conditions must be accepted
+- Real-time error messages
 
 ## 🌍 Deployment
 
 ### GitHub Pages (Automatic)
 
 1. Push to `main` branch
-2. Go to Settings → Pages
+2. Go to **Settings → Pages**
 3. Select "GitHub Actions" as source
 4. Site deploys automatically
 
@@ -171,32 +209,23 @@ npm run build
 npm run preview
 ```
 
-## 🎯 Form Validation
+## 📞 Contact
 
-- All required fields have validation
-- Email format validation
-- Phone number format validation
-- Age range validation (1-120)
-- Dynamic "Other" input fields
-- Terms & conditions must be accepted
-- Real-time error messages
-
-## 📄 License
-
-MIT License - Feel free to use for your own events!
-
-## 🙏 Acknowledgments
-
-- Built with ❤️ for Winter Camp 2026
-- Icons: Emoji-based for universal compatibility
-- Fonts: Google Fonts (Bebas Neue, Orbitron, Inter)
-- AI: Powered by Chutes.ai (Qwen/Qwen3-32B)
+**Organizers:**
+- Fikriya: +79111495385
+- Aris: +79810409453
+- Abil: +6285121080413
+- Telegram: [@permiraspb](https://t.me/permiraspb)
 
 ## 👨‍💻 Developer
 
 **Muhammad Aris Septanugroho**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/muhammad-aris-septanugroho/)
+
+## 📄 License
+
+MIT License - Feel free to use for your own events!
 
 ---
 
